@@ -6,13 +6,13 @@ const GlobalStyles = createGlobalStyle`
     src:url(${"../assets/fonts/NeurialGrotesk/NeurialGrotesk-Regular.otf"})
 }
 *, *::before, *::after{
-    box-sizing: border-box;
+    box-sizing: inherit;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     
 }
 html{
-  box-sizing: border-box;
+  
     font-size: 62.5%;
     font-family:'Neurial Grotesk',sans-serif;
     margin: 0;
@@ -21,6 +21,7 @@ html{
     width: 100vw; 
 }
  body{
+  box-sizing: border-box;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

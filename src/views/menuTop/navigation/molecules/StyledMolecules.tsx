@@ -12,9 +12,9 @@ export const StyledList = styled.ul`
   position: absolute;
   top: 6.6rem;
   left: -133px;
-  display: flex;
+  display: none;
   &.active {
-    display: flex; //replace for none when class actualy created
+    display: flex;
     @media (min-width: 1094px) {
       display: none;
     }

@@ -12,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
     
 }
 html{
+  box-sizing: border-box;
     font-size: 62.5%;
     font-family:'Neurial Grotesk',sans-serif;
     margin: 0;
@@ -20,6 +21,7 @@ html{
     width: 100vw; 
 }
  body{
+  box-sizing: border-box;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -2,7 +2,7 @@ import React, { FC, useState, useEffect } from "react";
 import { mainMenu } from "../../../../../assets/content/navMenu/mainMenu";
 import { useMenuOpenStore } from "../../../../../globalState/zustandStores/useMenuOpen";
 import { useMobileStore } from "../../../../../globalState/zustandStores/useMobileStore";
-import NavItem from "../../atoms/navItem/NavItem";
+import NavItem from "../../molecules/navItem/NavItem";
 import ContentSwitch from "../../templates/ContentSwitch";
 import { StyledNavList } from "./StyledNavList";
 

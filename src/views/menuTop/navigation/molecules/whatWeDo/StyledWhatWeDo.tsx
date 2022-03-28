@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import { theme } from "../../../../../themes/MainTheme";
 
-export const StyledWrapper = styled.div``;
+export const StyledWrapper = styled.div`
+  display: none;
+  &.active {
+    display: block;
+  }
+`;
 export const StyledGroup = styled.div`
   display: block;
   padding: 1.5rem;
@@ -11,5 +16,8 @@ export const StyledGroup = styled.div`
   }
   &:hover {
     background-color: ${theme.colors.hoverBgr};
+    h4 {
+      color: ${theme.colors.activeHeaders};
+    }
   }
 `;

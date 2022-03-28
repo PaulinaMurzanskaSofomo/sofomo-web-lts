@@ -12,7 +12,7 @@ export const StyledNavList = styled.ul`
     justify-content: flex-start;
     margin: 0 auto;
     list-style-type: none;
-    padding: 2.5rem 3rem;
+    padding: 2.5rem 1.5rem;
     position: absolute;
     top: 0;
     left: 0;

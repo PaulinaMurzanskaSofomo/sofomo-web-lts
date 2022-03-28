@@ -1,9 +1,9 @@
 import React, { FC, useState, useEffect } from "react";
-import { mainMenu } from "../../../../assets/content/navMenu/mainMenu";
-import { useMenuOpenStore } from "../../../../globalState/zustandStores/useMenuOpen";
-import { useMobileStore } from "../../../../globalState/zustandStores/useMobileStore";
-import NavItem from "../atoms/NavItem";
-import { StyledList } from "./StyledMolecules";
+import { mainMenu } from "../../../../../assets/content/navMenu/mainMenu";
+import { useMenuOpenStore } from "../../../../../globalState/zustandStores/useMenuOpen";
+import { useMobileStore } from "../../../../../globalState/zustandStores/useMobileStore";
+import NavItem from "../../atoms/navItem/NavItem";
+import { StyledNavList } from "./StyledNavList";
 
 const NavList: FC = () => {
   const isMenuOpen = useMenuOpenStore((state: any) => state.menuOpen);
@@ -26,11 +26,11 @@ const NavList: FC = () => {
   }, [myWindow]);
 
   return (
-    <StyledList className={`${isMobile ? "mobile" : ""} ${isMenuOpen ? "active" : ""} `}>
+    <StyledNavList className={`${isMobile ? "mobile" : ""} ${isMenuOpen ? "active" : ""} `}>
       {mainMenu.map((item) => (
         <NavItem item={item.title} key={item.id} chevron={item.chevron} />
       ))}
-    </StyledList>
+    </StyledNavList>
   );
 };
 

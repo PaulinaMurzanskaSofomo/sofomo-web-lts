@@ -1,7 +1,6 @@
 import React, { FC } from "react";
-import { StyledItem, StyledChevronBox } from "./StyledAtoms";
-import chevronUp from "../../../../assets/icons/chevronUp.svg";
-import chevronDown from "../../../../assets/icons/chevronDown.svg";
+import { StyledItem, StyledChevronBox } from "./StyledNavItem";
+import { HiOutlineChevronDown, HiOutlineChevronUp } from "react-icons/hi";
 
 interface Props {
   item: string;
@@ -14,8 +13,8 @@ const NavItem: FC<Props> = ({ item, chevron }) => {
       {item}
       {chevron && (
         <StyledChevronBox>
-          <img src={chevronDown} className="down" alt="" />
-          <img src={chevronUp} className="up" alt="" />
+          <HiOutlineChevronDown className="down" />
+          <HiOutlineChevronUp className="up" />
         </StyledChevronBox>
       )}
     </StyledItem>

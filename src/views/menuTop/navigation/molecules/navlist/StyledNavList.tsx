@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { theme } from "../../../../themes/MainTheme";
+import { theme } from "../../../../../themes/MainTheme";
 
-export const StyledList = styled.ul`
+export const StyledNavList = styled.ul`
   display: none;
   &.mobile {
     width: 100vw;

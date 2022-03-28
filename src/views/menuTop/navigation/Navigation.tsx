@@ -2,9 +2,9 @@ import React, { FC } from "react";
 import { StyledResponsiveContainer } from "../../../components/containers/StyledResponsiveContainer";
 import { useMenuOpenStore } from "../../../globalState/zustandStores/useMenuOpen";
 import { useMobileStore } from "../../../globalState/zustandStores/useMobileStore";
-import Bars from "./atoms/Bars";
-import Logo from "./atoms/Logo";
-import NavList from "./molecules/NavList";
+import Bars from "./atoms/StyledBars";
+import Logo from "./atoms/StyledLogo";
+import NavList from "./molecules/navlist/NavList";
 import { StyledNavWrapper, StyledOnBarMenu } from "./StyledNavigation";
 
 const Navigation: FC = () => {

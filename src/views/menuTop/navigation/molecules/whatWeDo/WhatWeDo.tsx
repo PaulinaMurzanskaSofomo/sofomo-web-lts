@@ -6,7 +6,6 @@ import { whatWeDo, advantages } from "../../../../../assets/content/navMenu/abou
 import { StyledWrapper, StyledGroup } from "./StyledWhatWeDo";
 
 interface Props {
-  id?: any;
   active?: boolean;
 }
 

@@ -13,9 +13,9 @@ const ContentSwitch: FC<Props> = ({ id, active }) => {
       {(() => {
         switch (id) {
           case 1:
-            return <WhatWeDo id={id} active={active} />;
+            return <WhatWeDo active={active} />;
           case 2:
-            return <Developers id={id} active={active} />;
+            return <Developers active={active} />;
           default:
             return;
         }

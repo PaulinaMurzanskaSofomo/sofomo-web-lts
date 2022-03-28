@@ -39,3 +39,14 @@ export const StyledChevronBox = styled.div`
     }
   }
 `;
+export const StyledSwitchWrapper = styled.div`
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  display: none;
+  &.active {
+    display: flex;
+  }
+`;

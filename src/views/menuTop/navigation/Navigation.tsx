@@ -4,7 +4,7 @@ import { useMenuOpenStore } from "../../../globalState/zustandStores/useMenuOpen
 import { useMobileStore } from "../../../globalState/zustandStores/useMobileStore";
 import Bars from "./atoms/StyledBars";
 import Logo from "./atoms/StyledLogo";
-import NavList from "./molecules/navlist/NavList";
+import NavList from "./organisms/navlist/NavList";
 import { StyledNavWrapper, StyledOnBarMenu } from "./StyledNavigation";
 
 const Navigation: FC = () => {

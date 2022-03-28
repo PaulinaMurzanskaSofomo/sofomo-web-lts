@@ -3,6 +3,7 @@ import { mainMenu } from "../../../../../assets/content/navMenu/mainMenu";
 import { useMenuOpenStore } from "../../../../../globalState/zustandStores/useMenuOpen";
 import { useMobileStore } from "../../../../../globalState/zustandStores/useMobileStore";
 import NavItem from "../../atoms/navItem/NavItem";
+import ContentSwitch from "../../templates/ContentSwitch";
 import { StyledNavList } from "./StyledNavList";
 
 const NavList: FC = () => {
@@ -28,7 +29,7 @@ const NavList: FC = () => {
   return (
     <StyledNavList className={`${isMobile ? "mobile" : ""} ${isMenuOpen ? "active" : ""} `}>
       {mainMenu.map((item) => (
-        <NavItem item={item.title} key={item.id} chevron={item.chevron} />
+        <NavItem item={item.title} key={item.id} chevron={item.chevron} id={item.id} />
       ))}
     </StyledNavList>
   );

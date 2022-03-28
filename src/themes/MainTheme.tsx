@@ -11,5 +11,8 @@ export const theme = {
     text: "hsla(0, 0%, 71%, 1)",
     gold: "hsla(41, 55%, 56%, 1)",
     shadow: "#E6EBF1",
+    activeHeaders: "hsla(234, 80%, 68%, 1)",
+    paragraph: "hsla(0, 0%, 25%, 1)",
+    hoverBgr: "rgba(103, 114, 229, 0.1)",
   },
 };

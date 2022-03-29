@@ -1,35 +1,23 @@
-import React, { FC, useState } from "react";
-import { StyledItem, StyledChevronBox, StyledItemOuter } from "./StyledNavItem";
-import { StyledHeaderH4 } from "../../../../../components/atoms/StyledHeader";
-import { HiOutlineChevronDown, HiOutlineChevronUp } from "react-icons/hi";
+import React, { FC } from "react";
+import { StyledItem } from "./StyledNavItem";
 import ContentSwitch from "../../templates/ContentSwitch";
+import { NavLink } from "react-router-dom";
+import NavHeader from "./NavHeader";
 
 interface Props {
   item: string;
-  chevron?: boolean;
   id?: number;
+  path?: string;
 }
 
-const NavItem: FC<Props> = ({ item, chevron, id }) => {
-  const [isItemActive, setIsItemActive] = useState(false);
-
-  const toggleItemContent = (e: any) => {
-    const target = e.currentTarget.id;
-    setIsItemActive(!isItemActive);
-  };
+const NavItem: FC<Props> = ({ item, id, path }) => {
   return (
-    <StyledItemOuter className={isItemActive ? "active" : ""}>
-      <StyledItem onClick={toggleItemContent} className={isItemActive ? "active" : ""}>
-        <StyledHeaderH4 label={item} fontSize="1.8rem" lineHeight="2.6rem" />
-        {chevron && (
-          <StyledChevronBox>
-            <HiOutlineChevronDown className={`down ${isItemActive ? "active" : ""}`} />
-            <HiOutlineChevronUp className={`up ${isItemActive ? "active" : ""}`} />
-          </StyledChevronBox>
-        )}
-      </StyledItem>
-      <ContentSwitch id={id} active={isItemActive} />
-    </StyledItemOuter>
+    <StyledItem>
+      <NavLink to={path ? path : "/"}>
+        <NavHeader item={item} />
+        <ContentSwitch id={id} />
+      </NavLink>
+    </StyledItem>
   );
 };
 

@@ -13,11 +13,13 @@ const NavList: FC = () => {
 
   const windowSize = window.innerWidth;
   const [myWindow, setMyWindow] = useState(windowSize);
-  const smallScreen = () => {
+
+  function smallScreen() {
     if (myWindow < 1094) {
       setMobile(true);
     } else setMobile(false);
-  };
+  }
+
   useEffect(() => {
     window.addEventListener("resize", () => {
       const resizedWindow = window.innerWidth;
@@ -29,7 +31,7 @@ const NavList: FC = () => {
   return (
     <StyledNavList className={`${isMobile ? "mobile" : ""} ${isMenuOpen ? "active" : ""} `}>
       {mainMenu.map((item) => (
-        <NavItem item={item.title} key={item.id} chevron={item.chevron} id={item.id} />
+        <NavItem item={item.title} key={item.id} id={item.id} path={item.path} />
       ))}
     </StyledNavList>
   );

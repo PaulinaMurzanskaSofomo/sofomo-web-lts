@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../../../../../themes/MainTheme";
 
 export const StyledNavList = styled.ul`
   display: none;
@@ -19,7 +18,6 @@ export const StyledNavList = styled.ul`
     transform: translate(120vw, -20px);
     animation: slideOut 0.1s ease-out;
     transition: all 0.1s ease-out;
-
     &.active {
       transform: translate(-133px, 6.6rem);
       animation: slideIn 0.1s ease-out;
@@ -33,11 +31,12 @@ export const StyledNavList = styled.ul`
     justify-content: flex-end;
     padding: 0 0 0 34px;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
-    transform: translate(0, 0);
+    transform: translate(0, -50%);
     transition: transform 0.1s linear;
   }
+
   @keyframes slideIn {
     0% {
       opacity: 0;
@@ -49,6 +48,7 @@ export const StyledNavList = styled.ul`
       opacity: 1;
     }
   }
+
   @keyframes slideOut {
     0% {
       opacity: 1;

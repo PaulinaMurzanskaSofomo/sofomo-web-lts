@@ -4,7 +4,7 @@ import { theme } from "../../../themes/MainTheme";
 export const StyledNavWrapper = styled.div`
   width: 100%;
   display: flex;
-  height: 6.6rem;
+  height: 8rem;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -40,6 +40,7 @@ export const StyledNavWrapper = styled.div`
     }
   }
 `;
+
 export const StyledOnBarMenu = styled.div`
   width: auto;
   min-height: 6.6rem;

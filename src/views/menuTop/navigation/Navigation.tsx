@@ -10,6 +10,7 @@ import { StyledNavWrapper, StyledOnBarMenu } from "./StyledNavigation";
 const Navigation: FC = () => {
   const isMenuOpen = useMenuOpenStore((state: any) => state.menuOpen);
   const isMobile = useMobileStore((state: any) => state.isMobile);
+
   return (
     <StyledResponsiveContainer>
       <StyledNavWrapper className={`${isMobile ? "mobile" : ""} ${isMenuOpen ? "active" : ""} `}>

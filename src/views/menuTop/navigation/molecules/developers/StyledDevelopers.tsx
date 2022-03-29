@@ -1,13 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../../../../themes/MainTheme";
 
-export const StyledDevWrapper = styled.div`
-  display: none;
-  &.active {
-    display: block;
-  }
-`;
-
 export const StyledRoles = styled.div`
   display: flex;
   flex-direction: row;
@@ -24,6 +17,11 @@ export const StyledRoles = styled.div`
   }
   &:hover {
     background-color: ${theme.colors.hoverBgr};
+    transition: 0.3s;
+  }
+  @media (min-width: 768px) {
+    width: 30%;
+    margin-right: 0.5rem;
   }
 `;
 
@@ -36,33 +34,47 @@ export const StyledDevDisplay = styled.div`
     }
   }
 `;
+
 export const StyledDescription = styled.div`
   display: none;
+  @media (min-width: 1094px) {
+    display: block;
+    &.clicked-dev-open {
+      display: none;
+    }
+  }
 `;
 
 export const StyledRoleList = styled.ul`
   margin-top: 10px;
+  @media (min-width: 1094px) {
+    display: none;
+    &.clicked-dev-open {
+      display: block;
+    }
+  }
 `;
+
 export const StyledRoleItem = styled.li`
   width: 100%;
   list-style-type: none;
   text-transform: capitalize;
   display: flex;
   align-items: center;
-  a {
-    display: flex;
-    align-items: center;
-    svg {
-      display: none;
+
+  display: flex;
+  align-items: center;
+  svg {
+    display: none;
+    color: ${theme.colors.activeHeaders};
+  }
+  &:hover {
+    p {
       color: ${theme.colors.activeHeaders};
+      transform: scale(1.02);
     }
-    &:hover {
-      p {
-        color: ${theme.colors.activeHeaders};
-      }
-      svg {
-        display: block;
-      }
+    svg {
+      display: block;
     }
   }
 `;

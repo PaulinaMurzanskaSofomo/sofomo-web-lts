@@ -1,16 +1,12 @@
 import React, { FC } from "react";
 import { developers } from "../../../../../assets/content/developers";
 import DeveloperBlock from "./DeveloperBlock";
-import { StyledDevWrapper } from "./StyledDevelopers";
+import { StyledContentWrapper } from "../../templates/StyledContentSwitch";
 
-interface Props {
-  active?: boolean;
-}
-
-const Developers: FC<Props> = ({ active }) => {
-  console.log("devs", developers);
+const Developers: FC = () => {
   return (
-    <StyledDevWrapper className={active ? "active" : ""}>
+    <StyledContentWrapper className="developers">
+      <h3>hire developers</h3>
       {developers.map((dev) => (
         <DeveloperBlock
           title={dev.type}
@@ -20,7 +16,7 @@ const Developers: FC<Props> = ({ active }) => {
           key={dev.id}
         />
       ))}
-    </StyledDevWrapper>
+    </StyledContentWrapper>
   );
 };
 

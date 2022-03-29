@@ -2,17 +2,14 @@ import React, { FC } from "react";
 import { StyledHeaderH4 } from "../../../../../components/atoms/StyledHeader";
 import { StyledParagraphP } from "../../../../../components/atoms/StyledParagraph";
 import { whatWeDo, advantages } from "../../../../../assets/content/navMenu/about";
+import { StyledGroup } from "./StyledWhatWeDo";
+import { StyledContentWrapper } from "../../templates/StyledContentSwitch";
 
-import { StyledWrapper, StyledGroup } from "./StyledWhatWeDo";
-
-interface Props {
-  active?: boolean;
-}
-
-const WhatWeDo: FC<Props> = ({ active }) => {
+const WhatWeDo: FC = () => {
   return (
-    <StyledWrapper className={active ? "active" : ""}>
-      <StyledGroup className={active ? "active" : ""}>
+    <StyledContentWrapper className="what-we-do">
+      <h3>what we do </h3>
+      <StyledGroup>
         <StyledHeaderH4 label="What We Do" />
         <StyledParagraphP text={whatWeDo} />
       </StyledGroup>
@@ -20,7 +17,7 @@ const WhatWeDo: FC<Props> = ({ active }) => {
         <StyledHeaderH4 label="Our Andvanges" />
         <StyledParagraphP text={advantages} />
       </StyledGroup>
-    </StyledWrapper>
+    </StyledContentWrapper>
   );
 };
 

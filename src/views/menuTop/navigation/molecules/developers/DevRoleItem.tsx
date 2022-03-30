@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { StyledRoleItem } from "./StyledDevelopers";
+import { StyledRoleItem } from "./StyledDevRoleListAndItem";
 import { BsArrowRight } from "react-icons/bs";
 import { StyledParagraphP } from "../../../../../components/atoms/StyledParagraph";
 

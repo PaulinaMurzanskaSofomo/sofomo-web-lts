@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { StyledRoleList } from "./StyledDevelopers";
+import { StyledRoleList } from "./StyledDevRoleListAndItem";
 import DevRoleItem from "./DevRoleItem";
 
 interface Props {

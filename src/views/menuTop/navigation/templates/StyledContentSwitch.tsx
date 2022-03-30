@@ -1,44 +1,26 @@
 import styled from "styled-components";
-import { theme } from "../../../../themes/MainTheme";
 
-export const StyledContentSwitch = styled.div`
-  margin-bottom: 3rem;
+export const StyledMobileDisplay = styled.div`
   width: 100%;
-  background-color: #ffffff;
   height: auto;
-  display: none;
+  padding-bottom: 3rem;
   @media (min-width: 1094px) {
-    position: fixed;
-    top: 12rem;
-    left: -133px;
-    width: 1094px;
+    display: none;
   }
 `;
 
-export const StyledContentWrapper = styled.div`
-  position: relative;
-  flex-direction: column;
+export const StyledFullDisplay = styled.div`
+  width: 100vw;
+  box-shadow: 0px 18px 40px -15px rgba(50, 49, 94, 0.2);
+  background-color: #fff;
   display: none;
-  h3 {
-    position: absolute;
-    top: 0;
-    left: 1.5rem;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    color: ${theme.colors.paragraph};
-    font-weight: 400;
-    line-height: 2rem;
-    display: none;
-  }
-  @media (min-width: 768px) {
-    padding-top: 3rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  @media (min-width: 1094px) {
-    h3 {
+  &.menu-dropped {
+    @media (min-width: 1094px) {
       display: block;
+      position: absolute;
+      top: 8rem;
+      left: 0;
+      min-height: 55vh;
     }
   }
 `;

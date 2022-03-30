@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Developers from "../molecules/developers/Developers";
 import WhatWeDo from "../molecules/whatWeDo/WhatWeDo";
-import { StyledContentSwitch } from "./StyledContentSwitch";
+import { StyledMobileDisplay } from "./StyledContentSwitch";
 
 interface Props {
   id?: number;
@@ -10,7 +10,7 @@ interface Props {
 
 const ContentSwitch: FC<Props> = ({ id }) => {
   return (
-    <StyledContentSwitch className="content-switch">
+    <StyledMobileDisplay className="content-switch">
       {(() => {
         switch (id) {
           case 1:
@@ -21,7 +21,7 @@ const ContentSwitch: FC<Props> = ({ id }) => {
             return;
         }
       })()}
-    </StyledContentSwitch>
+    </StyledMobileDisplay>
   );
 };
 

@@ -1,22 +1,20 @@
 import React, { FC } from "react";
+import { useFullScreenMenuOpenStore } from "../../../../globalState/zustandStores/useMenuOpen";
+import { useSelectedNavlink } from "../../../../globalState/zustandStores/useSelectedNavlink";
 import Developers from "../molecules/developers/Developers";
 import WhatWeDo from "../molecules/whatWeDo/WhatWeDo";
 import { StyledFullDisplay } from "./StyledContentSwitch";
 
-interface Props {
-  id?: number;
-  active?: boolean;
-}
+const ContentSwitchFullscreen: FC = () => {
+  const isMenuDropped = useFullScreenMenuOpenStore((state: any) => state.fullScreenMenuOpen);
+  const selectedId = useSelectedNavlink((state: any) => state.selectedItemId);
 
-const ContentSwitchFullscreen: FC<Props> = ({ id }) => {
-  const conditionForFullScreenDisplay = true;
-  const idFromStateOfSelectedItem1 = 1;
   return (
-    <StyledFullDisplay className={conditionForFullScreenDisplay ? "menu-dropped" : ""}>
+    <StyledFullDisplay className={`display ${isMenuDropped ? "menu-dropped" : ""}`}>
       {(() => {
-        switch (2) {
-          // case 1:
-          //   return <WhatWeDo />;
+        switch (selectedId) {
+          case 1:
+            return <WhatWeDo />;
           case 2:
             return <Developers />;
           default:

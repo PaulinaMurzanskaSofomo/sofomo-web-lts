@@ -8,9 +8,9 @@ interface Props {
   active?: boolean;
 }
 
-const ContentSwitch: FC<Props> = ({ id }) => {
+const ContentSwitch: FC<Props> = ({ id, active }) => {
   return (
-    <StyledMobileDisplay className="content-switch">
+    <StyledMobileDisplay className={`content-switch ${active ? "active" : ""}`}>
       {(() => {
         switch (id) {
           case 1:

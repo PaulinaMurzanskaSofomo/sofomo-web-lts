@@ -5,16 +5,19 @@ import { StyledHeaderH4 } from "../../../../../components/atoms/StyledHeader";
 
 interface Props {
   item?: string;
+  chevron?: boolean;
 }
 
-const NavHeader: FC<Props> = ({ item }) => {
+const NavHeader: FC<Props> = ({ item, chevron }) => {
   return (
     <StyledHeaderWrapper className="link-name">
       <StyledHeaderH4 label={item} fontSize="1.8rem" lineHeight="2.6rem" />
-      <div className="chevrons">
-        <HiOutlineChevronDown className="down" />
-        <HiOutlineChevronUp className="up" />
-      </div>
+      {chevron && (
+        <div className="chevrons">
+          <HiOutlineChevronDown className="down" />
+          <HiOutlineChevronUp className="up" />
+        </div>
+      )}
     </StyledHeaderWrapper>
   );
 };

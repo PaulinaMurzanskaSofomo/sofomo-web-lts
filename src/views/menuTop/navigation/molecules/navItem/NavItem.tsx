@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { StyledItem } from "./StyledNavItem";
-import ContentSwitch from "../../templates/ContentSwitch";
+import ContentSwitch from "../../templates/ContentSwitchMobile";
 import { NavLink } from "react-router-dom";
 import NavHeader from "./NavHeader";
 

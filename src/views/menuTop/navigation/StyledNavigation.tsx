@@ -3,6 +3,8 @@ import { theme } from "../../../themes/MainTheme";
 
 export const StyledNavWrapper = styled.div`
   width: 100%;
+  min-width: 37.5rem;
+  margin: 0 auto;
   display: flex;
   height: 8rem;
   flex-direction: row;
@@ -15,6 +17,9 @@ export const StyledNavWrapper = styled.div`
     &.active {
       animation: lineFadeIn 0.3s ease-out 0.5s 1 forwards;
     }
+  }
+  @media (min-width: 1094px) {
+    width: 1094px;
   }
 
   @keyframes lineFadeIn {

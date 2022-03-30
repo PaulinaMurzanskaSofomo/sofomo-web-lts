@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import { StyledResponsiveContainer } from "../../../components/containers/StyledResponsiveContainer";
 import { useMenuOpenStore } from "../../../globalState/zustandStores/useMenuOpen";
 import { useMobileStore } from "../../../globalState/zustandStores/useMobileStore";
 import Bars from "./atoms/StyledBars";
@@ -12,15 +11,13 @@ const Navigation: FC = () => {
   const isMobile = useMobileStore((state: any) => state.isMobile);
 
   return (
-    <StyledResponsiveContainer>
-      <StyledNavWrapper className={`${isMobile ? "mobile" : ""} ${isMenuOpen ? "active" : ""} `}>
-        <Logo />
-        <StyledOnBarMenu>
-          <NavList />
-          <Bars />
-        </StyledOnBarMenu>
-      </StyledNavWrapper>
-    </StyledResponsiveContainer>
+    <StyledNavWrapper className={`${isMobile ? "mobile" : ""} ${isMenuOpen ? "active" : ""} `}>
+      <Logo />
+      <StyledOnBarMenu>
+        <NavList />
+        <Bars />
+      </StyledOnBarMenu>
+    </StyledNavWrapper>
   );
 };
 

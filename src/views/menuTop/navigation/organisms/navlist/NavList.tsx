@@ -1,5 +1,6 @@
 import React, { FC, useState, useEffect } from "react";
 import { mainMenu } from "../../../../../assets/content/navMenu/mainMenu";
+import StyledButton from "../../../../../components/atoms/StyledButton";
 import { useMenuOpenStore } from "../../../../../globalState/zustandStores/useMenuOpen";
 import { useMobileStore } from "../../../../../globalState/zustandStores/useMobileStore";
 import NavItem from "../../molecules/navItem/NavItem";
@@ -30,8 +31,15 @@ const NavList: FC = () => {
   return (
     <StyledNavList className={`${isMobile ? "mobile" : ""} ${isMenuOpen ? "active" : ""} `}>
       {mainMenu.map((item) => (
-        <NavItem item={item.title} key={item.id} id={item.id} path={item.path} />
+        <NavItem
+          item={item.title}
+          key={item.id}
+          id={item.id}
+          path={item.path}
+          chevron={item.chevron}
+        />
       ))}
+      <StyledButton label="Contact us" />
     </StyledNavList>
   );
 };

@@ -11,15 +11,15 @@ export const StyledNavList = styled.ul`
     justify-content: flex-start;
     margin: 0 auto;
     list-style-type: none;
-    padding: 2.5rem 1.5rem;
     position: absolute;
     top: 0;
     left: 0;
     transform: translate(120vw, -20px);
     animation: slideOut 0.1s ease-out;
     transition: all 0.1s ease-out;
+    padding: 3rem;
     &.active {
-      transform: translate(-133px, 6.6rem);
+      transform: translate(-133px, 8rem);
       animation: slideIn 0.1s ease-out;
     }
   }
@@ -29,12 +29,24 @@ export const StyledNavList = styled.ul`
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 0 0 34px;
     position: absolute;
     top: 50%;
     left: 0;
     transform: translate(0, -50%);
     transition: transform 0.1s linear;
+  }
+  button {
+    font-size: 1.8rem;
+    width: 100%;
+    height: 5.2rem;
+    margin: 4rem 0 40vh;
+
+    @media (min-width: 1094px) {
+      width: 10.5rem;
+      height: 3.6rem;
+      margin: 0 0 0 3.4rem;
+      font-size: 1.5rem;
+    }
   }
 
   @keyframes slideIn {

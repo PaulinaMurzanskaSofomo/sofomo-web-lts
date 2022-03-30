@@ -41,6 +41,9 @@ export const StyledItem = styled.li`
         .developers {
           display: flex;
         }
+        @media (min-width: 1094px) {
+          display: none;
+        }
       }
     }
   }
@@ -55,7 +58,7 @@ export const StyledItem = styled.li`
 `;
 
 export const StyledHeaderWrapper = styled.div`
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   width: 100%;
   display: flex;
   flex-wrap: nowrap;

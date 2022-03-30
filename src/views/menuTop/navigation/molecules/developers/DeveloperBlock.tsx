@@ -1,8 +1,6 @@
 import React, { FC, useState } from "react";
-import { StyledRoles, StyledDevDisplay, StyledDescription } from "./StyledDevelopers";
-import { StyledHeaderH4 } from "../../../../../components/atoms/StyledHeader";
-import { StyledParagraphP } from "../../../../../components/atoms/StyledParagraph";
-import DevRoleList from "./DevRoleList";
+import { StyledRoles } from "./StyledDevelopersBlock";
+import DevelopersDisplay from "./DevelopersDisplay";
 
 interface DevProps {
   title?: string;
@@ -24,13 +22,12 @@ const DeveloperBlock: FC<DevProps> = ({ title, icon, description, roles }) => {
   return (
     <StyledRoles onClick={handleClick}>
       <img src={icon} alt="icon" />
-      <StyledDevDisplay>
-        <StyledHeaderH4 label={title} fontSize="1.6rem" />
-        <StyledDescription className={devClicked ? "clicked-dev-open" : ""}>
-          <StyledParagraphP text={description} />
-        </StyledDescription>
-        <DevRoleList devClicked={devClicked} roles={roles} />
-      </StyledDevDisplay>
+      <DevelopersDisplay
+        title={title}
+        devClicked={devClicked}
+        description={description}
+        roles={roles}
+      />
     </StyledRoles>
   );
 };

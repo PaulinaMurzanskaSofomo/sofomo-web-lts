@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 const Navigation: FC = () => {
-  return <div>navigation here: logo, bars, navigation list</div>;
+  return <nav>navigation here: logo, bars, navigation list</nav>;
 };
 
 export default Navigation;

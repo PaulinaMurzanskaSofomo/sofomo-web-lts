@@ -1,0 +1,1 @@
+export { StyledAvatar } from "./StyledAvatar";

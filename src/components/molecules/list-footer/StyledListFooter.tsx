@@ -26,4 +26,9 @@ export const StyledListFooter = styled.div`
       }
     }
   }
+  &.list-developers {
+    li {
+      width: 8rem;
+    }
+  }
 `;

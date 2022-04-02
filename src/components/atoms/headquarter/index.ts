@@ -1,0 +1,1 @@
+export { StyledHeadquarter } from "./StyledHeadquarter";

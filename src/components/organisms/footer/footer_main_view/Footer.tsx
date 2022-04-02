@@ -1,47 +1,27 @@
 import React, { FC } from "react";
 import { StyledFooterWrapper } from "./StyledFooter";
+<<<<<<< HEAD
 import sideImage from "../../../assets/images/footer/-g-Group 73.svg";
+=======
+import sideImage from "../../../../assets/images/footer/-g-Group 73.svg";
+import { copyrights } from "../../../../assets/content/footer/SectionAbout";
+import { FooterSection1 } from "../footer-section1";
+import { FooterSection2 } from "../footer-section2";
+import { FooterSection3 } from "../footer-section3";
+>>>>>>> b3f84f4 (Create final footer view as organisms)
 
 const Footer: FC = () => {
   return (
     <StyledFooterWrapper>
       <div className="grid-footer">
-        <div className="grid grid-col-1-blue">
-          <div className="col-blue-content">
-            <div className="content header">
-              Companies big and small alike choose Sofomo as their development partner
-            </div>
-            <div className="content icons">
-              <div className="icon">icon</div>
-              <div className="icon" />
-              <div className="icon" />
-              <div className="icon" />
-              <div className="icon" />
-              <div className="icon" />
-            </div>
-          </div>
-        </div>
-        <div className="grid grid-col-2-owners">
-          <div className="col-owner-content">
-            <div className="owner">peter</div>
-            <div className="owner">robert</div>
-            <div className="owner">peter 2</div>
-          </div>
-        </div>
-        <div className="grid grid-col-3-about">
-          <div className="col-about-content">
-            <div className="about-text">about us</div>
-            <div className="about-lists-block">
-              <div className="list-about">list about</div>
-              <div className="list-developers">list developers</div>
-            </div>
-          </div>
-        </div>
+        <FooterSection1 classname="grid grid-col-1-blue" />
+        <FooterSection2 classname="grid grid-col-2-owners" />
+        <FooterSection3 classname="grid grid-col-3-about" />
       </div>
       <div className="side-image">
         <img src={sideImage} alt="" />
       </div>
-      <div className="copyrights">Copyrights here</div>
+      <div className="copyrights">{copyrights}</div>
     </StyledFooterWrapper>
   );
 };

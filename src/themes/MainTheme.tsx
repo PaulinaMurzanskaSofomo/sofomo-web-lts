@@ -16,5 +16,6 @@ export const theme = {
     hoverBgr: "rgba(103, 114, 229, 0.1)",
     backgroudBlue: "hsla(234, 80%, 68%, 1)",
     white: "#ffffff",
+    fontLightGrey: "rgba(68,74,77,.65)",
   },
 };

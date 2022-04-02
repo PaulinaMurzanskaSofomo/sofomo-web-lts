@@ -1,6 +1,6 @@
 import React from "react";
-import { FacebookIcon } from "../facebook-icon";
-import { LinkedInIcon } from "../linkedIn-icon";
+import { FacebookIcon } from "../../atoms/facebook-icon";
+import { LinkedInIcon } from "../../atoms/linkedIn-icon";
 import { StyledSocials } from "./StyledSocials";
 
 const Socials = () => {

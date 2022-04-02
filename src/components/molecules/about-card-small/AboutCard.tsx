@@ -4,7 +4,7 @@ import { about, aboutText } from "../../../assets/content/footer/SectionAbout";
 import { StyledHeader } from "../../atoms/headers";
 import { StyledParagraph } from "../../atoms/paragraph";
 import { theme } from "../../../themes/MainTheme";
-import { Socials } from "../../atoms/socials";
+import { Socials } from "../socials";
 
 const AboutCard: FC = () => {
   return (

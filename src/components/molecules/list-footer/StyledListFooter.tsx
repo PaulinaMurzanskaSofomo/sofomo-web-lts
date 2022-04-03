@@ -18,17 +18,22 @@ export const StyledListFooter = styled.div`
       li {
         font-size: 1.4rem;
         line-height: 2.4rem;
+        width: 11.5rem;
+        margin-bottom: 0.5rem;
         color: ${theme.colors.fontLightGrey};
         &:hover {
           color: ${theme.colors.backgroudBlue};
           font-weight: bolder;
+        }
+        @media (min-width: 1094px) {
+          margin-bottom: 0;
         }
       }
     }
   }
   &.list-developers {
     li {
-      width: 8rem;
+      max-width: 8rem;
     }
   }
 `;

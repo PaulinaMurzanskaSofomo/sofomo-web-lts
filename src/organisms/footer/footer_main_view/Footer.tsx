@@ -5,6 +5,8 @@ import { copyrights } from "../../../assets/content/footer/SectionAbout";
 import { FooterSection1 } from "../footer-section1";
 import { FooterSection2 } from "../footer-section2";
 import { FooterSection3 } from "../footer-section3";
+import { ImageWrapper } from "../../../components/atoms/image-wrapper";
+import { StyledCopyrights } from "../../../components/atoms/copyrights";
 
 const Footer: FC = () => {
   return (
@@ -14,10 +16,8 @@ const Footer: FC = () => {
         <FooterSection2 classname="grid grid-col-2-owners" />
         <FooterSection3 classname="grid grid-col-3-about" />
       </div>
-      <div className="side-image">
-        <img src={sideImage} alt="" />
-      </div>
-      <div className="copyrights">{copyrights}</div>
+      <ImageWrapper alt="side" classname="side-image" image={sideImage} />
+      <StyledCopyrights>{copyrights}</StyledCopyrights>
     </StyledFooterWrapper>
   );
 };

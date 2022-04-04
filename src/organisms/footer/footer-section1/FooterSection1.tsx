@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-import { StyledHeader } from "../../../atoms/headers";
-import { theme } from "../../../../themes/MainTheme";
-import { sectionBlueHeader } from "../../../../assets/content/footer/SectionAbout";
-import { PartnersLogos } from "../../../molecules/parters_logos";
+import { StyledHeader } from "../../../components/atoms/headers";
+import { theme } from "../../../themes/MainTheme";
+import { sectionBlueHeader } from "../../../assets/content/footer/SectionAbout";
+import { PartnersLogos } from "../../../components/molecules/parters_logos";
 import { StyledFooterSection1 } from "./StyledFooterSection1";
 
 interface Props {

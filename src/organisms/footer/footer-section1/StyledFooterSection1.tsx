@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "../../../../themes/MainTheme";
+import { theme } from "../../../themes/MainTheme";
 
 export const StyledFooterSection1 = styled.div`
   margin: 0 auto;

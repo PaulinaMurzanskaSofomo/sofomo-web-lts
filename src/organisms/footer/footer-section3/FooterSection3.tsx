@@ -1,11 +1,7 @@
 import React, { FC } from "react";
-import { AboutCard } from "../../../molecules/about-card-small";
-import { ListFooter } from "../../../molecules/list-footer";
-import {
-  aboutList,
-  developers1,
-  developers2,
-} from "../../../../assets/content/footer/SectionAbout";
+import { AboutCard } from "../../../components/molecules/about-card-small";
+import { ListFooter } from "../../../components/molecules/list-footer";
+import { aboutList, developers1, developers2 } from "../../../assets/content/footer/SectionAbout";
 import { StyledFooterSection3 } from "./StyledFooterSection3";
 
 interface Props {

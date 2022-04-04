@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import { offices } from "../../../../assets/content/footer/Offices";
-import { OwnerCard } from "../../../molecules/owner_card";
+import { offices } from "../../../assets/content/footer/Offices";
+import { OwnerCard } from "../../../components/molecules/owner_card";
 import { StyledFooterSection2 } from "./StyledFooterSection2";
 
 interface Props {

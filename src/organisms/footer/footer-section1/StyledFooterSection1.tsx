@@ -23,13 +23,5 @@ export const StyledFooterSection1 = styled.div`
       max-width: 1094px;
       padding: 7.5rem 3rem 8.5rem;
     }
-    .content {
-      &.header {
-        text-align: center;
-        letter-spacing: 0.4px;
-      }
-      &.icons {
-      }
-    }
   }
 `;

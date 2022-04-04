@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import { StyledFooterWrapper } from "./StyledFooter";
-import sideImage from "../../../../assets/images/footer/-g-Group 73.svg";
+import sideImage from "../../../assets/images/footer/-g-Group 73.svg";
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <StyledFooterWrapper>
       <div className="grid-footer">

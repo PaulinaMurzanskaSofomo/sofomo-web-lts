@@ -31,13 +31,5 @@ export const StyledFooterSection3 = styled.div`
         grid-column-end: 4;
       }
     }
-    .about-lists-block {
-      display: grid;
-      grid-gap: 6rem;
-      grid-template-columns: 1fr 1fr;
-      @media (min-width: 1094px) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-      }
-    }
   }
 `;

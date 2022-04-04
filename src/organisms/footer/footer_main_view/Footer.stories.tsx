@@ -6,7 +6,7 @@ import { FooterSection1 } from "../footer-section1";
 import { FooterSection2 } from "../footer-section2";
 import { FooterSection3 } from "../footer-section3";
 import sideImage from "../../../../assets/images/footer/-g-Group 73.svg";
-import { copyrights } from "../../../../assets/content/footer/SectionAbout";
+import { copyrights } from "../../../assets/content/footer/SectionAbout";
 
 const meta: Meta = {
   title: "orgnisms/Footer",

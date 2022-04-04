@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "../../../themes/MainTheme";
+import { theme } from "../../../../themes/MainTheme";
 
 export const StyledFooterWrapper = styled.footer`
   margin-top: 8rem;

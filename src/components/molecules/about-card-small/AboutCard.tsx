@@ -6,9 +6,12 @@ import { StyledParagraph } from "../../atoms/paragraph";
 import { theme } from "../../../themes/MainTheme";
 import { Socials } from "../socials";
 
-const AboutCard: FC = () => {
+interface Props {
+  classname?: string;
+}
+const AboutCard: FC<Props> = ({ classname }) => {
   return (
-    <StyledAboutCard>
+    <StyledAboutCard className={classname}>
       <StyledHeader transform="capitalize" fontWeight="700" className="header">
         {about}
       </StyledHeader>

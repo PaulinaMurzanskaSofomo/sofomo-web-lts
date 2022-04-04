@@ -13,5 +13,7 @@ export const StyledHeader = styled.h3<Props>`
   line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : "2.4rem")};
   color: ${({ color }) => (color ? color : theme.colors.textDarkNavy)};
   font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : "400")};
-  text-transform: ${({ transform }) => (transform ? transform : "none")}; ;
+  text-transform: ${({ transform }) => (transform ? transform : "none")};
+  text-align: center;
+  letter-spacing: 0.4px;
 `;

@@ -1,1 +1,0 @@
-export { StyledCopyrights } from "./StyledCopyright";

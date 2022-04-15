@@ -12,6 +12,7 @@ import { FooterLists } from "../../components/molecules/FooterLists";
 import { aboutList, developers1, developers2 } from "../../assets/content/footer/SectionAbout";
 import { StyledSpan, StyledSection, StyledGridCards, StyledGridLists } from "./StyledFooter";
 import sideImage from "../../assets/images/footer/CirclesImage.svg";
+import { partnersLogosList } from "../../assets/logos/partners/logosList";
 
 const Footer: FC = () => {
   return (
@@ -21,7 +22,7 @@ const Footer: FC = () => {
           <Typography as="h3" className={classes.h.normalH3}>
             Companies big and small alike choose Sofomo as their development partner
           </Typography>
-          <LogosShadowGrid />
+          <LogosShadowGrid logosList={partnersLogosList} />
         </StyledSection>
       </StyledSectionContainer>
       <StyledSectionContainer>

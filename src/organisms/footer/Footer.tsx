@@ -1,7 +1,5 @@
 import React, { FC } from "react";
-import { classes } from "../../utils/classes/classes";
 import { theme } from "../../themes/MainTheme";
-import { StyledFooter, StyledSideImage } from "./StyledFooter";
 import { StyledSectionContainer } from "../../components/atoms/SectionContainer";
 import { Typography } from "../../components/atoms/Typography";
 import { LogosShadowGrid } from "../../components/molecules/LogosShadowGrid";
@@ -13,13 +11,14 @@ import { aboutList, developers1, developers2 } from "../../assets/content/footer
 import { StyledSpan, StyledSection, StyledGridCards, StyledGridLists } from "./StyledFooter";
 import sideImage from "../../assets/images/footer/CirclesImage.svg";
 import { partnersLogosList } from "../../assets/logos/partners/logosList";
+import { StyledFooter, StyledSideImage } from "./StyledFooter";
 
 const Footer: FC = () => {
   return (
     <StyledFooter>
       <StyledSectionContainer background={theme.colors.backgroudBlue}>
         <StyledSection>
-          <Typography as="h3" className={classes.h.normalH3}>
+          <Typography as="h3" color={theme.colors.white} weight="700" fontBase={[2, 2.8]}>
             Companies big and small alike choose Sofomo as their development partner
           </Typography>
           <LogosShadowGrid logosList={partnersLogosList} />

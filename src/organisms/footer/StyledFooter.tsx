@@ -96,8 +96,8 @@ export const StyledSideImage = styled(ImageContainer)`
   width: 314px;
   height: 289px;
   position: absolute;
-  top: -188px;
-  left: -80px;
+  top: -190px;
+  left: -85px;
   z-index: 10;
   img {
     transform: scale(1.2);

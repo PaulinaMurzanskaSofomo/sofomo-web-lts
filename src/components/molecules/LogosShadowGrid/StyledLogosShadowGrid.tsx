@@ -6,10 +6,12 @@ export const StyledLogosShadowGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 3rem;
-  grid-auto-rows: minmax(3.5rem, auto);
+  grid-auto-rows: minmax(3.5rem, 3.9rem);
   .logo {
     grid-column: span 3;
     @media ${device.tablet} {
+      margin: 0 auto;
+      width: 15.6rem;
       grid-column: span 2;
     }
     @media ${device.laptop} {

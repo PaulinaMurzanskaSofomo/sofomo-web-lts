@@ -23,7 +23,7 @@ const AddressCard: FC<Props> = ({ country, headquarter, data, avatar, className 
   return (
     <StyledAddressCard className={className}>
       <StyledTitle>
-        <Typography as="h1" className={classes.h.cardH6}>
+        <Typography as="h6" color={theme.colors.textDarkGreyIsh} fontBase={[2.2, 3]} weight="700">
           {country}
         </Typography>
         {headquarter && <StyledLabel>Headquarters</StyledLabel>}
@@ -34,7 +34,7 @@ const AddressCard: FC<Props> = ({ country, headquarter, data, avatar, className 
         </ImageContainer>
         <StyledAddressBlock>
           {data.map((item, i) => (
-            <Typography key={i} className={classes.p.mediumPaleP}>
+            <Typography key={i} as="p" className={classes.regularPale}>
               {item}
             </Typography>
           ))}

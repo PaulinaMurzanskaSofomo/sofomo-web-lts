@@ -12,7 +12,14 @@ interface Props {
 const ListItemPlain: FC<Props> = ({ item, path }) => {
   return (
     <StyledListItemPlain href={path} target="_blank">
-      <Typography className={classes.p.mediumPaleHoverP}>{item}</Typography>
+      <Typography
+        as="p"
+        className={classes.regularPale}
+        hoverColor={theme.colors.backgroudBlue}
+        hoverWeight="bolder"
+      >
+        {item}
+      </Typography>
     </StyledListItemPlain>
   );
 };

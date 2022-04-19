@@ -17,7 +17,7 @@ interface Props {
 const ListCardPlain: FC<Props> = ({ title, list, list2, shouldBeSecondList }) => {
   return (
     <StyledListCardPlain>
-      <Typography as="h6" className={classes.h.listsDarkH6}>
+      <Typography as="h6" className={classes.medium} weight="700">
         {title}
       </Typography>
       <StyledListsWrapper>

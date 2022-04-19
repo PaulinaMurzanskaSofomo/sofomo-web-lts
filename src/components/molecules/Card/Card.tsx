@@ -17,10 +17,18 @@ interface Props {
 const Card: FC<Props> = ({ className, text, title, withSocials, width, height }) => {
   return (
     <StyledCard className={className} width={width} height={height}>
-      <Typography as="h6" className={classes.h.listsDarkH6} margin="0 0 2rem 0">
+      <Typography
+        as="h3"
+        color={theme.colors.textDarkGreyIsh}
+        fontBase={[1.6, 2.7]}
+        weight="700"
+        margin="0 0 2rem 0"
+      >
         {title}
       </Typography>
-      <Typography className={classes.p.mediumPaleP}>{text}</Typography>
+      <Typography as="p" className={classes.regularPale}>
+        {text}
+      </Typography>
       {withSocials && <Socials socialsList={socialIconsList} />}
     </StyledCard>
   );

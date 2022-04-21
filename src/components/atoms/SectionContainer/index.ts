@@ -1,1 +1,1 @@
-export { StyledSectionContainer } from "./StyledSectionContainer";
+export { SectionContainer } from "./SectionContainer";

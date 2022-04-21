@@ -6,34 +6,34 @@ export const offices = [
   {
     country: `Poland`,
     headquarter: true,
-    data: [
-      `Peter Schumacher, CEO`,
-      `Dmowskiego 3/69, 50-203`,
-      `Wrocław, Poland`,
-      `Phone: +48 697 997 134`,
-    ],
+    data: {
+      name: `Peter Schumacher`,
+      title: `Founder & CEO`,
+      address: `Dmowskiego 3/69, 50-203`,
+      location: `Wrocław, Poland`,
+    },
     avatar: `${peterS}`,
   },
   {
     country: `San Francisco`,
     headquarter: false,
-    data: [
-      `Robert Hogeboom, Director`,
-      `535 Mission St 14th Floor`,
-      `San Francisco, CA 94105`,
-      `Phone: 415.244.6460`,
-    ],
+    data: {
+      name: "Robert Hogeboom",
+      title: `Managing Director`,
+      address: `535 Mission St 14th Floor`,
+      location: `San Francisco, CA 94105`,
+    },
     avatar: `${robert}`,
   },
   {
     country: `London`,
     headquarter: false,
-    data: [
-      `Peter Nixey, London Rep`,
-      `145 City Road`,
-      `London, United Kingdom`,
-      `Phone: 0208 144 4033`,
-    ],
+    data: {
+      name: "Peter Nixey",
+      title: `London Rep`,
+      address: `145 City Road`,
+      location: `London, United Kingdom`,
+    },
     avatar: `${peterN}`,
   },
 ];

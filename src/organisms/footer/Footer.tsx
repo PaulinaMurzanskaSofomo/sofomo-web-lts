@@ -1,65 +1,100 @@
-import React, { FC } from "react";
+import React, { FC, useContext } from "react";
 import { theme } from "../../themes/MainTheme";
-import { StyledSectionContainer } from "../../components/atoms/SectionContainer";
-import { Typography } from "../../components/atoms/Typography";
-import { LogosShadowGrid } from "../../components/molecules/LogosShadowGrid";
-import { AddressCard } from "../../components/molecules/AddressCard";
 import { offices } from "../../assets/content/footer/Offices";
-import { Card } from "../../components/molecules/Card";
-import { FooterLists } from "../../components/molecules/FooterLists";
-import { aboutList, developers1, developers2 } from "../../assets/content/footer/SectionAbout";
-import { StyledSpan, StyledSection, StyledGridCards, StyledGridLists } from "./StyledFooter";
-import sideImage from "../../assets/images/footer/CirclesImage.svg";
-import { partnersLogosList } from "../../assets/logos/partners/logosList";
-import { StyledFooter, StyledSideImage } from "./StyledFooter";
+import { socialIconsList } from "../../assets/icons/socialIconsList";
+import { footerLists } from "../../assets/content/footer/SectionAbout";
+import { Image, Typography, SectionContainer } from "../../components/atoms";
+import { ListItem, List, Card } from "../../components/molecules";
+import {
+  StyledSpan,
+  StyledCardBody,
+  StyledListsWrapper,
+  StyledFooter,
+  StyledDividerLine,
+} from "./StyledFooter";
+import { Link, useLocation } from "react-router-dom";
 
-const Footer: FC = () => {
+export const Footer: FC = () => {
+  const location = useLocation();
+  const defaultPath = location.pathname;
+
   return (
-    <StyledFooter>
-      <StyledSectionContainer background={theme.colors.backgroudBlue}>
-        <StyledSection>
-          <Typography as="h3" color={theme.colors.white} weight="700" fontBase={[2, 2.8]}>
-            Companies big and small alike choose Sofomo as their development partner
-          </Typography>
-          <LogosShadowGrid logosList={partnersLogosList} />
-        </StyledSection>
-      </StyledSectionContainer>
-      <StyledSectionContainer>
-        <StyledGridCards>
-          {offices.map((office, i) => (
-            <AddressCard
-              className="grid-area"
-              key={i}
-              country={office.country}
-              data={office.data}
-              avatar={office.avatar}
-              headquarter={office.headquarter}
-            />
-          ))}
-        </StyledGridCards>
-        <StyledGridLists>
+    <SectionContainer background="#f5f8fb" as="footer">
+      <StyledFooter>
+        {offices.map((office, i) => (
           <Card
-            className="grid-area-a"
-            withSocials
-            title="About Us"
-            text="We build & support your own talented, trusted, full-time development team hosted out of Sofomo’s headquarters in Poland."
-          />
-          <FooterLists
-            className="grid-area-b"
-            listOne={aboutList}
-            listTwo={developers1}
-            listThree={developers2}
-            title1="About Us"
-            title2="Our Developers"
-          />
-        </StyledGridLists>
+            className="grid-area"
+            key={i}
+            title={office.country}
+            label={office.headquarter ? "Headquarters" : ""}
+            variant={"large-const"}
+          >
+            {office.data && (
+              <StyledCardBody>
+                <Image width="5rem" height="5rem" src={office.avatar} alt="avatar" />
+                <List variant={"plain"} margin="0 0 0 1.5rem">
+                  {Object.values(office.data).map((item: any, i: number) => (
+                    <Typography variant={"font-14"} key={i}>
+                      {item}
+                    </Typography>
+                  ))}
+                </List>
+              </StyledCardBody>
+            )}
+          </Card>
+        ))}
+        <Card
+          className="grid-area"
+          socialIconsList={socialIconsList}
+          title="About Us"
+          variant={"small-const"}
+        >
+          <Typography as="p" variant={"font-14"} width="30.5rem">
+            Sofomo provides high performing development teams to innovative companies. Our
+            developers join your team and become your superpower!.
+          </Typography>
+        </Card>
+        {footerLists.map((list: any, i: number) => (
+          <Card title={list[0][0]} variant={"small-const"} className="grid-area" key={i}>
+            <StyledListsWrapper>
+              <List variant={"plain"} margin="0">
+                {list[1].map((item: any, i: number) => (
+                  <Link to={item.path === "" ? defaultPath : item.path} key={i}>
+                    <ListItem
+                      as="div"
+                      hover
+                      hoverWeight="400"
+                      variant={"plain"}
+                      listItem={item.title}
+                      itemColor={theme.colors.gray400}
+                      itemWidth="max-content"
+                    />
+                  </Link>
+                ))}
+              </List>
+              {list.length > 2 && (
+                <List variant={"plain"} margin="0 0 0 4rem">
+                  {list[2].map((item: any, i: number) => (
+                    <Link key={i} to={item.path}>
+                      <ListItem
+                        margin="0 0 10px 0"
+                        hover
+                        hoverWeight="400"
+                        variant={"plain"}
+                        listItem={item.title}
+                        itemColor={theme.colors.gray400}
+                        itemWidth="max-content"
+                      />
+                    </Link>
+                  ))}
+                </List>
+              )}
+            </StyledListsWrapper>
+          </Card>
+        ))}
+        <StyledDividerLine />
         <StyledSpan>© All rights reserved Sofomo 2020</StyledSpan>
-      </StyledSectionContainer>
-      <StyledSideImage className="side-image">
-        <img src={sideImage} alt="side" />
-      </StyledSideImage>
-    </StyledFooter>
+      </StyledFooter>
+    </SectionContainer>
   );
 };
-
-export default Footer;

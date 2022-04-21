@@ -1,107 +1,114 @@
 export const about = `About us`;
 export const aboutText = `We build & support your own talented, trusted, full-time development team hosted out of Sofomo’s headquarters in Poland.`;
 export const sectionBlueHeader = `Companies big and small alike choose Sofomo as their development partner`;
+import { OUTSOURCE } from "../../../routes";
 export const aboutList = [
-  {
-    title: `What We Do`,
-    path: "/",
-  },
-  {
-    title: `Our Advantage`,
-    path: "/",
-  },
-  {
-    title: `Clients`,
-    path: "/",
-  },
-  {
-    title: `About Us`,
-    path: "/",
-  },
-  {
-    title: `Why Poland`,
-    path: "/",
-  },
-  {
-    title: `FAQ’s`,
-    path: "/",
-  },
-  {
-    title: `Careers`,
-    path: "/",
-  },
-  {
-    title: `Get Started`,
-    path: "/",
-  },
-  {
-    title: `Contact Us`,
-    path: "/",
-  },
+  ["Sofomo"],
+  [
+    {
+      title: `What We Do`,
+      path: OUTSOURCE,
+    },
+    {
+      title: `Our Advantage`,
+      path: OUTSOURCE,
+    },
+    {
+      title: `Clients`,
+      path: OUTSOURCE,
+    },
+    {
+      title: `About Us`,
+      path: OUTSOURCE,
+    },
+    {
+      title: `Why Poland`,
+      path: OUTSOURCE,
+    },
+    {
+      title: `FAQ’s`,
+      path: OUTSOURCE,
+    },
+    {
+      title: `Careers`,
+      path: OUTSOURCE,
+    },
+    {
+      title: `Get Started`,
+      path: OUTSOURCE,
+    },
+    {
+      title: `Contact Us`,
+      path: "",
+    },
+  ],
 ];
 export const developers1 = [
   {
     title: `React`,
-    path: "/",
+    path: OUTSOURCE,
   },
   {
     title: `Angular`,
-    path: "/",
+    path: OUTSOURCE,
   },
   {
     title: `PHP`,
-    path: "/",
+    path: OUTSOURCE,
   },
   {
     title: `Ruby`,
-    path: "/",
+    path: OUTSOURCE,
   },
   {
     title: `.Net`,
-    path: "/",
+    path: OUTSOURCE,
   },
   {
     title: `Node.js`,
-    path: "/",
+    path: OUTSOURCE,
   },
   {
     title: `Golang`,
-    path: "/",
+    path: OUTSOURCE,
   },
   {
     title: `Magento`,
-    path: "/",
+    path: OUTSOURCE,
   },
 ];
 
 export const developers2 = [
   {
     title: `Java`,
-    path: "/",
+    path: OUTSOURCE,
   },
   {
     title: `Python`,
-    path: "/",
+    path: OUTSOURCE,
   },
   {
     title: `iOS`,
-    path: "/",
+    path: OUTSOURCE,
   },
   {
     title: `Android`,
-    path: "/",
+    path: OUTSOURCE,
   },
   {
     title: `Salesforce`,
-    path: "/",
+    path: OUTSOURCE,
   },
   {
     title: `AWS`,
-    path: "/",
+    path: OUTSOURCE,
   },
   {
     title: `Azure`,
-    path: "/",
+    path: OUTSOURCE,
   },
 ];
+
+export const footerLists = [aboutList, [["Our Developers"], developers1, developers2]];
+
 export const copyrights = `© All rights reserved Sofomo 2020`;

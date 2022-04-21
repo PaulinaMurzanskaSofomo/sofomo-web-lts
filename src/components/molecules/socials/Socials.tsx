@@ -1,34 +1,28 @@
 import React, { FC } from "react";
-import { SocialIcon } from "../../atoms/SocialIcon";
+import { Icon } from "../../atoms";
 import { StyledSocials } from "./StyledSocials";
 
 interface Props {
   className?: string;
   fontSize?: string;
-  width?: string;
-  height?: string;
+  iconWidth?: string;
   socialsList: any;
 }
 
-const Socials: FC<Props> = ({ className, fontSize, width, height, socialsList }) => {
+export const Socials: FC<Props> = ({ className, fontSize, socialsList, iconWidth }) => {
   return (
     <StyledSocials className={className}>
       {socialsList.map((item: any) => (
-        <SocialIcon
+        <Icon
           key={item.path}
-          width={width}
-          height={height}
           fontSize={fontSize}
-          fill={item.fill}
-          bgr={item.bgr}
-          fillHover={item.fillHover}
           path={item.path}
+          variant={item.variant}
+          width={iconWidth}
         >
           {item.icon}
-        </SocialIcon>
+        </Icon>
       ))}
     </StyledSocials>
   );
 };
-
-export default Socials;

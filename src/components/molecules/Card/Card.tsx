@@ -1,37 +1,49 @@
 import React, { FC } from "react";
-import { theme } from "../../../themes/MainTheme";
+import { Label } from "../../atoms";
 import { Socials } from "../Socials";
-import { socialIconsList } from "../../../assets/icons/socialIconsList";
-import { StyledCard } from "./StyledCard";
-import Typography from "../../atoms/Typography/Typography";
-import { classes } from "../../../utils/classes/classes";
+import { StyledCard, StyledCardBody, StyledHeading } from "./StyledCard";
 
 interface Props {
+  variant?: "medium" | "small-const" | "large-const" | "large";
+  children?: any;
   className?: string;
-  title: string;
-  text: string;
-  withSocials?: boolean;
+  headingColor?: string;
+  socialIconsList?: any;
+  title?: string;
   width?: string;
   height?: string;
+  label?: string;
+  hover?: boolean;
+  id?: string;
 }
-const Card: FC<Props> = ({ className, text, title, withSocials, width, height }) => {
+export const Card: FC<Props> = ({
+  headingColor,
+  socialIconsList,
+  className,
+  title,
+  width,
+  height,
+  children,
+  label,
+  variant,
+  hover,
+  id,
+}) => {
   return (
-    <StyledCard className={className} width={width} height={height}>
-      <Typography
-        as="h3"
-        color={theme.colors.textDarkGreyIsh}
-        fontBase={[1.6, 2.7]}
-        weight="700"
-        margin="0 0 2rem 0"
-      >
+    <StyledCard
+      className={`${variant} ${hover ? "hovered" : ""} ${className}`}
+      width={width}
+      height={height}
+      id={id}
+    >
+      <StyledHeading className={variant} headingColor={headingColor}>
         {title}
-      </Typography>
-      <Typography as="p" className={classes.regularPale}>
-        {text}
-      </Typography>
-      {withSocials && <Socials socialsList={socialIconsList} />}
+        {label && <Label label={label} />}
+      </StyledHeading>
+      <StyledCardBody>
+        {children}
+        {socialIconsList && <Socials socialsList={socialIconsList} />}
+      </StyledCardBody>
     </StyledCard>
   );
 };
-
-export default Card;

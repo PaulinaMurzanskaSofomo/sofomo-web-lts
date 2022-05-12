@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Image, Logo } from "../../atoms";
+import { Image } from "../../atoms";
 import { StyledGrid } from "./StyledGrid";
 
 interface Props {

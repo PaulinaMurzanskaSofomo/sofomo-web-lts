@@ -20,11 +20,11 @@ export const StyledCard = styled.div<Props>`
       }
     }
   }
-  &.medium {
+  &.medium-responsive {
     padding: 1.5rem;
     border-radius: 2px;
   }
-  &.large {
+  &.large-responsive {
     margin-bottom: 3.5rem;
     @media ${device.tablet} {
       margin-left: -1.5rem;
@@ -44,13 +44,13 @@ export const StyledHeading = styled.h3<Props>`
     font-weight: 700;
     color: ${({ headingColor }) => headingColor || theme.colors.dark};
   }
-  &.large-const {
+  &.large-nonresponsive {
     font-size: 2.2rem;
     line-height: 3rem;
     font-weight: 700;
     color: ${({ headingColor }) => headingColor || theme.colors.dark};
   }
-  &.large {
+  &.large-responsive {
     font-size: 2rem;
     line-height: 2.8rem;
     font-weight: 700;
@@ -66,7 +66,7 @@ export const StyledHeading = styled.h3<Props>`
       line-height: 4rem;
     }
   }
-  &.medium {
+  &.medium-responsive {
     font-size: 1.6rem;
     line-height: 2.4rem;
     font-weight: 400;

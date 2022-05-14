@@ -4,12 +4,16 @@ import { Socials } from "../Socials";
 import { StyledCard, StyledCardBody, StyledHeading } from "./StyledCard";
 
 interface Props {
-  variant?: "medium" | "small-const" | "large-const" | "large";
-  children?: any;
+  variant?:
+    | "medium-responsive"
+    | "small-nonresponsive"
+    | "large-nonresponsive"
+    | "large-responsive";
+  children: any;
   className?: string;
   headingColor?: string;
   socialIconsList?: any;
-  title?: string;
+  title: string;
   width?: string;
   height?: string;
   label?: string;

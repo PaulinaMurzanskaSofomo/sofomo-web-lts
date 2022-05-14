@@ -16,7 +16,7 @@ interface Props {
 export const Socials: FC<Props> = ({ className, fontSize, socialsList, iconWidth }) => {
   return (
     <StyledSocials className={className}>
-      {socialsList.map((item: any) => (
+      {socialsList.map((item) => (
         <Icon
           key={item.path}
           fontSize={fontSize}

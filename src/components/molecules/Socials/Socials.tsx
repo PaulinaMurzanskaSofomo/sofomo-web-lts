@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 import { Icon } from "../../atoms";
 import { StyledSocials } from "./StyledSocials";
 
@@ -6,7 +6,11 @@ interface Props {
   className?: string;
   fontSize?: string;
   iconWidth?: string;
-  socialsList: any;
+  socialsList: {
+    icon: string | ReactNode;
+    variant?: string;
+    path?: string;
+  }[];
 }
 
 export const Socials: FC<Props> = ({ className, fontSize, socialsList, iconWidth }) => {

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { device } from "../../../utils";
 import { StyledResponsiveContainer } from "../../atoms";
 
-export const StyledBaner = styled.div`
+export const StyledBanner = styled.div`
   position: relative;
   &.outsource {
     @media ${device.tablet} {

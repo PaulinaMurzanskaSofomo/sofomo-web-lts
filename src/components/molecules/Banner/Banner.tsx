@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from "react";
 import { TypographyTypes } from "../../../types/typographyTypes";
 import { Typography, SectionContainer } from "../../atoms";
-import { StyledBaner, StyledSection, StyledBanerImage, StyledChildren } from "./StyledBaner";
+import { StyledBanner, StyledSection, StyledBannerImage, StyledChildren } from "./StyledBanner";
 
 interface Props {
   image?: string;
@@ -17,7 +17,7 @@ interface Props {
   animated?: boolean;
 }
 
-export const Baner: FC<Props> = ({
+export const Banner: FC<Props> = ({
   image,
   title,
   backgroundColor,
@@ -32,7 +32,7 @@ export const Baner: FC<Props> = ({
 }) => {
   return (
     <SectionContainer background={backgroundColor}>
-      <StyledBaner className={className}>
+      <StyledBanner className={className}>
         <StyledSection className={`${imageOuter ? "image-outer" : "image-inner"}`}>
           <Typography variant={titleVariant} as="h3" color={titleColor} bold>
             {title}
@@ -40,17 +40,17 @@ export const Baner: FC<Props> = ({
           {subtitle && <Typography variant={"font-13 to-15-to-17"}>{subtitle}</Typography>}
           <StyledChildren className="grid-area">{children}</StyledChildren>
           {imageInner && (
-            <StyledBanerImage className="grid-area inner">
-              <img src={image} alt="baner" />
-            </StyledBanerImage>
+            <StyledBannerImage className="grid-area inner">
+              <img src={image} alt="banner" />
+            </StyledBannerImage>
           )}
         </StyledSection>
         {imageOuter && (
-          <StyledBanerImage className="grid-area outer">
-            <img src={image} alt="baner" />
-          </StyledBanerImage>
+          <StyledBannerImage className="grid-area outer">
+            <img src={image} alt="banner" />
+          </StyledBannerImage>
         )}
-      </StyledBaner>
+      </StyledBanner>
     </SectionContainer>
   );
 };

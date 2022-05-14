@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "../../../themes/MainTheme";
 import { device } from "../../../utils";
 
-export const StyledLabel = styled.div`
+export const StyledDocket = styled.div`
   width: 13rem;
   font-size: 1.2rem;
   letter-spacing: 0.3px;
@@ -12,7 +12,7 @@ export const StyledLabel = styled.div`
   border-radius: 1.3rem;
   line-height: 2rem;
   font-weight: 700;
-  color: ${theme.colors.purpleLigh};
+  color: ${theme.colors.purpleLight};
   background-color: ${theme.colors.lightPurpleTransparent};
   &.wider {
     width: 20rem;

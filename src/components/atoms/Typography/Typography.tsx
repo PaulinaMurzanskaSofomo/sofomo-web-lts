@@ -37,7 +37,7 @@ export const Typography: FC<Props> = ({
       hoverWeight={hoverWeight}
       transform={transform}
       highlightColor={highlightColor}
-      bold={bold ? "700" : "400"}
+      bold={bold}
     >
       {children}
     </StyledTypography>

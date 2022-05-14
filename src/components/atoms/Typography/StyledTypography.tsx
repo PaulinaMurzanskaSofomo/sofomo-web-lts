@@ -11,14 +11,14 @@ export interface StyledProps {
   hoverWeight?: string;
   transform?: string;
   highlightColor?: string;
-  bold?: any;
+  bold?: boolean;
 }
 
 export const StyledTypography = styled.p<StyledProps>`
   color: ${(props) => props.color};
   margin: ${({ margin }) => (margin ? margin : "0")};
   text-transform: ${({ transform }) => (transform ? transform : "")};
-  font-weight: ${({ bold }) => bold || 400};
+  font-weight: ${({ bold }) => (bold ? "700" : "400")};
   width: ${({ width }) => (width ? width : "auto")};
   &.font-11-to-12 {
     font-size: 1.1rem;

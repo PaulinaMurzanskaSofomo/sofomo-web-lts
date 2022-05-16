@@ -1,9 +1,10 @@
+import { ElementType } from "react";
 import styled from "styled-components";
 import { device } from "../../../utils/devices/devices";
 
 interface Props {
   background?: string;
-  as?: any;
+  as?: ElementType;
 }
 
 export const StyledSectionContainer = styled.div<Props>`

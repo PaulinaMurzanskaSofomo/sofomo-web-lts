@@ -1,9 +1,10 @@
+import { ElementType } from "react";
 import styled from "styled-components";
 import { theme } from "../../../themes/MainTheme";
 import { device } from "../../../utils/devices/devices";
 
 export interface StyledProps {
-  as?: any;
+  as?: ElementType;
   color?: string;
   width?: string;
   margin?: string;

@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import React, { ElementType, FC } from "react";
 import { StyledSectionContainer } from "./StyledSectionContainer";
 
 interface Props {
   background?: string;
   children?: any;
-  as?: any;
+  as?: ElementType;
 }
 
 export const SectionContainer: FC<Props> = ({ children, background, as }) => {

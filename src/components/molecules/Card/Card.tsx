@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Label } from "../../atoms";
+import { Docket } from "../../atoms";
 import { Socials } from "../Socials";
 import { StyledCard, StyledCardBody, StyledHeading } from "./StyledCard";
 
@@ -42,7 +42,7 @@ export const Card: FC<Props> = ({
     >
       <StyledHeading className={variant} headingColor={headingColor}>
         {title}
-        {label && <Label label={label} />}
+        {label && <Docket label={label} />}
       </StyledHeading>
       <StyledCardBody>
         {children}

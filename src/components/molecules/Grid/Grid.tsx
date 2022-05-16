@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Logo } from "../../atoms";
+import { Image } from "../../atoms";
 import { StyledGrid } from "./StyledGrid";
 
 interface Props {
@@ -17,7 +17,13 @@ export const Grid: FC<Props> = ({ className, itemsList, variant, additionalVaria
   return (
     <StyledGrid className={`${className} grid-wrapper ${variant} ${additionalVariant}`}>
       {itemsList.map((item, i) => (
-        <Logo key={item.id + i} logo={item.logo} label={item.label} className="grid-item" />
+        <Image
+          key={item.id + i}
+          src={item.logo}
+          alt="logo"
+          label={item.label}
+          className="grid-item"
+        />
       ))}
     </StyledGrid>
   );

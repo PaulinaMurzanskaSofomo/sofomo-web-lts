@@ -78,7 +78,7 @@ export const StyledSection = styled(StyledResponsiveContainer)`
     padding: 6rem 3rem;
   }
 `;
-export const StyledBanerImage = styled.div`
+export const StyledBannerImage = styled.div`
   &.outer {
     width: 23rem;
     height: 23rem;

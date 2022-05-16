@@ -1,4 +1,4 @@
-export { Baner } from "./Banner";
+export { Banner } from "./Banner";
 export { Card } from "./Card";
 export { Grid } from "./Grid";
 export { List } from "./List";

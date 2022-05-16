@@ -7,7 +7,7 @@ interface Props {
   as?: ElementType;
 }
 
-export const SectionContainer: FC<Props> = ({ children, background, as }) => {
+export const SectionContainer: FC<Props> = ({ children, background = "none", as }) => {
   return (
     <StyledSectionContainer background={background} as={as}>
       {children}

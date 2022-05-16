@@ -9,7 +9,13 @@ interface Props {
   children?: any;
 }
 
-export const Icon: FC<Props> = ({ fontSize, path, children, variant, width }) => {
+export const Icon: FC<Props> = ({
+  fontSize = "2rem",
+  path,
+  children,
+  variant,
+  width = "3.5rem",
+}) => {
   return (
     <StyledIcon
       className={variant}

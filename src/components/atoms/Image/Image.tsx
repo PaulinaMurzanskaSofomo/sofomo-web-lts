@@ -14,11 +14,11 @@ interface Props {
 }
 
 export const Image: FC<Props> = ({
-  width,
-  height,
+  width = "100%",
+  height = "100%",
   src,
   alt,
-  margin,
+  margin = "0",
   className,
   onClick,
   label,

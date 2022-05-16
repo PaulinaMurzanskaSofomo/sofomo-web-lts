@@ -7,9 +7,9 @@ interface Props {
 }
 
 export const StyledIcon = styled.a<Props>`
-  width: ${({ width }) => width || "3.5rem"};
-  height: ${({ width }) => width || "3.5rem"};
-  font-size: ${({ fontSize }) => fontSize || "2rem"};
+  width: ${({ width }) => width};
+  height: ${({ width }) => width};
+  font-size: ${({ fontSize }) => fontSize};
   border-radius: 50%;
   display: flex;
   align-items: center;

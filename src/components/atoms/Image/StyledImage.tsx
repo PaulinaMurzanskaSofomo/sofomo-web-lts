@@ -8,9 +8,9 @@ interface Props {
 }
 
 export const StyledImage = styled.div<Props>`
-  width: ${({ width }) => width || "100%"};
-  height: ${({ height }) => height || "100%"};
-  margin: ${({ margin }) => margin || "0"};
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
+  margin: ${({ margin }) => margin};
   text-align: center;
   img {
     width: 100%;

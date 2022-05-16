@@ -16,11 +16,11 @@ export interface StyledProps {
 }
 
 export const StyledTypography = styled.p<StyledProps>`
-  color: ${(props) => props.color};
-  margin: ${({ margin }) => (margin ? margin : "0")};
-  text-transform: ${({ transform }) => (transform ? transform : "")};
+  color: ${({ color }) => color};
+  margin: ${({ margin }) => margin};
+  text-transform: ${({ transform }) => transform};
   font-weight: ${({ bold }) => (bold ? "700" : "400")};
-  width: ${({ width }) => (width ? width : "auto")};
+  width: ${({ width }) => width};
   &.font-11-to-12 {
     font-size: 1.1rem;
     line-height: 1.8rem;

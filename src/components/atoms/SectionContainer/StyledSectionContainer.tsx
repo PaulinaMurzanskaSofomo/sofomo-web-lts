@@ -12,7 +12,7 @@ export const StyledSectionContainer = styled.div<Props>`
   height: auto;
   margin: 0 auto;
   min-width: 37.5rem;
-  background-color: ${({ background }) => (background ? background : "none")};
+  background-color: ${({ background }) => background};
   @media ${device.tablet} {
     width: 100vw;
   }

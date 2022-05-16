@@ -1,38 +1,38 @@
-import tenPlus from "./icons/10plus.svg";
-import arrowRightDotted from "./icons/ArrowRight.svg";
-import arrowRightPlain from "./icons/ArrowRightPlain.svg";
-import awsCloud from "./icons/AwsCloud.svg";
-import backend from "./icons/Backend.svg";
-import checkPng from "./icons/CheckIcon.png";
-import checkSvg from "./icons/CheckMark.svg";
-import checkWhite from "./icons/CheckmarkWhite.svg";
-import chevronDown from "./icons/ChevronDown.svg";
-import chevronUP from "./icons/ChevronUp.svg";
-import clock from "./icons/ClockIcon.png";
-import cross from "./icons/Cross.svg";
-import frontend from "./icons/Frontend.svg";
-import magento from "./icons/Magento.svg";
-import man from "./icons/Man.svg";
-import menu from "./icons/Menu.svg";
-import minus from "./icons/Minus.svg";
-import mobile from "./icons/Mobile.svg";
-import greenBadge from "./icons/OutsourceMark.svg";
-import plus from "./icons/Plus.svg";
-import quotationMark from "./icons/QuotationMark.svg";
-import quatationMarkBlack from "./icons/QuotationMarkBlack.svg";
-import salesforce from "./icons/Salesforce.svg";
-import shield from "./icons/Shield.svg";
+import tenPlus from "./10plus.svg";
+import arrowRightDotted from "./ArrowRight.svg";
+import arrowRightPlain from "./ArrowRightPlain.svg";
+import awsCloud from "./AwsCloud.svg";
+import backend from "./Backend.svg";
+import checkPng from "./CheckIcon.png";
+import checkSvg from "./CheckMark.svg";
+import checkWhite from "./CheckmarkWhite.svg";
+import chevronDown from "./chevronDown.svg";
+import chevronUp from "./chevronUp.svg";
+import clock from "./ClockIcon.png";
+import cross from "./Cross.svg";
+import frontend from "./Frontend.svg";
+import magento from "./Magento.svg";
+import man from "./Man.svg";
+import menu from "./Menu.svg";
+import minus from "./Minus.svg";
+import mobile from "./Mobile.svg";
+import greenBadge from "./OutsourceMark.svg";
+import plus from "./Plus.svg";
+import quotationMark from "./QuotationMark.svg";
+import quotationMarkBlack from "./QuotationMarkBlack.svg";
+import salesforce from "./Salesforce.svg";
+import shield from "./Shield.svg";
 export {
   tenPlus,
-  awsCloud,
   arrowRightDotted,
   arrowRightPlain,
+  awsCloud,
   backend,
   checkPng,
   checkSvg,
   checkWhite,
   chevronDown,
-  chevronUP,
+  chevronUp,
   clock,
   cross,
   frontend,
@@ -43,8 +43,8 @@ export {
   mobile,
   greenBadge,
   plus,
-  quatationMarkBlack,
   quotationMark,
+  quotationMarkBlack,
   salesforce,
   shield,
 };

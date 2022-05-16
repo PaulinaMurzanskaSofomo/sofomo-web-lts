@@ -1,16 +1,18 @@
 import React, { FC } from "react";
+import { GridTypes } from "../../../types/gridTypes";
 import { Image } from "../../atoms";
 import { StyledGrid } from "./StyledGrid";
 
+type AdditionalGridVariant = "loop";
+
 interface Props {
   itemsList: {
-    logo?: any;
+    logo: any;
     label?: string;
-    id: number;
   }[];
-  variant?: "grid-4-items" | "grid-5-items" | "grid-6-items";
+  variant?: GridTypes;
   className?: string;
-  additionalVariant?: "loop";
+  additionalVariant?: AdditionalGridVariant;
 }
 
 export const Grid: FC<Props> = ({ className, itemsList, variant, additionalVariant }) => {
@@ -18,7 +20,7 @@ export const Grid: FC<Props> = ({ className, itemsList, variant, additionalVaria
     <StyledGrid className={`${className} grid-wrapper ${variant} ${additionalVariant}`}>
       {itemsList.map((item, i) => (
         <Image
-          key={item.id + i}
+          key={item.logo + i}
           src={item.logo}
           alt="logo"
           label={item.label}

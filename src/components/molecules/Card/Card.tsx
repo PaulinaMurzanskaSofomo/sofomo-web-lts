@@ -1,14 +1,11 @@
 import React, { FC } from "react";
+import { CardTypes } from "../../../types/cardTypes";
 import { Docket } from "../../atoms";
 import { Socials } from "../Socials";
 import { StyledCard, StyledCardBody, StyledHeading } from "./StyledCard";
 
 interface Props {
-  variant?:
-    | "medium-responsive"
-    | "small-nonresponsive"
-    | "large-nonresponsive"
-    | "large-responsive";
+  variant: CardTypes;
   children: any;
   className?: string;
   headingColor?: string;
@@ -25,8 +22,8 @@ export const Card: FC<Props> = ({
   socialIconsList,
   className,
   title,
-  width,
-  height,
+  width = "100%",
+  height = "auto",
   children,
   label,
   variant,

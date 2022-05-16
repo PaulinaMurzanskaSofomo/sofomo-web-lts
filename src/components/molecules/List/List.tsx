@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 import { ListVariants } from "../../../types/listTypes";
 import { StyledList } from "./StyledList";
 
 interface Props {
   variant: ListVariants;
-  children?: any;
+  children?: ReactNode;
   isActive?: boolean;
   className?: string;
   margin?: string;
@@ -18,7 +18,7 @@ export const List: FC<Props> = ({
   children,
   isActive,
   className,
-  margin,
+  margin = "3.5rem 0 0 0",
   id,
   onMouseLeave,
   onClick,

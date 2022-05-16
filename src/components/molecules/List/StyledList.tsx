@@ -10,7 +10,7 @@ export const StyledList = styled.div<Props>`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: ${({ margin }) => margin || "3.5rem 0 0 0"};
+  margin: ${({ margin }) => margin};
   display: none;
   &.standard {
     display: flex;

@@ -60,7 +60,6 @@ export const StyledGrid = styled(StyledResponsiveContainer)`
       }
     }
   }
-
   &.grid-6-items {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 3rem;

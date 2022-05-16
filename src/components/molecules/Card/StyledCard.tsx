@@ -9,8 +9,8 @@ interface Props {
 }
 
 export const StyledCard = styled.div<Props>`
-  width: ${({ width }) => width || "100%"};
-  height: ${({ height }) => height || "auto"};
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
   &.hovered {
     &:hover {
       background-color: ${theme.colors.blueTransparent};

@@ -1,6 +1,9 @@
 import React, { FC } from "react";
 import { arrowRightDotted, minus, plus } from "../../../assets/icons";
 import { HiOutlineChevronDown, HiOutlineChevronUp } from "react-icons/hi";
+import { Image } from "../../atoms";
+import { ListItemVariants } from "../../../types/listItemTypes";
+import { theme } from "../../../themes/MainTheme";
 import {
   StyledIcon,
   StyledIconAfter,
@@ -8,8 +11,6 @@ import {
   StyledItemWrapper,
   StyledChevrons,
 } from "./StyledListItem";
-import { Image } from "../../atoms";
-import { ListItemVariants } from "../../../types/listItemTypes";
 
 interface Props {
   variant: ListItemVariants;
@@ -19,7 +20,7 @@ interface Props {
   path?: string;
   dropdownActive?: boolean;
   onClick?: (e: any) => void;
-  listItem?: string;
+  listItem: string;
   itemWidth?: string;
   backgroundColor?: string;
   hoverWeight?: string;
@@ -100,4 +101,13 @@ export const ListItem: FC<Props> = ({
       </StyledIconAfter>
     </StyledItemWrapper>
   );
+};
+ListItem.defaultProps = {
+  backgroundColor: "none",
+  hoverWeight: "400",
+  iconMargin: "0 1rem 0 0",
+  iconWidth: "1.6rem",
+  itemColor: theme.colors.gray500,
+  itemWidth: "100%",
+  margin: "0",
 };

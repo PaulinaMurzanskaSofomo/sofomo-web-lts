@@ -17,10 +17,10 @@ interface WrapperProps extends Props {
   margin?: string;
 }
 export const StyledItemWrapper = styled.div<WrapperProps>`
-  background-color: ${({ backgroundColor }) => backgroundColor || "none"};
-  margin: ${({ margin }) => margin || "0"};
-  color: ${({ color }) => color || theme.colors.gray500};
-  width: ${({ itemWidth }) => itemWidth || "100%"};
+  background-color: ${({ backgroundColor }) => backgroundColor};
+  margin: ${({ margin }) => margin};
+  color: ${({ color }) => color};
+  width: ${({ itemWidth }) => itemWidth};
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -73,10 +73,10 @@ export const StyledItemWrapper = styled.div<WrapperProps>`
     &:hover {
       transition: all 0.9s;
       color: ${theme.colors.blue};
-      font-weight: ${({ hoverWeight }) => hoverWeight || "300"};
+      font-weight: ${({ hoverWeight }) => hoverWeight};
       p {
         color: ${theme.colors.blue};
-        font-weight: ${({ hoverWeight }) => hoverWeight || "300"};
+        font-weight: ${({ hoverWeight }) => hoverWeight};
       }
       .arrow {
         &:after {
@@ -87,7 +87,7 @@ export const StyledItemWrapper = styled.div<WrapperProps>`
         font-weight: 400;
         background-color: ${theme.colors.blueTransparent};
         p {
-          font-weight: ${({ hoverWeight }) => hoverWeight || "300"};
+          font-weight: ${({ hoverWeight }) => hoverWeight};
         }
         .last {
           display: block;
@@ -102,7 +102,7 @@ export const StyledIcon = styled.div<Props>`
   justify-content: center;
   width: auto;
   display: none;
-  margin: ${({ iconMargin }) => iconMargin || "0 1rem 0 0"};
+  margin: ${({ iconMargin }) => iconMargin};
   height: 100%;
   padding-top: 5px;
   &.icon-left,
@@ -119,7 +119,7 @@ export const StyledIcon = styled.div<Props>`
   }
   img {
     height: auto;
-    width: ${({ iconWidth }) => iconWidth || "1.6rem"};
+    width: ${({ iconWidth }) => iconWidth};
     object-fit: contain;
   }
   @media ${device.tablet} {
@@ -137,7 +137,7 @@ export const StyledItem = styled.p<Props>`
     line-height: 2.4rem;
     font-weight: 400;
     letter-spacing: 0.4px;
-    color: ${({ color }) => color || theme.colors.gray500};
+    color: ${({ color }) => color};
   }
   &.plain {
     line-height: 1.8rem;
@@ -146,7 +146,7 @@ export const StyledItem = styled.p<Props>`
   &.icon-check-arr-dots {
     font-size: 1.6rem;
     line-height: 2.4rem;
-    color: ${({ color }) => color || theme.colors.gray500};
+    color: ${({ color }) => color};
   }
   &.dropdown-plus-minus {
     font-weight: 700;

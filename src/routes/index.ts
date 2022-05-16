@@ -1,1 +1,1 @@
-export { HOME_PAGE, OUTSOURCE } from "./routes";
+export { ROUTE } from "./routes";

@@ -1,36 +1,36 @@
 import { backend, frontend, mobile, magento, salesforce, awsCloud } from "../icons";
-import { OUTSOURCE } from "../../routes";
+import { ROUTE } from "../../routes";
 export const developers = [
   {
     type: "backend developers",
     role: [
       {
         title: "ruby developers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
       {
         title: "python developers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
       {
         title: "PHP developers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
       {
         title: "node.Js developers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
       {
         title: "java developers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
       {
         title: "magento developers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
       {
         title: "golang developers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
     ],
     description: `We support all major backend technologies.`,
@@ -42,15 +42,15 @@ export const developers = [
     role: [
       {
         title: "react developers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
       {
         title: "angular developers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
       {
         title: "vue.Js developers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
     ],
     description: `We're specialists in React, Angular & Vue.js.`,
@@ -62,15 +62,15 @@ export const developers = [
     role: [
       {
         title: "IOS developers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
       {
         title: "android developers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
       {
         title: "react native delevopers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
     ],
     description: `Launching a new app ? Lets's do it! iOS, Android & React Native.`,
@@ -82,10 +82,10 @@ export const developers = [
     role: [
       {
         title: "AWS Engineers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
     ],
-    description: `We've done it all from basic to advanced AWS infranstructure.`,
+    description: `We've done it all from basic to advanced AWS infrastructure.`,
     icon: `${awsCloud}`,
     id: "4",
   },
@@ -94,7 +94,7 @@ export const developers = [
     role: [
       {
         title: "Salesforce Developers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
     ],
     description: `Take advantage of Salesforce, we've got you covered.`,
@@ -106,7 +106,7 @@ export const developers = [
     role: [
       {
         title: ".Net Developers",
-        path: OUTSOURCE,
+        path: ROUTE.OUTSOURCE,
       },
     ],
     description: `We're experts in .Net framework/Core.`,

@@ -1,41 +1,41 @@
 export const about = `About us`;
 export const aboutText = `We build & support your own talented, trusted, full-time development team hosted out of Sofomo’s headquarters in Poland.`;
 export const sectionBlueHeader = `Companies big and small alike choose Sofomo as their development partner`;
-import { OUTSOURCE } from "../../../routes";
+import { ROUTE } from "../../../routes";
 export const aboutList = [
   ["Sofomo"],
   [
     {
       title: `What We Do`,
-      path: OUTSOURCE,
+      path: ROUTE.OUTSOURCE,
     },
     {
       title: `Our Advantage`,
-      path: OUTSOURCE,
+      path: ROUTE.OUTSOURCE,
     },
     {
       title: `Clients`,
-      path: OUTSOURCE,
+      path: ROUTE.OUTSOURCE,
     },
     {
       title: `About Us`,
-      path: OUTSOURCE,
+      path: ROUTE.OUTSOURCE,
     },
     {
       title: `Why Poland`,
-      path: OUTSOURCE,
+      path: ROUTE.OUTSOURCE,
     },
     {
       title: `FAQ’s`,
-      path: OUTSOURCE,
+      path: ROUTE.OUTSOURCE,
     },
     {
       title: `Careers`,
-      path: OUTSOURCE,
+      path: ROUTE.OUTSOURCE,
     },
     {
       title: `Get Started`,
-      path: OUTSOURCE,
+      path: ROUTE.OUTSOURCE,
     },
     {
       title: `Contact Us`,
@@ -46,66 +46,66 @@ export const aboutList = [
 export const developers1 = [
   {
     title: `React`,
-    path: OUTSOURCE,
+    path: ROUTE.OUTSOURCE,
   },
   {
     title: `Angular`,
-    path: OUTSOURCE,
+    path: ROUTE.OUTSOURCE,
   },
   {
     title: `PHP`,
-    path: OUTSOURCE,
+    path: ROUTE.OUTSOURCE,
   },
   {
     title: `Ruby`,
-    path: OUTSOURCE,
+    path: ROUTE.OUTSOURCE,
   },
   {
     title: `.Net`,
-    path: OUTSOURCE,
+    path: ROUTE.OUTSOURCE,
   },
   {
     title: `Node.js`,
-    path: OUTSOURCE,
+    path: ROUTE.OUTSOURCE,
   },
   {
     title: `Golang`,
-    path: OUTSOURCE,
+    path: ROUTE.OUTSOURCE,
   },
   {
     title: `Magento`,
-    path: OUTSOURCE,
+    path: ROUTE.OUTSOURCE,
   },
 ];
 
 export const developers2 = [
   {
     title: `Java`,
-    path: OUTSOURCE,
+    path: ROUTE.OUTSOURCE,
   },
   {
     title: `Python`,
-    path: OUTSOURCE,
+    path: ROUTE.OUTSOURCE,
   },
   {
     title: `iOS`,
-    path: OUTSOURCE,
+    path: ROUTE.OUTSOURCE,
   },
   {
     title: `Android`,
-    path: OUTSOURCE,
+    path: ROUTE.OUTSOURCE,
   },
   {
     title: `Salesforce`,
-    path: OUTSOURCE,
+    path: ROUTE.OUTSOURCE,
   },
   {
     title: `AWS`,
-    path: OUTSOURCE,
+    path: ROUTE.OUTSOURCE,
   },
   {
     title: `Azure`,
-    path: OUTSOURCE,
+    path: ROUTE.OUTSOURCE,
   },
 ];
 

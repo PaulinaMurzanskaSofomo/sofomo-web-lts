@@ -1,20 +1,20 @@
-import tenYears from "./images/10Years.svg";
-import circles from "./images/CirclesImage.svg";
-import clientsCollage from "./images/ClientsColorColage.png";
-import developer from "./images/DeveloperImage.png";
-import devices from "./images/DevicesImage.png";
-import girl from "./images/GirlImage.png";
-import jimConning from "./images/JimConning.png";
-import meeting from "./images/MeetingImage.png";
-import meetup from "./images/MeetupImage.png";
-import heroOutsource from "./images/OutsourseTopImage.svg";
-import owners from "./images/OwnersImage.png";
-import scrumboard from "./images/ScrumboardImage.png";
-import techsHorizontal from "./images/TechIconsHorizontal.svg";
-import techsVertical from "./images/TechIconsVertical.svg";
-import heroHomepage from "./images/TopHomepageImage.svg";
-import whiteboard from "./images/WhiteboardImage.png";
-import heroBase from "./images/HeroBase.png";
+import tenYears from "./10Years.svg";
+import circles from "./CirclesImage.svg";
+import clientsCollage from "./ClientsColorCollage.png";
+import developer from "./DeveloperImage.png";
+import devices from "./DevicesImage.png";
+import girl from "./GirlImage.png";
+import jimConning from "./JimConning.png";
+import meeting from "./MeetingImage.png";
+import meetup from "./MeetupImage.png";
+import heroOutsource from "./OutsourceTopImage.svg";
+import owners from "./OwnersImage.png";
+import scrumboard from "./ScrumboardImage.png";
+import techsHorizontal from "./TechIconsHorizontal.svg";
+import techsVertical from "./TechIconsVertical.svg";
+import heroHomepage from "./TopHomepageImage.svg";
+import whiteboard from "./WhiteboardImage.png";
+import heroBase from "./HeroBase.png";
 
 export {
   tenYears,
@@ -35,38 +35,32 @@ export const imagesList = [
     {
       image: developer,
       height: "21rem",
-      id: 1,
     },
     {
       image: meetup,
       height: "12.3rem",
-      id: 2,
     },
   ],
   [
     {
       image: girl,
       height: "42.7rem",
-      id: 2,
     },
   ],
   [
     {
       image: meeting,
       height: "30.5rem",
-      id: 3,
     },
   ],
   [
     {
       image: scrumboard,
       height: "27rem",
-      id: 5,
     },
     {
       image: whiteboard,
       height: "18rem",
-      id: 6,
     },
   ],
 ];

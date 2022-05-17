@@ -1,10 +1,12 @@
 import React, { FC } from "react";
 import { StyledIcon } from "./StyledIcon";
 
-interface Props {
+type IconVariant = string | "linked-in";
+
+export interface Props {
   fontSize?: string;
   path?: string;
-  variant?: string;
+  variant?: IconVariant;
   width?: string;
   children?: any;
 }

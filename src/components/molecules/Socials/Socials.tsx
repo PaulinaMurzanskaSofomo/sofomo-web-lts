@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from "react";
 import { Icon } from "../../atoms";
 import { StyledSocials } from "./StyledSocials";
 
-interface Props {
+export interface Props {
   className?: string;
   fontSize?: string;
   iconWidth?: string;

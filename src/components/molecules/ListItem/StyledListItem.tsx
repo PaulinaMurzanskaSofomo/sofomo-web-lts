@@ -35,7 +35,7 @@ export const StyledItemWrapper = styled.div<WrapperProps>`
     border-radius: 4px;
   }
   &.icon-left {
-    align-items: flex-start;
+    align-items: center;
     @media ${device.tablet} {
       margin-bottom: 2rem;
     }

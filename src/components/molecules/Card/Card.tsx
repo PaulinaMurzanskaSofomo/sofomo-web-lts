@@ -4,7 +4,7 @@ import { Docket } from "../../atoms";
 import { Socials } from "../Socials";
 import { StyledCard, StyledCardBody, StyledHeading } from "./StyledCard";
 
-interface Props {
+export interface Props {
   variant: CardTypes;
   children: any;
   className?: string;

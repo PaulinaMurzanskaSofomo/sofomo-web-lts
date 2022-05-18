@@ -1,9 +1,15 @@
-import React, { FC } from "react";
+import React, { ElementType, FC, ReactNode } from "react";
 import { TypographyTypes } from "../../../types/typographyTypes";
 import { StyledTypography, StyledProps } from "./StyledTypography";
 
-interface Props extends StyledProps {
-  children: any;
+interface Props {
+  as?: ElementType;
+  color?: string;
+  width?: string;
+  margin?: string;
+  highlightColor?: string;
+  bold?: boolean;
+  children: ReactNode;
   className?: string;
   variant?: TypographyTypes;
   href?: string;
@@ -15,29 +21,21 @@ export const Typography: FC<Props> = ({
   color,
   width = "auto",
   margin = "0",
-  hoverColor,
-  transform = "",
-  hoverWeight = "400",
   className,
   highlightColor,
   variant,
-  href,
   bold,
 }) => {
   return (
     <StyledTypography
       as={as}
-      href={href}
-      target="_blank"
-      className={`${variant} ${className}`}
+      className={className}
       width={width}
       color={color}
       margin={margin}
-      hoverColor={hoverColor}
-      hoverWeight={hoverWeight}
-      transform={transform}
       highlightColor={highlightColor}
       bold={bold}
+      name={variant}
     >
       {children}
     </StyledTypography>

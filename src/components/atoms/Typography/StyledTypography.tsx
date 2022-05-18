@@ -1,306 +1,363 @@
+import styled, { css } from "styled-components";
 import { ElementType } from "react";
-import styled from "styled-components";
 import { theme } from "../../../themes/MainTheme";
 import { device } from "../../../utils/devices/devices";
 
+export const variant: any = {
+  body_text_1: {
+    color: theme.colors.dark,
+    mobile: {
+      size: "1.1rem",
+      line: "1.8rem",
+      spacing: "0.3px",
+    },
+    tablet: {
+      size: "1.2rem",
+      line: "2rem",
+      spacing: "0.4px",
+    },
+  },
+  body_text_2: {
+    color: theme.colors.white,
+    mobile: {
+      size: "1.2rem",
+      line: "2rem",
+      spacing: "0.4px",
+    },
+    tablet: {
+      size: "1.4rem",
+      line: "2.4rem",
+      spacing: "0",
+    },
+  },
+  body_text_3: {
+    color: theme.colors.gray300,
+    mobile: {
+      size: "1.3rem",
+      line: "2rem",
+      spacing: "0.4px",
+    },
+    tablet: {
+      size: "1.5rem",
+      line: "2.2rem",
+      spacing: "2.15px",
+    },
+    laptop: {
+      size: "1.7rem",
+      line: "3rem",
+      spacing: "2.15px",
+    },
+  },
+  body_text_4: {
+    color: theme.colors.gray400,
+    mobile: {
+      size: "1.4rem",
+      line: "2.4rem",
+      spacing: "0.4px",
+    },
+  },
+  body_text_5: {
+    color: theme.colors.gray600,
+    mobile: {
+      size: "1.4rem",
+      line: "2.2rem",
+      spacing: "0.4px",
+    },
+    tablet: {
+      size: "1.2rem",
+      line: "2rem",
+      spacing: "0.4px",
+    },
+  },
+  body_text_6: {
+    color: theme.colors.gray500,
+    mobile: {
+      size: "1.5rem",
+      line: "2.2rem",
+      spacing: "0.35",
+    },
+    tablet: {
+      size: "1.8rem",
+      line: "2.4rem",
+      spacing: "0",
+    },
+  },
+  body_text_7: {
+    color: theme.colors.white,
+    mobile: {
+      size: "1.6rem",
+      line: "2.4rem",
+      spacing: "0",
+    },
+  },
+  body_text_8: {
+    margin: "1.5rem 0 3rem 0",
+    color: theme.colors.gray500,
+    mobile: {
+      size: "1.6rem",
+      line: "2.4rem",
+      spacing: "0",
+    },
+    tablet: {
+      size: "1.7rem",
+      line: "3rem",
+      spacing: "0.4px",
+    },
+  },
+  body_text_9: {
+    color: theme.colors.gray500,
+    mobile: {
+      size: "2rem",
+      line: "2.8rem",
+      spacing: "0",
+    },
+    tablet: {
+      size: "2.4rem",
+      line: "3.8rem",
+      spacing: "0.3",
+    },
+  },
+  text_uppercase_1: {
+    color: theme.colors.gray400,
+    transform: "uppercase",
+    mobile: {
+      size: "1.2rem",
+      line: "2rem",
+      spacing: "0.4px",
+    },
+  },
+  text_uppercase_2: {
+    margin: "0 0 1.5rem 0",
+    transform: "uppercase",
+    weight: "700",
+    color: theme.colors.gray300,
+    mobile: {
+      size: "1.4rem",
+      line: "2.4rem",
+      spacing: "1.75px",
+    },
+    tablet: {
+      size: "1.7rem",
+      line: "3rem",
+      spacing: "2.15px",
+    },
+  },
+  heading_8: {
+    margin: "1.5rem 0 3rem 0",
+    weight: "700",
+    color: theme.colors.dark,
+    mobile: {
+      size: "1.3rem",
+      line: "2rem",
+      spacing: "0.4px",
+    },
+    tablet: {
+      size: "2rem",
+      line: "2.8rem",
+      spacing: "0",
+    },
+  },
+  heading_7: {
+    color: theme.colors.white,
+    weight: "700",
+    mobile: {
+      size: "1.4rem",
+      line: "2.4rem",
+      spacing: "0.4px",
+    },
+    tablet: {
+      size: "2rem",
+      line: "2.8rem",
+      spacing: "0.4px",
+    },
+    laptop: {
+      size: "2.6rem",
+      line: "4rem",
+      spacing: "0.35px",
+    },
+  },
+  heading_6: {
+    color: theme.colors.white,
+    weight: "700",
+    mobile: {
+      size: "1.7rem",
+      line: "3rem",
+      spacing: "0.4px",
+    },
+    tablet: {
+      size: "2rem",
+      line: "2.8rem",
+      spacing: "0",
+    },
+  },
+  heading_5: {
+    color: theme.colors.dark,
+    weight: "700",
+    mobile: {
+      size: "2.4rem",
+      line: "3.8rem",
+      spacing: "0.3px",
+    },
+    tablet: {
+      size: "3.5rem",
+      line: "4.2rem",
+      spacing: "0.45px",
+    },
+    laptop: {
+      size: "3.7rem",
+      line: "6.2rem",
+      spacing: "0",
+    },
+  },
+  heading_4: {
+    color: theme.colors.dark,
+    weight: "700",
+    mobile: {
+      size: "2.4rem",
+      line: "3.8rem",
+      spacing: "0.3px",
+    },
+    tablet: {
+      size: "3.5rem",
+      line: "4.2rem",
+      spacing: "0.45px",
+    },
+    laptop: {
+      size: "4.4rem",
+      line: "6.2rem",
+      spacing: "0",
+    },
+  },
+  heading_3: {
+    color: theme.colors.dark,
+    weight: "700",
+    mobile: {
+      size: "2.4rem",
+      line: "3.8rem",
+      spacing: "0.3px",
+    },
+    tablet: {
+      size: "3.5rem",
+      line: "4.2rem",
+      spacing: "0.45px",
+    },
+    laptop: {
+      size: "4.6rem",
+      line: "6.2rem",
+      spacing: "0",
+    },
+  },
+  heading_2: {
+    color: theme.colors.dark,
+    weight: "700",
+    margin: "0",
+    mobile: {
+      size: "2.6rem",
+      line: "4rem",
+      spacing: "0.35px",
+    },
+    tablet: {
+      size: "3.7rem",
+      line: "4.8rem",
+      spacing: "0.35px",
+    },
+    laptop: {
+      size: "4.6rem",
+      line: "6.2rem",
+      spacing: "0",
+    },
+  },
+  heading_1: {
+    color: theme.colors.dark,
+    weight: "700",
+    mobile: {
+      size: "3.5rem",
+      line: "4.2rem",
+      spacing: "0.45px",
+    },
+    laptop: {
+      size: "5.7rem",
+      line: "6.8rem",
+      spacing: "0",
+    },
+  },
+};
+
 export interface StyledProps {
   as?: ElementType;
-  color?: string;
+  customColor?: string;
   width?: string;
-  margin?: string;
-  hoverColor?: string;
   hoverWeight?: string;
-  transform?: string;
   highlightColor?: string;
   bold?: boolean;
+  name: string;
 }
 
-export const StyledTypography = styled.p<StyledProps>`
-  color: ${({ color }) => color};
-  margin: ${({ margin }) => margin};
-  text-transform: ${({ transform }) => transform};
-  font-weight: ${({ bold }) => (bold ? "700" : "400")};
-  width: ${({ width }) => width};
-  &.font-11-to-12 {
-    font-size: 1.1rem;
-    line-height: 1.8rem;
-    letter-spacing: 0.3px;
-    color: ${({ color }) => color || theme.colors.dark};
-    @media ${device.tablet} {
-      font-size: 1.2rem;
-      line-height: 2rem;
-      letter-spacing: 0.4px;
-    }
-  }
-  &.font-12 {
-    font-size: 1.2rem;
-    line-height: 2rem;
-    letter-spacing: 0.4px;
-    color: ${({ color }) => color || theme.colors.gray400};
-    &.to-14 {
-      color: ${({ color }) => color || theme.colors.white};
-      @media ${device.tablet} {
-        font-size: 1.4rem;
-        line-height: 2.4rem;
-        letter-spacing: 0;
-      }
-    }
-  }
-  &.font-13 {
-    font-size: 1.3rem;
-    line-height: 2rem;
-    color: ${({ color }) => color || theme.colors.dark};
-    &.to-15-to-17 {
-      letter-spacing: 0.4px;
-      color: ${({ color }) => color || theme.colors.gray300};
-      @media ${device.tablet} {
-        font-size: 1.5rem;
-        line-height: 2.2rem;
-        letter-spacing: 2.15px;
-      }
-      @media ${device.laptop} {
-        font-size: 1.7rem;
-        line-height: 3rem;
-        letter-spacing: 2.15px;
-        &.gold {
-          font-weight: 500;
-        }
-      }
-    }
-    &.to-20 {
-      @media ${device.tablet} {
-        font-size: 2rem;
-        line-height: 2.8rem;
-        letter-spacing: 0;
-      }
-    }
-  }
+export const StyledTypography = styled.p<StyledProps>(
+  ({ name, customColor, bold, highlightColor, width }) => {
+    const { mobile, tablet, laptop, color, weight, margin, transform } = variant[name];
+    return [
+      css`
+        text-transform: ${transform};
+        color: ${customColor || color};
+        font-weight: ${(bold && "700") || weight};
+        font-size: ${mobile.size};
+        margin: ${margin};
+        line-height: ${mobile.line};
+        letter-spacing: ${mobile.spacing};
+        width: ${width};
 
-  &.font-14 {
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-    letter-spacing: 0.4px;
-    color: ${({ color }) => color || theme.colors.gray400};
-    &.to-12 {
-      line-height: 2.2rem;
-      color: ${({ color }) => color || theme.colors.gray600};
-      @media ${device.tablet} {
-        font-size: 1.2rem;
-        line-height: 2rem;
-        letter-spacing: 0.4px;
-      }
-    }
-    &.to-15-to-17 {
-      color: ${({ color }) => color || theme.colors.gray500};
-      @media ${device.tablet} {
-        font-size: 1.5rem;
-        line-height: 2.2rem;
-      }
-      @media ${device.laptop} {
-        font-size: 1.7rem;
-        line-height: 3rem;
-        letter-spacing: 0.4px;
-      }
-    }
-    &.to-17 {
-      color: ${({ color }) => color || theme.colors.gray500};
-      @media ${device.tablet} {
-        font-size: 1.7rem;
-        line-height: 3rem;
-        letter-spacing: 0.4px;
-      }
-      &.uppercase {
-        letter-spacing: 1.75px;
-        color: ${({ color }) => color || theme.colors.gray300};
-        text-transform: uppercase;
-        @media ${device.laptop} {
-          font-size: 1.7rem;
-          line-height: 3rem;
-          letter-spacing: 2.15px;
-        }
-      }
-    }
-    &.to-20-to-26 {
-      color: ${({ color }) => color || theme.colors.white};
-      @media ${device.tablet} {
-        font-size: 2rem;
-        line-height: 2.8rem;
-      }
-      @media ${device.laptop} {
-        font-size: 2.6rem;
-        line-height: 4rem;
-        letter-spacing: 0.35px;
-      }
-    }
-  }
-  &.font-15 {
-    font-size: 1.5rem;
-    line-height: 2.2rem;
-    color: ${({ color }) => color || theme.colors.gray500};
-    &.to-18 {
-      letter-spacing: 0.35px;
-      color: ${({ color }) => color || theme.colors.gray500};
-      @media ${device.tablet} {
-        font-size: 1.8rem;
-        line-height: 2.4rem;
-        letter-spacing: 0;
-      }
-    }
-  }
-  &.font-16 {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    color: ${({ color }) => color || theme.colors.white};
-    &.to-17 {
-      color: ${({ color }) => color || theme.colors.gray500};
-      @media ${device.tablet} {
-        font-size: 1.7rem;
-        line-height: 3rem;
-        letter-spacing: 0.4px;
-      }
-    }
-  }
-  &.font-17-to-20 {
-    font-size: 1.7rem;
-    line-height: 3rem;
-    letter-spacing: 0.4px;
-    color: ${({ color }) => color || theme.colors.white};
-    @media ${device.tablet} {
-      font-size: 2rem;
-      line-height: 2.8rem;
-      letter-spacing: 0;
-    }
-  }
-  &.font-20-to-24 {
-    font-size: 2rem;
-    line-height: 2.8rem;
-    color: ${({ color }) => color || theme.colors.gray500};
-    @media ${device.tablet} {
-      font-size: 2.4rem;
-      line-height: 3.8rem;
-      letter-spacing: 0.3px;
-    }
-  }
-
-  &.font-24-to-35 {
-    font-size: 2.4rem;
-    line-height: 3.8rem;
-    letter-spacing: 0.3px;
-    color: ${({ color }) => color || theme.colors.dark};
-    @media ${device.tablet} {
-      font-size: 3.5rem;
-      line-height: 4.2rem;
-      letter-spacing: 0.45px;
-    }
-    @media ${device.laptop} {
-      letter-spacing: 0;
-      line-height: 6.2rem;
-      &.to-37 {
-        font-size: 3.7rem;
-      }
-      &.to-44 {
-        font-size: 4.4rem;
-        span {
-          &.highlighted {
-            &:after {
-              @media (min-width: 1094px) {
-                height: 40.92px;
-                bottom: 10px;
+        ${tablet &&
+        css`
+          @media ${device.tablet} {
+            font-size: ${tablet.size};
+            line-height: ${tablet.line};
+            letter-spacing: ${tablet.spacing};
+          }
+        `}
+        ${laptop &&
+        css`
+          @media ${device.laptop} {
+            font-size: ${laptop.size};
+            line-height: ${laptop.line};
+            letter-spacing: ${laptop.spacing};
+          }
+        `}
+      ${highlightColor &&
+        css`
+          span {
+            &.highlighted {
+              position: relative;
+              z-index: 2;
+              display: inline-flex;
+              &:last-child {
+                &:after {
+                  margin-right: 5px;
+                }
+              }
+              &:after {
+                content: "";
+                background-color: ${highlightColor};
+                bottom: calc((${mobile.line} - ${mobile.size}) * 0.5 + 2px);
+                left: 0;
+                right: 0;
+                height: calc(${mobile.size} * 0.93);
+                z-index: -1;
+                position: absolute;
+                display: block;
+                @media (min-width: 768px) {
+                  bottom: calc((${tablet.line} - ${tablet.size}) * 0.5 + 3px);
+                  height: calc(${tablet.size} * 0.93);
+                }
+                @media (min-width: 1094px) {
+                  bottom: calc((${laptop.line} - ${laptop.size}) * 0.5 + 4px);
+                  height: calc(${laptop.size} * 0.93);
+                }
               }
             }
           }
-        }
-      }
-      &.to-46 {
-        font-size: 4.6rem;
-      }
-    }
+        `}
+      `,
+    ];
   }
-  &.font-24-to-35,
-  &.to-20-to-26 {
-    span {
-      &.highlighted {
-        position: relative;
-        z-index: 2;
-        display: inline-flex;
-        &:last-child {
-          &:after {
-            margin-right: 5px;
-          }
-        }
-        &:after {
-          content: "";
-          background-color: ${({ highlightColor }) => highlightColor || theme.colors.yellow};
-          bottom: 8px;
-          left: 0;
-          right: 0;
-          height: 22.32px;
-          z-index: -1;
-          position: absolute;
-          display: block;
-          @media (min-width: 768px) {
-            bottom: 5px;
-            height: 32.55px;
-          }
-          @media (min-width: 1094px) {
-            height: 42.78px;
-            bottom: 12px;
-          }
-        }
-      }
-    }
-  }
-  &.to-20-to-26 {
-    span {
-      &.highlighted {
-        :after {
-          height: 13.02px;
-          bottom: 5px;
-          @media ${device.tablet} {
-            height: 18.6px;
-            bottom: 5px;
-          }
-          @media ${device.laptop} {
-            height: 24.18px;
-            bottom: 7px;
-          }
-        }
-      }
-    }
-  }
-  &.font-26-to-37 {
-    font-size: 2.6rem;
-    line-height: 4rem;
-    letter-spacing: 0.35px;
-    color: ${({ color }) => color || theme.colors.dark};
-    @media ${device.tablet} {
-      font-size: 3.7rem;
-      line-height: 4.8rem;
-      letter-spacing: 0.35px;
-    }
-    @media ${device.laptop} {
-      font-size: 4.6rem;
-      line-height: 6.2rem;
-      letter-spacing: 0;
-    }
-  }
-  &.font-35-to-57 {
-    font-size: 3.5rem;
-    line-height: 4.2rem;
-    letter-spacing: 0.45px;
-    color: ${({ color }) => color || theme.colors.dark};
-    @media ${device.tablet} {
-      font-size: 5.7rem;
-      line-height: 6.8rem;
-      letter-spacing: 0;
-    }
-  }
-  &:hover {
-    color: ${({ hoverColor }) => (hoverColor ? hoverColor : "")};
-    font-weight: ${({ hoverWeight }) => (hoverWeight ? hoverWeight : "")};
-    transition: all 0.3s;
-  }
-  &.active {
-    color: ${theme.colors.blue};
-  }
-`;
+);

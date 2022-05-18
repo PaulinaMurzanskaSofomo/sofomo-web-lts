@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# Frontend Dev Project - Sofomo.com Website Pages
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The goal of this project is to recreate the current Sofomo.com website, as a way to further develop React skills, learn animations, transitions, build a pixel perfect, responsive site and more.
 
-## Available Scripts
+Sections that are being build with this project are:
 
-In the project directory, you can run:
+- Home
+- Landing Page-Outsource
+- Contact Form
+- Header Navigation and Footer
 
-### `npm start`
+## Project type
+
+TypeScript project, bootstrapped as Create-React-App, React version: 17.0.2.
+
+Node version v16.14.0.
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Project structure approach
 
-### `npm test`
+Project is based on Structure based on Atomic Design approach.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Structure will look similar to example below:
 
-### `npm run build`
+<img src="./src/assets/images/StructureSchema.png" width="250" height="auto">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Styling
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Project uses StyledComponents
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Code formatting
 
-### `npm run eject`
+Project has Linter and Prettier installed
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Project status
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Project still in development phase.
+There is a demo version of finished project, that presents final UI result, although this is not code reviewed and still requires code reformat.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Demo version
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Demo version has been deployed on Firebase, you can view it here: https://sofomowebsite-40ac6.web.app/
 
-## Learn More
+## Differences between project and design and project requirement
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Design:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Project is based on provided Figma design, but I also tried to adapt to current version of Sofomo website, so there might be differences e.g in some content texts or margins.
+
+#### State management:
+
+There is no need to use state management solutions like suggested Zustand, it was implemented in earlier stage but removed later, as all the state can be managed inside components or by context API.
+
+#### Styling:
+
+I decided to make styles with Styled Components instead of suggested CSS Modules.
+
+## External libraries used
+
+- Styled Components,
+- Framer Motion,
+- Storybook,
+- Formik,
+- Swiper,
+
+## What has not been implements so far, not even in demo version:
+
+- testing

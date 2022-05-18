@@ -1,4 +1,5 @@
 import React, { ElementType, FC, ReactNode } from "react";
+import { theme } from "../../../themes/MainTheme";
 import { TypographyTypes } from "../../../types/typographyTypes";
 import { StyledTypography, StyledProps } from "./StyledTypography";
 
@@ -8,23 +9,22 @@ interface Props {
   width?: string;
   margin?: string;
   highlightColor?: string;
-  bold?: boolean;
+  fontWeight?: string;
   children: ReactNode;
   className?: string;
   variant?: TypographyTypes;
-  href?: string;
 }
 
 export const Typography: FC<Props> = ({
   as = "p",
   children,
-  color,
+  color = theme.colors.gray500,
   width = "auto",
   margin = "0",
   className,
   highlightColor,
   variant,
-  bold,
+  fontWeight = "400",
 }) => {
   return (
     <StyledTypography
@@ -34,7 +34,7 @@ export const Typography: FC<Props> = ({
       color={color}
       margin={margin}
       highlightColor={highlightColor}
-      bold={bold}
+      fontWeight={fontWeight}
       name={variant}
     >
       {children}

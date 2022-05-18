@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from "react";
+import { theme } from "../../../themes/MainTheme";
 import { TypographyTypes } from "../../../types/typographyTypes";
 import { Typography, SectionContainer } from "../../atoms";
 import { StyledBanner, StyledSection, StyledBannerImage, StyledChildren } from "./StyledBanner";
@@ -34,10 +35,14 @@ export const Banner: FC<Props> = ({
     <SectionContainer background={backgroundColor}>
       <StyledBanner className={className}>
         <StyledSection className={`${imageOuter ? "image-outer" : "image-inner"}`}>
-          <Typography variant={titleVariant} as="h3" color={titleColor} bold>
+          <Typography variant={titleVariant} as="h3" color={titleColor} fontWeight="700">
             {title}
           </Typography>
-          {subtitle && <Typography variant={"font-13 to-15-to-17"}>{subtitle}</Typography>}
+          {subtitle && (
+            <Typography color={theme.colors.gray300} variant={"body_text_3"}>
+              {subtitle}
+            </Typography>
+          )}
           <StyledChildren className="grid-area">{children}</StyledChildren>
           {imageInner && (
             <StyledBannerImage className="grid-area inner">

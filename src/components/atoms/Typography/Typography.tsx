@@ -1,43 +1,41 @@
-import React, { FC } from "react";
+import React, { ElementType, FC, ReactNode } from "react";
+import { theme } from "../../../themes/MainTheme";
 import { TypographyTypes } from "../../../types/typographyTypes";
-import { StyledTypography, StyledProps } from "./StyledTypography";
+import { StyledTypography } from "./StyledTypography";
 
-interface Props extends StyledProps {
-  children: any;
-  className?: string;
+interface Props {
+  as?: ElementType;
+  color?: string;
+  width?: string;
+  highlightColor?: string;
+  fontWeight?: string;
   variant?: TypographyTypes;
-  href?: string;
+  children: ReactNode;
+  className?: string;
+  textTransform?: string;
 }
 
 export const Typography: FC<Props> = ({
   as = "p",
   children,
-  color,
+  color = theme.colors.gray500,
   width = "auto",
-  margin = "0",
-  hoverColor,
-  transform = "",
-  hoverWeight = "400",
   className,
   highlightColor,
   variant,
-  href,
-  bold,
+  fontWeight = "400",
+  textTransform = "none",
 }) => {
   return (
     <StyledTypography
       as={as}
-      href={href}
-      target="_blank"
-      className={`${variant} ${className}`}
+      className={className}
       width={width}
       color={color}
-      margin={margin}
-      hoverColor={hoverColor}
-      hoverWeight={hoverWeight}
-      transform={transform}
       highlightColor={highlightColor}
-      bold={bold}
+      fontWeight={fontWeight}
+      name={variant}
+      textTransform={textTransform}
     >
       {children}
     </StyledTypography>

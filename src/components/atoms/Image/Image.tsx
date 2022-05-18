@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { theme } from "../../../themes/MainTheme";
 import { Typography } from "../Typography";
 import { StyledImage } from "./StyledImage";
 
@@ -33,7 +34,7 @@ export const Image: FC<Props> = ({
     >
       <img src={src} alt={alt} className={label ? "with-label" : ""} />
       {label && (
-        <Typography variant={"font-11-to-12"} as="p">
+        <Typography variant="body_text_1" color={theme.colors.dark} as="p">
           {label}
         </Typography>
       )}

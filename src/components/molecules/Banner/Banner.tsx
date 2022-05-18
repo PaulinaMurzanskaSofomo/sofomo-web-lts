@@ -39,7 +39,7 @@ export const Banner: FC<Props> = ({
             {title}
           </Typography>
           {subtitle && (
-            <Typography color={theme.colors.gray300} variant={"body_text_3"}>
+            <Typography color={theme.colors.gray300} variant="body_text_3">
               {subtitle}
             </Typography>
           )}

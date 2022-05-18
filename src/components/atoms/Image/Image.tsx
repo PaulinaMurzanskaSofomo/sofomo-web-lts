@@ -34,7 +34,7 @@ export const Image: FC<Props> = ({
     >
       <img src={src} alt={alt} className={label ? "with-label" : ""} />
       {label && (
-        <Typography variant={"body_text_1"} color={theme.colors.dark} as="p">
+        <Typography variant="body_text_1" color={theme.colors.dark} as="p">
           {label}
         </Typography>
       )}

@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { StyledIcon } from "./StyledIcon";
 
-interface Props {
+export interface Props {
   fontSize?: string;
   path?: string;
   variant?: string;

@@ -3,7 +3,7 @@ import { TypographyTypes } from "../../../types/typographyTypes";
 import { Typography, SectionContainer } from "../../atoms";
 import { StyledBanner, StyledSection, StyledBannerImage, StyledChildren } from "./StyledBanner";
 
-interface Props {
+export interface Props {
   image?: string;
   imageOuter?: boolean;
   imageInner?: boolean;

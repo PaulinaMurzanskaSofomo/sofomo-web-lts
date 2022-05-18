@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from "react";
 import { ListVariants } from "../../../types/listTypes";
 import { StyledList } from "./StyledList";
 
-interface Props {
+export interface Props {
   variant: ListVariants;
   children?: ReactNode;
   isActive?: boolean;

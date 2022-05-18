@@ -5,7 +5,7 @@ import { StyledGrid } from "./StyledGrid";
 
 type AdditionalGridVariant = "loop";
 
-interface Props {
+export interface Props {
   itemsList: {
     logo: any;
     label?: string;

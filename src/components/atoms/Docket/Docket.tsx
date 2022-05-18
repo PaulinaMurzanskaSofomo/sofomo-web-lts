@@ -3,7 +3,7 @@ import { StyledDocket } from "./StyledDocket";
 
 type Variant = "wider";
 
-interface Props {
+export interface Props {
   label?: string;
   padding?: string;
   variant?: Variant;

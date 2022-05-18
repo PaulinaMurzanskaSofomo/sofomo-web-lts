@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Typography } from "../Typography";
 import { StyledImage } from "./StyledImage";
 
-interface Props {
+export interface Props {
   width?: string;
   height?: string;
   src: any;

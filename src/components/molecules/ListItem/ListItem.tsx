@@ -12,7 +12,7 @@ import {
   StyledChevrons,
 } from "./StyledListItem";
 
-interface Props {
+export interface Props {
   variant: ListItemVariants;
   itemColor?: string;
   hover?: boolean;

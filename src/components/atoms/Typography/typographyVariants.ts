@@ -13,13 +13,18 @@ export const variant: any = {
     size: "1.2rem",
     lineHeight: "2rem",
     spacing: "0.4px",
+  },
+  body_text_3: {
+    size: "1.2rem",
+    lineHeight: "2rem",
+    spacing: "0.4px",
     tablet: {
       size: "1.4rem",
       lineHeight: "2.4rem",
       spacing: "0",
     },
   },
-  body_text_3: {
+  body_text_4: {
     size: "1.3rem",
     lineHeight: "2rem",
     spacing: "0.4px",
@@ -34,12 +39,22 @@ export const variant: any = {
       spacing: "2.15px",
     },
   },
-  body_text_4: {
+  body_text_5: {
     size: "1.4rem",
     lineHeight: "2.4rem",
     spacing: "0.4px",
   },
-  body_text_5: {
+  body_text_6: {
+    size: "1.4rem",
+    lineHeight: "2.4rem",
+    spacing: "1.75px",
+    tablet: {
+      size: "1.7rem",
+      lineHeight: "3rem",
+      spacing: "2.15px",
+    },
+  },
+  body_text_7: {
     size: "1.4rem",
     lineHeight: "2.2rem",
     spacing: "0.4px",
@@ -49,7 +64,7 @@ export const variant: any = {
       spacing: "0.4px",
     },
   },
-  body_text_6: {
+  body_text_8: {
     size: "1.5rem",
     lineHeight: "2.2rem",
     spacing: "0.35",
@@ -59,12 +74,12 @@ export const variant: any = {
       spacing: "0",
     },
   },
-  body_text_7: {
+  body_text_9: {
     size: "1.6rem",
     lineHeight: "2.4rem",
     spacing: "0",
   },
-  body_text_8: {
+  body_text_10: {
     size: "1.6rem",
     lineHeight: "2.4rem",
     spacing: "0",
@@ -74,7 +89,7 @@ export const variant: any = {
       spacing: "0.4px",
     },
   },
-  body_text_9: {
+  body_text_11: {
     size: "2rem",
     lineHeight: "2.8rem",
     spacing: "0",
@@ -82,23 +97,6 @@ export const variant: any = {
       size: "2.4rem",
       lineHeight: "3.8rem",
       spacing: "0.3",
-    },
-  },
-  text_uppercase_1: {
-    transform: "uppercase",
-    size: "1.2rem",
-    lineHeight: "2rem",
-    spacing: "0.4px",
-  },
-  text_uppercase_2: {
-    transform: "uppercase",
-    size: "1.4rem",
-    lineHeight: "2.4rem",
-    spacing: "1.75px",
-    tablet: {
-      size: "1.7rem",
-      lineHeight: "3rem",
-      spacing: "2.15px",
     },
   },
   heading_8: {

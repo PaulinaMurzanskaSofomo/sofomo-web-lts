@@ -1,18 +1,18 @@
 import React, { ElementType, FC, ReactNode } from "react";
 import { theme } from "../../../themes/MainTheme";
 import { TypographyTypes } from "../../../types/typographyTypes";
-import { StyledTypography, StyledProps } from "./StyledTypography";
+import { StyledTypography } from "./StyledTypography";
 
 interface Props {
   as?: ElementType;
   color?: string;
   width?: string;
-  margin?: string;
   highlightColor?: string;
   fontWeight?: string;
+  variant?: TypographyTypes;
   children: ReactNode;
   className?: string;
-  variant?: TypographyTypes;
+  textTransform?: string;
 }
 
 export const Typography: FC<Props> = ({
@@ -20,11 +20,11 @@ export const Typography: FC<Props> = ({
   children,
   color = theme.colors.gray500,
   width = "auto",
-  margin = "0",
   className,
   highlightColor,
   variant,
   fontWeight = "400",
+  textTransform = "none",
 }) => {
   return (
     <StyledTypography
@@ -32,10 +32,10 @@ export const Typography: FC<Props> = ({
       className={className}
       width={width}
       color={color}
-      margin={margin}
       highlightColor={highlightColor}
       fontWeight={fontWeight}
       name={variant}
+      textTransform={textTransform}
     >
       {children}
     </StyledTypography>

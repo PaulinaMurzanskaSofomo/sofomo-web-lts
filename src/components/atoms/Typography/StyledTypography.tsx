@@ -5,20 +5,20 @@ import { variant } from "./typographyVariants";
 
 export interface StyledProps {
   as?: ElementType;
-  customColor?: string;
+  color?: string;
   width?: string;
   highlightColor?: string;
-  bold?: boolean;
   name: string;
   fontWeight?: string;
+  textTransform?: string;
 }
 
 export const StyledTypography = styled.p<StyledProps>(
-  ({ name, color, fontWeight, highlightColor, width }) => {
-    const { size, lineHeight, spacing, tablet, laptop, transform } = variant[name];
+  ({ name, color, fontWeight, highlightColor, width, textTransform }) => {
+    const { size, lineHeight, spacing, tablet, laptop } = variant[name];
     return [
       css`
-        text-transform: ${transform};
+        text-transform: ${textTransform};
         color: ${color};
         font-weight: ${fontWeight};
         font-size: ${size};

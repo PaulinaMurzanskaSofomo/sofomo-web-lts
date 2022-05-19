@@ -4,6 +4,7 @@ import { Meta, Story } from "@storybook/react";
 import { circles, tenYears } from "../../../assets/images";
 import { Grid } from "../Grid";
 import { leadersLogoList, partnersLogosList } from "../../../assets/logos/logoLists";
+import { theme } from "../../../themes/MainTheme";
 
 export default {
   title: "Molecules/Banner",
@@ -26,8 +27,8 @@ Default.args = {
     "We build & support your own talented, trusted, full-time development team hosted out of Sofomo’s",
   backgroundColor: "#6c79ef",
   animated: true,
-  titleVariant: "font-17-to-20",
-  titleColor: "white",
+  titleVariant: "heading_6",
+  titleColor: theme.colors.white,
 };
 
 export const ImageInner = () => (
@@ -37,7 +38,7 @@ export const ImageInner = () => (
       imageInner
       title="Exceptional development teams for startups to industry leaders"
       backgroundColor="#FAFBFE;"
-      titleVariant="font-13 to-20"
+      titleVariant="heading_8"
     >
       <Grid itemsList={leadersLogoList} variant={"grid-4-items"} />
     </Banner>

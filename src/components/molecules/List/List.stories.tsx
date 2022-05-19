@@ -17,7 +17,7 @@ export const ListPlain: Story<Props> = (args) => (
     <StyledResponsiveContainer>
       <List {...args}>
         {developers.map((item) => (
-          <ListItem listItem={item.type} variant={"plain"} />
+          <ListItem listItem={item.type} variant="plain" />
         ))}
       </List>
     </StyledResponsiveContainer>
@@ -30,9 +30,9 @@ ListPlain.args = {
 export const ListInDropdown: Story<Props> = (args) => (
   <StyledResponsiveContainer>
     <div className="container items">
-      <List {...args} variant={"in-dropdown"} isActive={true}>
+      <List {...args} variant="in-dropdown" isActive={true}>
         {developers.map((item) => (
-          <ListItem listItem={item.type} variant={"icon-check-arr-dots"} icon={checkPng} hover />
+          <ListItem listItem={item.type} variant="icon-check-arr-dots" icon={checkPng} hover />
         ))}
       </List>
     </div>
@@ -42,9 +42,9 @@ export const ListInDropdown: Story<Props> = (args) => (
 export const ListSplit: Story<Props> = (args) => (
   <StyledResponsiveContainer>
     <div className="container">
-      <List {...args} variant={"split"} isActive={true}>
+      <List {...args} variant="split" isActive={true}>
         {developers.map((item) => (
-          <ListItem listItem={item.type} variant={"icon-left"} icon={checkPng} hover />
+          <ListItem listItem={item.type} variant="icon-left" icon={checkPng} hover />
         ))}
       </List>
     </div>
@@ -56,7 +56,7 @@ export const Navlist: Story<Props> = (args) => {
   return (
     <div className="container">
       <StyledResponsiveContainer>
-        <List {...args} variant={"navlist"}>
+        <List {...args} variant="navlist">
           {mainMenu.map((item) => (
             <ListItem
               listItem={item.title}

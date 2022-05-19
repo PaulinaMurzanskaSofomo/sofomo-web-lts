@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import { StyledResponsiveContainer, Typography } from "../../atoms";
 import { Card, Props } from "./Card";
 import { Meta, Story } from "@storybook/react";
@@ -6,6 +6,7 @@ import { List } from "../List";
 import { developers1 } from "../../../assets/content/footer/SectionAbout";
 import { ListItem } from "../ListItem";
 import { socialIconsList } from "../../../assets/icons/socialIconsList";
+import { theme } from "../../../themes/MainTheme";
 
 export default {
   title: "Molecules/Card",
@@ -41,7 +42,7 @@ CardWithSocials.args = {
   title: "About us",
   socialIconsList: socialIconsList,
   children: (
-    <Typography variant="font-14" width="200px">
+    <Typography variant="body_text_5" width="200px" color={theme.colors.gray400}>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem rem reiciendis asperiores!
     </Typography>
   ),

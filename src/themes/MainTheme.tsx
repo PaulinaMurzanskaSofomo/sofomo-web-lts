@@ -7,7 +7,7 @@ export const theme = {
     dark: "#122E45",
     gold: "#cda551",
     gray000: "#FAFBFE",
-    gray000Lighter: "#F2F2F2",
+    gray090: "#F2F2F2",
     gray100: "#e5eaf0",
     gray200: "#b5b5b5",
     gray300: "#B4B4B4",

@@ -2,16 +2,17 @@ import styled from "styled-components";
 import { theme } from "../../../themes/MainTheme";
 import { device } from "../../../utils";
 import { arrowRightPlain } from "../../../assets/icons";
+import { ElementType } from "react";
 
 interface Props {
   color?: string;
   hoverWeight?: string;
-  cursorPointer?: boolean;
+  cursorPointer?: string;
   iconWidth?: string;
   iconMargin?: string;
 }
 interface WrapperProps extends Props {
-  as?: any;
+  as?: ElementType;
   itemWidth?: string;
   backgroundColor?: string;
   margin?: string;
@@ -26,7 +27,7 @@ export const StyledItemWrapper = styled.div<WrapperProps>`
   justify-content: flex-start;
   flex-wrap: nowrap;
   position: relative;
-  cursor: ${({ cursorPointer }) => (cursorPointer ? "pointer" : "")};
+  cursor: ${({ cursorPointer }) => cursorPointer};
   &.plain {
     margin-bottom: 1.4rem;
   }
@@ -48,7 +49,6 @@ export const StyledItemWrapper = styled.div<WrapperProps>`
     padding: 1.8rem 2rem 1.8rem 3rem;
     border-radius: 4px;
     height: 6.4rem;
-    align-items: center;
     margin-bottom: 2.5rem;
     background-color: ${theme.colors.white};
     @media ${device.tablet} {
@@ -60,7 +60,6 @@ export const StyledItemWrapper = styled.div<WrapperProps>`
   &.dropdown-chevrons,
   &.dropdown-no-chevrons {
     height: 5.6rem;
-    align-items: center;
     @media ${device.tablet} {
       height: 4.6rem;
     }
@@ -117,11 +116,6 @@ export const StyledIcon = styled.div<Props>`
     display: flex;
     margin-right: 2rem;
   }
-  img {
-    height: auto;
-    width: ${({ iconWidth }) => iconWidth};
-    object-fit: contain;
-  }
   @media ${device.tablet} {
     align-self: flex-start;
     align-items: flex-start;
@@ -161,7 +155,7 @@ export const StyledItem = styled.p<Props>`
   &.icon-left-bold {
     font-size: 1.6rem;
     line-height: 2.4rem;
-    color: ${({ color }) => color || theme.colors.white};
+    color: ${({ color }) => color};
     font-weight: 700;
     @media ${device.tablet} {
       font-size: 1.8rem;
@@ -187,7 +181,7 @@ export const StyledItem = styled.p<Props>`
     font-size: 1.8rem;
     line-height: 2.6rem;
     letter-spacing: 0.4px;
-    color: ${({ color }) => color || theme.colors.dark};
+    color: ${({ color }) => color};
     text-transform: capitalize;
     @media ${device.tablet} {
       font-size: 1.5rem;
@@ -210,7 +204,7 @@ export const StyledItem = styled.p<Props>`
   }
   &.arrow {
     text-transform: capitalize;
-    color: ${({ color }) => color || theme.colors.gray600};
+    color: ${({ color }) => color};
     @media ${device.tablet} {
       font-size: 1.2rem;
       line-height: 2rem;

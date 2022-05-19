@@ -11,9 +11,7 @@ export const StyledList = styled.div<Props>`
   display: flex;
   flex-direction: column;
   margin: ${({ margin }) => margin};
-  display: none;
   &.standard {
-    display: flex;
     &.developers {
       &.inner {
         padding-left: 3.5rem;
@@ -32,7 +30,6 @@ export const StyledList = styled.div<Props>`
     }
   }
   &.plain {
-    display: flex;
     width: max-content;
   }
   &.in-dropdown {
@@ -54,13 +51,11 @@ export const StyledList = styled.div<Props>`
     position: relative;
     align-items: center;
     justify-content: flex-start;
-    display: flex;
     @media ${device.laptop} {
       align-items: flex-start;
     }
   }
   &.split {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     @media ${device.tablet} {
@@ -82,7 +77,6 @@ export const StyledList = styled.div<Props>`
   &.dropdown-outer {
     width: 100%;
     position: relative;
-    display: flex;
     &.active {
       border-top: 4px solid ${theme.colors.blue};
       border-top-right-radius: 4px;
@@ -98,8 +92,6 @@ export const StyledList = styled.div<Props>`
   }
   &.navlist {
     padding: 2.5rem 1.5rem;
-    display: flex;
-    flex-direction: column;
     @media ${device.laptop} {
       flex-direction: row;
       justify-content: flex-end;

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { ElementType, FC } from "react";
 import { arrowRightDotted, minus, plus } from "../../../assets/icons";
 import { HiOutlineChevronDown, HiOutlineChevronUp } from "react-icons/hi";
 import { Image } from "../../atoms";
@@ -16,7 +16,7 @@ export interface Props {
   variant: ListItemVariants;
   itemColor?: string;
   hover?: boolean;
-  as?: any;
+  as?: ElementType;
   path?: string;
   dropdownActive?: boolean;
   onClick?: (e: any) => void;
@@ -77,11 +77,11 @@ export const ListItem: FC<Props> = ({
       backgroundColor={backgroundColor}
       hoverWeight={hoverWeight}
       margin={margin}
-      cursorPointer={cursorPointer}
+      cursorPointer={cursorPointer ? "pointer" : ""}
     >
       {icon && (
         <StyledIcon className={variant} iconWidth={iconWidth} iconMargin={iconMargin}>
-          <img src={icon} alt="icon" />
+          <Image src={icon} alt="icon" width={iconWidth} height="auto" />
         </StyledIcon>
       )}
       <StyledItem

@@ -56,7 +56,7 @@ export const StyledTypography = styled.p<StyledProps>(
               &:after {
                 content: "";
                 background-color: ${highlightColor};
-                bottom: calc((${lineHeight} - ${size}) * 0.5 + 2px);
+                top: calc((${lineHeight} - ${size}) * 0.5);
                 left: 0;
                 right: 0;
                 height: calc(${size} * 0.93);
@@ -64,11 +64,9 @@ export const StyledTypography = styled.p<StyledProps>(
                 position: absolute;
                 display: block;
                 @media (min-width: 768px) {
-                  bottom: calc((${tablet.line} - ${tablet.size}) * 0.5 + 3px);
                   height: calc(${tablet.size} * 0.93);
                 }
                 @media (min-width: 1094px) {
-                  bottom: calc((${laptop.line} - ${laptop.size}) * 0.5 + 4px);
                   height: calc(${laptop.size} * 0.93);
                 }
               }

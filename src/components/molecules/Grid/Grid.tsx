@@ -1,9 +1,7 @@
 import React, { FC } from "react";
-import { GridTypes } from "../../../types/gridTypes";
+import { AdditionalGridVariant, GridTypes } from "../../../types/gridTypes";
 import { Image } from "../../atoms";
 import { StyledGrid } from "./StyledGrid";
-
-type AdditionalGridVariant = "loop";
 
 export interface Props {
   itemsList: {

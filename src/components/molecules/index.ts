@@ -5,3 +5,5 @@ export { List } from "./List";
 export { ListItem } from "./ListItem";
 export { Socials } from "./Socials";
 export { Title } from "./Title";
+export { ImagesSwiper } from "./ImagesSwiper";
+export { TestimonialsSwiper } from "./TestimonialsSwiper";

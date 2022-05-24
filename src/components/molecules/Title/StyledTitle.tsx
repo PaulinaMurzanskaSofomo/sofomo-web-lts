@@ -4,6 +4,7 @@ import { device } from "../../../utils";
 interface Props {
   quotationMarkColor?: string;
   quotationMarkSize?: string;
+  quotationMarginBottom?: string;
   margin?: string;
 }
 
@@ -12,7 +13,7 @@ export const StyledTitle = styled.div<Props>`
 `;
 
 export const StyledQuotation = styled.div<Props>`
-  margin-bottom: ${({ quotationMarkSize }) => (quotationMarkSize === "3rem" ? "2rem" : "1.5rem")};
+  margin-bottom: ${({ quotationMarginBottom }) => quotationMarginBottom};
   text-align: left;
   .quotation-mark {
     width: ${({ quotationMarkSize }) => quotationMarkSize};

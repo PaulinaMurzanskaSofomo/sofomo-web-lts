@@ -41,6 +41,7 @@ export const Title: FC<ITitle> = ({
         <StyledQuotation
           quotationMarkColor={quotationMarkColor}
           quotationMarkSize={quotationMarkSize}
+          quotationMarginBottom={quotationMarkSize === "3rem" ? "2rem" : "1.5"}
         >
           <Quote className="quotation-mark" />
         </StyledQuotation>

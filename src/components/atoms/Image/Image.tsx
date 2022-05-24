@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 import { theme } from "../../../themes/MainTheme";
 import { Typography } from "../Typography";
-import { StyledImage } from "./StyledImage";
+import { StyledImage, StyledImageContainer } from "./StyledImage";
 
 export interface Props {
   width?: string;
@@ -12,6 +12,7 @@ export interface Props {
   onClick?: VoidFunction;
   margin?: string;
   label?: string;
+  animatedComponent?: ReactNode;
 }
 
 export const Image: FC<Props> = ({
@@ -23,21 +24,23 @@ export const Image: FC<Props> = ({
   className,
   onClick,
   label,
+  animatedComponent,
 }) => {
   return (
-    <StyledImage
+    <StyledImageContainer
       width={width}
       height={height}
       className={className}
       onClick={onClick}
       margin={margin}
     >
-      <img src={src} alt={alt} className={label ? "with-label" : ""} />
+      <StyledImage src={src} alt={alt} className={`${className} ${label ? "with-label" : ""}`} />
       {label && (
-        <Typography variant="body_text_1" color={theme.colors.dark} as="p">
+        <Typography variant="body_text_1" as="p" color={theme.colors.dark}>
           {label}
         </Typography>
       )}
-    </StyledImage>
+      {animatedComponent && animatedComponent}
+    </StyledImageContainer>
   );
 };

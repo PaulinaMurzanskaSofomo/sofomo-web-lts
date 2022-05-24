@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { theme } from "../../../themes/MainTheme";
 import { CardTypes } from "../../../types/cardTypes";
 import { Docket } from "../../atoms";
 import { Socials } from "../Socials";
@@ -18,7 +19,7 @@ export interface Props {
   id?: string;
 }
 export const Card: FC<Props> = ({
-  headingColor,
+  headingColor = theme.colors.dark,
   socialIconsList,
   className,
   title,

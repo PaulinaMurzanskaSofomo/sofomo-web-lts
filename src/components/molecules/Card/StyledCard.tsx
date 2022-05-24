@@ -42,19 +42,19 @@ export const StyledHeading = styled.h3<Props>`
     font-size: 1.6rem;
     line-height: 2.4rem;
     font-weight: 700;
-    color: ${({ headingColor }) => headingColor || theme.colors.dark};
+    color: ${({ headingColor }) => headingColor};
   }
   &.large-nonresponsive {
     font-size: 2.2rem;
     line-height: 3rem;
     font-weight: 700;
-    color: ${({ headingColor }) => headingColor || theme.colors.dark};
+    color: ${({ headingColor }) => headingColor};
   }
   &.large-responsive {
     font-size: 2rem;
     line-height: 2.8rem;
     font-weight: 700;
-    color: ${({ headingColor }) => headingColor || theme.colors.dark};
+    color: ${({ headingColor }) => headingColor};
     margin-bottom: 1rem;
     @media ${device.tablet} {
       font-size: 2.2rem;
@@ -70,7 +70,7 @@ export const StyledHeading = styled.h3<Props>`
     font-size: 1.6rem;
     line-height: 2.4rem;
     font-weight: 400;
-    color: ${({ headingColor }) => headingColor || theme.colors.dark};
+    color: ${({ headingColor }) => headingColor};
     text-transform: capitalize;
     margin-bottom: 0.5rem;
     @media ${device.tablet} {

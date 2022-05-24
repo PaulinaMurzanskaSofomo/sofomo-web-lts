@@ -7,7 +7,7 @@ import girl from "./GirlImage.png";
 import jimConning from "./JimConning.png";
 import meeting from "./MeetingImage.png";
 import meetup from "./MeetupImage.png";
-import heroOutsource from "./OutsourceTopImage.svg";
+import heroOutsource from "./OutsourceTopImage.png";
 import owners from "./OwnersImage.png";
 import scrumboard from "./ScrumboardImage.png";
 import techsHorizontal from "./TechIconsHorizontal.svg";

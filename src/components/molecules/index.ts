@@ -5,3 +5,4 @@ export { List } from "./List";
 export { ListItem } from "./ListItem";
 export { Socials } from "./Socials";
 export { Title } from "./Title";
+export { PageView } from "./PageView";

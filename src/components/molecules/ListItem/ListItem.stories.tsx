@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { StyledResponsiveContainer } from "../../atoms";
 import { Meta, Story } from "@storybook/react";
 import { ListItem, Props } from "./ListItem";
-import { checkSvg, checkPng, shield, tenPlus } from "../../../assets/icons";
+import { checkSvg, checkPng, tenPlus } from "../../../assets/icons";
 
 export default {
   title: "Molecules/ListItem",

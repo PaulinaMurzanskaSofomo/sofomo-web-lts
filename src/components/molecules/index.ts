@@ -6,3 +6,5 @@ export { ListItem } from "./ListItem";
 export { Socials } from "./Socials";
 export { Title } from "./Title";
 export { PageView } from "./PageView";
+export { ImagesSwiper } from "./ImagesSwiper";
+export { TestimonialsSwiper } from "./TestimonialsSwiper";

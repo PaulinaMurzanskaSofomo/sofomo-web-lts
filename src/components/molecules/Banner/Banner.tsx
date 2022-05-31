@@ -35,14 +35,16 @@ export const Banner: FC<Props> = ({
     <SectionContainer background={backgroundColor}>
       <StyledBanner className={className}>
         <StyledSection className={`${imageOuter ? "image-outer" : "image-inner"}`}>
-          <Typography variant={titleVariant} as="h3" color={titleColor} fontWeight="700">
-            {title}
-          </Typography>
-          {subtitle && (
-            <Typography color={theme.colors.gray300} variant="body_text_4">
-              {subtitle}
+          <div className="grid-area">
+            <Typography variant={titleVariant} as="h3" color={titleColor} fontWeight="700">
+              {title}
             </Typography>
-          )}
+            {subtitle && (
+              <Typography color={theme.colors.gray300} variant="body_text_4">
+                {subtitle}
+              </Typography>
+            )}
+          </div>
           <StyledChildren className="grid-area">{children}</StyledChildren>
           {imageInner && (
             <StyledBannerImage className="grid-area inner">

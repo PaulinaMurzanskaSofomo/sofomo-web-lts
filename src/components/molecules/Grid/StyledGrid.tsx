@@ -21,7 +21,7 @@ export const StyledGrid = styled(StyledResponsiveContainer)`
       grid-template-columns: repeat(5, 1fr);
     }
     .grid-item {
-      &:first-child {
+      &:nth-child(5) {
         display: none;
         @media ${device.tablet} {
           display: block;

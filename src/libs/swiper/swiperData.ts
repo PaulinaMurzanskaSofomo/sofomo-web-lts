@@ -1,6 +1,6 @@
 import React from "react";
 
-type RefType = React.MutableRefObject<null>;
+type RefType = { current: HTMLDivElement | null };
 
 export const onInit = (swiperPrevRef: RefType, swiperNextRef: RefType, swiper: any) => {
   swiper.params.navigation.prevEl = swiperPrevRef.current;

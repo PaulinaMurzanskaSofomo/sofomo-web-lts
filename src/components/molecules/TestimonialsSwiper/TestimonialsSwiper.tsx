@@ -16,11 +16,11 @@ import {
 } from "./StyledTestimonialsSwiper";
 
 export const TestimonialsSwiper: FC = () => {
-  const swiperPrevRef = useRef(null);
-  const swiperNextRef = useRef(null);
+  const swiperPrevRef = useRef<HTMLDivElement | null>(null);
+  const swiperNextRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <StyledTestimonialsSwiper className="S-wiper">
+    <StyledTestimonialsSwiper className="swiper">
       <Typography
         as="h3"
         color={theme.colors.gray300}

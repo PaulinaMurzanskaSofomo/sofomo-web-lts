@@ -15,20 +15,18 @@ import {
 } from "./StyledImagesSwiper";
 
 export const ImagesSwiper: FC = () => {
-  type RefType = React.MutableRefObject<null>;
-
-  const swiperImagePrevRef: RefType = useRef(null);
-  const swiperImageNextRef: RefType = useRef(null);
+  const swiperImagePrevRef = useRef<HTMLDivElement | null>(null);
+  const swiperImageNextRef = useRef<HTMLDivElement | null>(null);
   const [disableNext, setDisableNext] = useState(true);
   const [disablePrev, setDisablePrev] = useState(true);
 
   const handleClick = () => {
-    const elNext = document.querySelector("#next");
-    const elPrev = document.querySelector("#prev");
-    if (elNext?.classList.contains("swiper-button-disabled")) {
+    const targetNext = swiperImageNextRef.current;
+    const targetPrev = swiperImagePrevRef.current;
+    if (targetNext?.classList.contains("swiper-button-disabled")) {
       setDisableNext(true);
     } else setDisableNext(false);
-    if (elPrev?.classList.contains("swiper-button-disabled")) {
+    if (targetPrev?.classList.contains("swiper-button-disabled")) {
       setDisablePrev(true);
     } else setDisablePrev(false);
   };

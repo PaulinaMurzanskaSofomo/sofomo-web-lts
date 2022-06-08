@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 import { Typography } from "../../atoms";
 import { StyledQuotation, StyledTitle, StyledUppercaseTitle } from "./StyledTitle";
 import { TypographyTypes } from "../../../types/typographyTypes";
@@ -10,7 +10,7 @@ export interface ITitle {
   quotationMarkSize?: string;
   label?: string;
   labelColor?: string;
-  title?: string | HTMLSpanElement;
+  title?: string | HTMLSpanElement | ReactNode;
   titleHighlighted?: string;
   titleAfter?: string | HTMLSpanElement;
   titleColor?: string;

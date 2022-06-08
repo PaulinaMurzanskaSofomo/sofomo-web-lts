@@ -4,6 +4,7 @@ import { HiOutlineChevronDown, HiOutlineChevronUp } from "react-icons/hi";
 import { Image } from "../../atoms";
 import { ListItemVariants } from "../../../types/listItemTypes";
 import { theme } from "../../../themes/MainTheme";
+import { ReactComponent as CheckIcon } from "../../../assets/icons/CheckMark.svg";
 import {
   StyledIcon,
   StyledIconAfter,
@@ -31,6 +32,7 @@ export interface Props {
   iconMargin?: string;
   className?: string;
   cursorPointer?: boolean;
+  checkIconColor?: string;
 }
 
 export const ListItem: FC<Props> = ({
@@ -52,6 +54,7 @@ export const ListItem: FC<Props> = ({
   onClick,
   path,
   variant,
+  checkIconColor,
 }) => {
   const displayClassName = `${variant} ${hover ? "hovered" : ""}`;
 
@@ -79,9 +82,18 @@ export const ListItem: FC<Props> = ({
       margin={margin}
       cursorPointer={cursorPointer ? "pointer" : ""}
     >
-      {icon && (
-        <StyledIcon className={variant} iconWidth={iconWidth} iconMargin={iconMargin}>
-          <Image src={icon} alt="icon" width={iconWidth} height="auto" />
+      {(icon || checkIconColor) && (
+        <StyledIcon
+          className={variant}
+          iconWidth={iconWidth}
+          iconMargin={iconMargin}
+          checkIconColor={checkIconColor}
+        >
+          {checkIconColor ? (
+            <CheckIcon className="check-icon" />
+          ) : (
+            <Image src={icon} alt="icon" width={iconWidth} height="auto" />
+          )}
         </StyledIcon>
       )}
       <StyledItem

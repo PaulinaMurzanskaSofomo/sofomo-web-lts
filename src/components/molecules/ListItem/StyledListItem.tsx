@@ -10,6 +10,7 @@ interface Props {
   cursorPointer?: string;
   iconWidth?: string;
   iconMargin?: string;
+  checkIconColor?: string;
 }
 interface WrapperProps extends Props {
   as?: ElementType;
@@ -120,6 +121,11 @@ export const StyledIcon = styled.div<Props>`
     align-self: flex-start;
     align-items: flex-start;
     padding-top: 0.5rem;
+  }
+  .check-icon {
+    rect {
+      fill: ${({ checkIconColor }) => checkIconColor};
+    }
   }
 `;
 

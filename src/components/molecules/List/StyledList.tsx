@@ -45,16 +45,6 @@ export const StyledList = styled.div<Props>`
       display: block;
     }
   }
-  &.dropdown-wrapper {
-    width: 100%;
-    height: auto;
-    position: relative;
-    align-items: center;
-    justify-content: flex-start;
-    @media ${device.laptop} {
-      align-items: flex-start;
-    }
-  }
   &.split {
     flex-direction: row;
     flex-wrap: wrap;

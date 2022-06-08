@@ -1,6 +1,5 @@
 export type ListVariants =
   | "in-dropdown"
-  | "dropdown-wrapper"
   | "split"
   | "standard"
   | "standard developers inner"

@@ -7,6 +7,7 @@ import { developers1 } from "../../../assets/content/footer/SectionAbout";
 import { ListItem } from "../ListItem";
 import { socialIconsList } from "../../../assets/icons/socialIconsList";
 import { theme } from "../../../themes/MainTheme";
+import { v4 as uuidv4 } from "uuid";
 
 export default {
   title: "Molecules/Card",
@@ -29,7 +30,7 @@ CardWithList.args = {
   children: (
     <List variant="plain">
       {developers1.map((item, i) => (
-        <ListItem variant="plain" listItem={item.title} key={i} hover />
+        <ListItem variant="plain" listItem={item.title} key={uuidv4()} hover />
       ))}
     </List>
   ),

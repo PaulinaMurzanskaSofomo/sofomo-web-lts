@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 import { Meta, Story } from "@storybook/react";
 import { BrowserRouter } from "react-router-dom";
 import { theme } from "../../../themes/MainTheme";
@@ -88,9 +89,9 @@ Secondary.args = {
         margin="0"
       />
       <List variant={"standard"} margin="3.5rem 0 1rem 0">
-        {featuresList.map((item: any, i: any) => (
+        {featuresList.map((item) => (
           <ListItem
-            key={i}
+            key={uuidv4()}
             icon={item.icon}
             variant={"icon-left"}
             iconWidth="4rem"
@@ -119,7 +120,7 @@ Tertiary.args = {
       />
       {outsourceCards.map((item: any, i: number) => (
         <Card
-          key={i}
+          key={uuidv4()}
           className="card-white"
           title={item.title}
           headingColor={theme.colors.white}
@@ -163,7 +164,7 @@ HalfWidth.args = {
       />
       <>
         {developersShort.map((item: any) => (
-          <List variant={"standard"} className="grid-area" margin="0" key={item.id}>
+          <List variant={"standard"} className="grid-area" margin="0" key={uuidv4()}>
             <ListItem
               listItem={item.type}
               variant={"icon-left-bold"}
@@ -172,9 +173,9 @@ HalfWidth.args = {
               margin="0 0 1.5rem 0"
             />
             <List variant="standard" margin="0 0 0 0">
-              {item.role.map((item: any, i: number) => (
+              {item.role.map((item: any) => (
                 <ListItem
-                  key={i}
+                  key={uuidv4()}
                   checkIconColor={theme.colors.white}
                   listItem={item.title}
                   variant="icon-left"
@@ -204,9 +205,9 @@ NoImage.args = {
         titleHighlighted="YOUR superpower!"
       />
       <List variant="split" margin="3.5rem 0 2.5rem 0 ">
-        {whatWeDolist.map((item: any, i: number) => (
+        {whatWeDolist.map((item: any) => (
           <ListItem
-            key={i}
+            key={uuidv4()}
             checkIconColor={theme.colors.blue}
             iconWidth="1.6rem"
             variant="icon-left"

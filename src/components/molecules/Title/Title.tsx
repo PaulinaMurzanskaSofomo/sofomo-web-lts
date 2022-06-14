@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { Typography } from "../../atoms";
 import { StyledQuotation, StyledTitle, StyledUppercaseTitle } from "./StyledTitle";
 import { TypographyTypes } from "../../../types/typographyTypes";
@@ -66,8 +67,8 @@ export const Title: FC<ITitle> = ({
       >
         {title}{" "}
         {titleHighlighted &&
-          wordsArray.map((word, i) => (
-            <span className="highlighted" key={i}>
+          wordsArray.map((word) => (
+            <span className="highlighted" key={uuidv4()}>
               {word}&nbsp;
             </span>
           ))}

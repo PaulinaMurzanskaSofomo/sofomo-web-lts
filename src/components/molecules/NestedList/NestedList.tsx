@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router-dom";
 import { theme } from "../../../themes/MainTheme";
 import { List } from "../List";
@@ -32,8 +33,8 @@ export const NestedList: FC<Props> = ({
         cursorPointer
       />
       <List variant="in-dropdown" isActive={isActive} margin="0" id={itemOuterId}>
-        {itemInnerList.map((item, i) => (
-          <Link key={i} to={item.path}>
+        {itemInnerList.map((item) => (
+          <Link key={uuidv4()} to={item.path}>
             <ListItem
               checkIconColor={theme.colors.blue}
               listItem={item.title}

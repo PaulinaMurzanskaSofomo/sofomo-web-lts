@@ -6,3 +6,4 @@ export { StyledResponsiveContainer } from "./StyledResponsiveContainer";
 export { Image } from "./Image";
 export { Button } from "./Button";
 export { DottedArrow } from "./DottedArrow";
+export { Input } from "./Input";

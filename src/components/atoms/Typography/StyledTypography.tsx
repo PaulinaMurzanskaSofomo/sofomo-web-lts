@@ -65,9 +65,11 @@ export const StyledTypography = styled.p<StyledProps>(
                 display: block;
                 @media (min-width: 768px) {
                   height: calc(${tablet.size} * 0.93);
+                  top: calc((${tablet.lineHeight} - ${tablet.size}) * 0.5);
                 }
                 @media (min-width: 1094px) {
                   height: calc(${laptop.size} * 0.93);
+                  top: calc((${laptop.lineHeight} - ${laptop.size}) * 0.5);
                 }
               }
             }

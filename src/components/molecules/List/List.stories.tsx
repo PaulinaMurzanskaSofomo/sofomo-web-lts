@@ -4,8 +4,8 @@ import { Meta, Story } from "@storybook/react";
 import { List, Props } from "./List";
 import { developers } from "../../../assets/content/developers";
 import { ListItem } from "../ListItem";
-import { checkPng } from "../../../assets/icons";
 import { mainMenu } from "../../../assets/content/navMenu/mainMenu";
+import { theme } from "../../../themes/MainTheme";
 
 export default {
   title: "Molecules/List",
@@ -32,7 +32,12 @@ export const ListInDropdown: Story<Props> = (args) => (
     <div className="container items">
       <List {...args} variant="in-dropdown" isActive={true}>
         {developers.map((item) => (
-          <ListItem listItem={item.type} variant="icon-check-arr-dots" icon={checkPng} hover />
+          <ListItem
+            listItem={item.type}
+            variant="icon-check-arr-dots"
+            checkIconColor={theme.colors.blue}
+            hover
+          />
         ))}
       </List>
     </div>
@@ -44,7 +49,12 @@ export const ListSplit: Story<Props> = (args) => (
     <div className="container">
       <List {...args} variant="split" isActive={true}>
         {developers.map((item) => (
-          <ListItem listItem={item.type} variant="icon-left" icon={checkPng} hover />
+          <ListItem
+            listItem={item.type}
+            variant="icon-left"
+            checkIconColor={theme.colors.blue}
+            hover
+          />
         ))}
       </List>
     </div>
@@ -61,7 +71,7 @@ export const Navlist: Story<Props> = (args) => {
             <ListItem
               listItem={item.title}
               variant={item.chevron ? "dropdown-chevrons" : "dropdown-no-chevrons"}
-              icon={checkPng}
+              checkIconColor={theme.colors.blue}
               onClick={() => setDropdownActive(!dropdownActive)}
               dropdownActive={dropdownActive}
             />

@@ -10,7 +10,6 @@ import { List } from "../List";
 import { ListItem } from "../ListItem";
 import { featuresList } from "../../../assets/content/homepage/SectionClientSuccess";
 import { whatWeDolist } from "../../../assets/content/homepage/SectionApproach";
-import { checkPng, checkWhite } from "../../../assets/icons";
 import { Card } from "../Card";
 import { outsourceCards } from "../../../assets/content/landingOutsource/SectionHowWePartner";
 import { developersShort } from "../../../assets/content/developersShort";
@@ -176,7 +175,7 @@ HalfWidth.args = {
               {item.role.map((item: any, i: number) => (
                 <ListItem
                   key={i}
-                  icon={checkWhite}
+                  checkIconColor={theme.colors.white}
                   listItem={item.title}
                   variant="icon-left"
                   itemColor="white"
@@ -208,7 +207,7 @@ NoImage.args = {
         {whatWeDolist.map((item: any, i: number) => (
           <ListItem
             key={i}
-            icon={checkPng}
+            checkIconColor={theme.colors.blue}
             iconWidth="1.6rem"
             variant="icon-left"
             listItem={item}

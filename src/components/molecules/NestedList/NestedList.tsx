@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { theme } from "../../../themes/MainTheme";
 import { List } from "../List";
 import { ListItem } from "../ListItem";
-import { checkPurple } from "../../../assets/icons";
 
 interface Props {
   isActive: boolean;
@@ -36,7 +35,7 @@ export const NestedList: FC<Props> = ({
         {itemInnerList.map((item, i) => (
           <Link key={i} to={item.path}>
             <ListItem
-              icon={checkPurple}
+              checkIconColor={theme.colors.blue}
               listItem={item.title}
               variant="icon-check-arr-dots"
               hover

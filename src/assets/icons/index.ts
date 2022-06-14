@@ -3,10 +3,7 @@ import arrowRightDotted from "./ArrowRight.svg";
 import arrowRightPlain from "./ArrowRightPlain.svg";
 import awsCloud from "./AwsCloud.svg";
 import backend from "./Backend.svg";
-import checkPurple from "./CheckPurple.svg";
-import checkPng from "./CheckIcon.png";
 import checkSvg from "./CheckMark.svg";
-import checkWhite from "./CheckmarkWhite.svg";
 import chevronDown from "./chevronDown.svg";
 import chevronUp from "./chevronUp.svg";
 import clock from "./ClockIcon.png";
@@ -30,14 +27,12 @@ export {
   awsCloud,
   backend,
   checkSvg,
-  checkWhite,
   chevronDown,
   chevronUp,
   clock,
   cross,
   frontend,
   magento,
-  checkPng,
   man,
   menu,
   minus,
@@ -48,5 +43,4 @@ export {
   quotationMarkBlack,
   salesforce,
   shield,
-  checkPurple,
 };

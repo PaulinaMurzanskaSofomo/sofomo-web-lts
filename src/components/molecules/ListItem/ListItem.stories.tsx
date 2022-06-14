@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { StyledResponsiveContainer } from "../../atoms";
 import { Meta, Story } from "@storybook/react";
 import { ListItem, Props } from "./ListItem";
-import { checkSvg, checkPng, tenPlus } from "../../../assets/icons";
+import { tenPlus } from "../../../assets/icons";
+import { theme } from "../../../themes/MainTheme";
 
 export default {
   title: "Molecules/ListItem",
@@ -52,7 +53,7 @@ PlainWithArrowOnHover.args = {
 export const WithCheckIcon = Template.bind({});
 WithCheckIcon.args = {
   variant: "icon-left",
-  icon: checkSvg,
+  checkIconColor: theme.colors.blue,
   iconWidth: "16px",
 };
 
@@ -66,7 +67,7 @@ WithOtherIcon.args = {
 export const WithCheckIconAndDottedArrowOnHover = Template.bind({});
 WithCheckIconAndDottedArrowOnHover.args = {
   variant: "icon-check-arr-dots",
-  icon: checkPng,
+  checkIconColor: theme.colors.blue,
   iconWidth: "16px",
   hover: true,
   cursorPointer: true,

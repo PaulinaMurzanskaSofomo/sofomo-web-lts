@@ -42,6 +42,7 @@ import { ContactModal } from "../../../organisms";
 import { useResize } from "../../../hooks/useResize";
 import { useContactFormContext } from "../../../context/ContactFormContext";
 import { useLaptopScreen, useScreenGraterThanTablet } from "../../../hooks";
+import { MotionContainer } from "../../../libs/framer";
 
 interface Props {
   stickyForm: boolean;
@@ -80,17 +81,19 @@ export const OutsourcePageDisplay = ({
             label="outsource development company"
             title="Trusted outsource developers with Sofomo"
           />
-          <List variant="standard">
-            {aboutList.map((item) => (
-              <ListItem
-                key={uuidv4()}
-                variant="icon-left"
-                listItem={item}
-                margin="0 0 1rem 0"
-                icon={checkSvg}
-              />
-            ))}
-          </List>
+          <MotionContainer>
+            <List variant="standard">
+              {aboutList.map((item) => (
+                <ListItem
+                  key={uuidv4()}
+                  variant="icon-left"
+                  listItem={item}
+                  margin="0 0 1rem 0"
+                  icon={checkSvg}
+                />
+              ))}
+            </List>
+          </MotionContainer>
           <StyledArrow onClick={handleScroll}>
             <DottedArrow variant="down" backgroundColor="none" />
           </StyledArrow>
@@ -140,32 +143,34 @@ export const OutsourcePageDisplay = ({
               </span>
             }
           />
-          <StyledListWrapper>
-            {developersShort.map((item) => (
-              <List variant="standard" className="grid-area" margin="0" key={item.id}>
-                <ListItem
-                  listItem={item.type}
-                  variant="icon-left-bold"
-                  itemColor="white"
-                  icon={item.icon}
-                  margin="0 0 1.5rem 0"
-                />
-                <List variant="standard" margin="0">
-                  {item.role.map((item) => (
-                    <ListItem
-                      key={uuidv4()}
-                      checkIconColor={theme.colors.white}
-                      listItem={item.title}
-                      variant="icon-left"
-                      itemColor="white"
-                      iconMargin="0 1.5rem 0 0"
-                      margin="0 0 1.5rem 0"
-                    />
-                  ))}
+          <MotionContainer delay={0.2}>
+            <StyledListWrapper>
+              {developersShort.map((item) => (
+                <List variant="standard" className="grid-area" margin="0" key={item.id}>
+                  <ListItem
+                    listItem={item.type}
+                    variant="icon-left-bold"
+                    itemColor="white"
+                    icon={item.icon}
+                    margin="0 0 1.5rem 0"
+                  />
+                  <List variant="standard" margin="0">
+                    {item.role.map((item) => (
+                      <ListItem
+                        key={uuidv4()}
+                        checkIconColor={theme.colors.white}
+                        listItem={item.title}
+                        variant="icon-left"
+                        itemColor="white"
+                        iconMargin="0 1.5rem 0 0"
+                        margin="0 0 1.5rem 0"
+                      />
+                    ))}
+                  </List>
                 </List>
-              </List>
-            ))}
-          </StyledListWrapper>
+              ))}
+            </StyledListWrapper>
+          </MotionContainer>
         </PageView>
         <PageView variant="tertiary" background={theme.colors.blue} image={owners}>
           <Title
@@ -241,7 +246,9 @@ export const OutsourcePageDisplay = ({
           className="outsource"
           animated
         >
-          <Grid variant="grid-6-items" itemsList={partnersLogosList} />
+          <MotionContainer>
+            <Grid variant="grid-6-items" itemsList={partnersLogosList} />
+          </MotionContainer>
         </Banner>
       </StyledOutsourcePageDisplay>
       <StyledButtonWrapper>

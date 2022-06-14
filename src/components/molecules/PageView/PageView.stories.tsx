@@ -13,6 +13,7 @@ import { whatWeDolist } from "../../../assets/content/homepage/SectionApproach";
 import { Card } from "../Card";
 import { outsourceCards } from "../../../assets/content/landingOutsource/SectionHowWePartner";
 import { developersShort } from "../../../assets/content/developersShort";
+import { MotionContainer } from "../../../libs/framer";
 
 export default {
   title: "Organisms/PageView",
@@ -38,12 +39,14 @@ Intro.args = {
   children: (
     <>
       <Title title="Scale your development team with Sofomo" titleVariant="heading_2" margin="0" />
-      <div style={{ margin: "1.5rem 0 3rem" }}>
-        <Typography variant="body_text_10">
-          Sofomo provides exceptional development teams to innovative companies across the world.
-          Our developers join your team and become your superpower!
-        </Typography>
-      </div>
+      <MotionContainer>
+        <div style={{ margin: "1.5rem 0 3rem" }}>
+          <Typography variant="body_text_10">
+            Sofomo provides exceptional development teams to innovative companies across the world.
+            Our developers join your team and become your superpower!
+          </Typography>
+        </div>
+      </MotionContainer>
     </>
   ),
 };
@@ -87,18 +90,20 @@ Secondary.args = {
         titleVariant="heading_3"
         margin="0"
       />
-      <List variant={"standard"} margin="3.5rem 0 1rem 0">
-        {featuresList.map((item: any, i: any) => (
-          <ListItem
-            key={i}
-            icon={item.icon}
-            variant={"icon-left"}
-            iconWidth="4rem"
-            listItem={item.title}
-            margin="0 0 2.5rem 0"
-          />
-        ))}
-      </List>
+      <MotionContainer>
+        <List variant={"standard"} margin="3.5rem 0 1rem 0">
+          {featuresList.map((item: any, i: any) => (
+            <ListItem
+              key={i}
+              icon={item.icon}
+              variant={"icon-left"}
+              iconWidth="4rem"
+              listItem={item.title}
+              margin="0 0 2.5rem 0"
+            />
+          ))}
+        </List>
+      </MotionContainer>
     </>
   ),
 };
@@ -161,7 +166,7 @@ HalfWidth.args = {
         label="Our developers"
         title=" With our skillset, We've got you covered"
       />
-      <>
+      <MotionContainer delay={0.2}>
         {developersShort.map((item: any) => (
           <List variant={"standard"} className="grid-area" margin="0" key={item.id}>
             <ListItem
@@ -186,7 +191,7 @@ HalfWidth.args = {
             </List>
           </List>
         ))}
-      </>
+      </MotionContainer>
     </>
   ),
 };
@@ -203,19 +208,21 @@ NoImage.args = {
         title={`Sofomo developers join your team &\u00a0become`}
         titleHighlighted="YOUR superpower!"
       />
-      <List variant="split" margin="3.5rem 0 2.5rem 0 ">
-        {whatWeDolist.map((item: any, i: number) => (
-          <ListItem
-            key={i}
-            checkIconColor={theme.colors.blue}
-            iconWidth="1.6rem"
-            variant="icon-left"
-            listItem={item}
-            margin="0 0 1rem 0"
-            itemColor="black"
-          />
-        ))}
-      </List>
+      <MotionContainer>
+        <List variant="split" margin="3.5rem 0 2.5rem 0 ">
+          {whatWeDolist.map((item: any, i: number) => (
+            <ListItem
+              key={i}
+              checkIconColor={theme.colors.blue}
+              iconWidth="1.6rem"
+              variant="icon-left"
+              listItem={item}
+              margin="0 0 1rem 0"
+              itemColor="black"
+            />
+          ))}
+        </List>
+      </MotionContainer>
     </>
   ),
 };

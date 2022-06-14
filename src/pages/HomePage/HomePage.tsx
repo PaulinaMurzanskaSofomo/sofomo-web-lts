@@ -31,6 +31,8 @@ import { useResize } from "../../hooks/useResize";
 import { checkMediumScreen } from "../../helpers/checkMediumScreen";
 import { StyledHomePage, StyledClockImage, StyledParagraphWrapper } from "./StyledHomePage";
 import { NestedDropdownList } from "../../organisms";
+import { MotionContainer } from "../../libs/framer";
+import { useContactFormContext } from "../../context/ContactFormContext";
 
 export const HomePage: FC = () => {
   const screenSize = useResize();
@@ -52,12 +54,14 @@ export const HomePage: FC = () => {
           titleColor={theme.colors.dark}
           margin="0"
         />
-        <StyledParagraphWrapper>
-          <Typography variant="body_text_9">
-            Sofomo provides exceptional development teams to innovative companies across the world.
-            Our developers join your team and become your superpower!
-          </Typography>
-        </StyledParagraphWrapper>
+        <MotionContainer>
+          <StyledParagraphWrapper>
+            <Typography variant="body_text_9">
+              Sofomo provides exceptional development teams to innovative companies across the
+              world. Our developers join your team and become your superpower!
+            </Typography>
+          </StyledParagraphWrapper>
+        </MotionContainer>
       </PageView>
       <Banner
         image={tenYears}
@@ -106,18 +110,20 @@ export const HomePage: FC = () => {
           titleColor={theme.colors.dark}
           margin="0"
         />
-        <List variant="standard" margin="3.5rem 0 1rem 0">
-          {featuresList.map((item) => (
-            <ListItem
-              key={uuidv4()}
-              icon={item.icon}
-              variant="icon-left"
-              iconWidth="4rem"
-              listItem={item.title}
-              margin="0 0 2.5rem 0"
-            />
-          ))}
-        </List>
+        <MotionContainer>
+          <List variant="standard" margin="3.5rem 0 1rem 0">
+            {featuresList.map((item) => (
+              <ListItem
+                key={uuidv4()}
+                icon={item.icon}
+                variant="icon-left"
+                iconWidth="4rem"
+                listItem={item.title}
+                margin="0 0 2.5rem 0"
+              />
+            ))}
+          </List>
+        </MotionContainer>
       </PageView>
       <PageView btnLabel="What We Do" btnPath={ROUTE.OUTSOURCE} variant="noImage">
         <Title
@@ -127,18 +133,20 @@ export const HomePage: FC = () => {
           title="Sofomo developers join your team&nbsp;become"
           titleHighlighted="YOUR superpower!"
         />
-        <List variant="split" margin="3.5rem 0 2.5rem 0">
-          {whatWeDolist.map((item) => (
-            <ListItem
-              checkIconColor={theme.colors.blue}
-              key={uuidv4()}
-              iconWidth="1.6rem"
-              variant="icon-left"
-              listItem={item}
-              margin="0 0 1rem 0"
-            />
-          ))}
-        </List>
+        <MotionContainer>
+          <List variant="split" margin="3.5rem 0 2.5rem 0">
+            {whatWeDolist.map((item) => (
+              <ListItem
+                checkIconColor={theme.colors.blue}
+                key={uuidv4()}
+                iconWidth="1.6rem"
+                variant="icon-left"
+                listItem={item}
+                margin="0 0 1rem 0"
+              />
+            ))}
+          </List>
+        </MotionContainer>
       </PageView>
       <ImagesSwiper />
       <SectionContainer background={theme.colors.gray000}>
@@ -187,7 +195,9 @@ export const HomePage: FC = () => {
         titleColor={theme.colors.white}
         animated
       >
-        <Grid itemsList={partnersLogosList} variant={"grid-6-items"} />
+        <MotionContainer>
+          <Grid itemsList={partnersLogosList} variant={"grid-6-items"} />
+        </MotionContainer>
       </Banner>
     </StyledHomePage>
   );

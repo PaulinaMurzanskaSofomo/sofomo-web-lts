@@ -1,4 +1,5 @@
 import React, { FC, ReactNode } from "react";
+import { MotionContainer } from "../../../libs/framer";
 import { theme } from "../../../themes/MainTheme";
 import { TypographyTypes } from "../../../types/typographyTypes";
 import { Typography, SectionContainer } from "../../atoms";
@@ -35,7 +36,7 @@ export const Banner: FC<Props> = ({
     <SectionContainer background={backgroundColor}>
       <StyledBanner className={className}>
         <StyledSection className={`${imageOuter ? "image-outer" : "image-inner"}`}>
-          <div className="grid-area">
+          <MotionContainer className="grid-area" variant={animated ? "default" : "no-animation"}>
             <Typography variant={titleVariant} as="h3" color={titleColor} fontWeight="700">
               {title}
             </Typography>
@@ -44,7 +45,7 @@ export const Banner: FC<Props> = ({
                 {subtitle}
               </Typography>
             )}
-          </div>
+          </MotionContainer>
           <StyledChildren className="grid-area">{children}</StyledChildren>
           {imageInner && (
             <StyledBannerImage className="grid-area inner">

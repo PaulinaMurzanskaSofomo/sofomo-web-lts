@@ -4,6 +4,7 @@ import { StyledQuotation, StyledTitle, StyledUppercaseTitle } from "./StyledTitl
 import { TypographyTypes } from "../../../types/typographyTypes";
 import { ReactComponent as Quote } from "../../../assets/icons/QuotationMark.svg";
 import { theme } from "../../../themes/MainTheme";
+import { MotionContainer } from "../../../libs/framer";
 
 export interface ITitle {
   quotationMarkColor?: string;
@@ -38,41 +39,47 @@ export const Title: FC<ITitle> = ({
   return (
     <StyledTitle margin={margin}>
       {quotationMarkColor && (
-        <StyledQuotation
-          quotationMarkColor={quotationMarkColor}
-          quotationMarkSize={quotationMarkSize}
-          quotationMarginBottom={quotationMarkSize === "3rem" ? "2rem" : "1.5"}
-        >
-          <Quote className="quotation-mark" />
-        </StyledQuotation>
+        <MotionContainer>
+          <StyledQuotation
+            quotationMarkColor={quotationMarkColor}
+            quotationMarkSize={quotationMarkSize}
+            quotationMarginBottom={quotationMarkSize === "3rem" ? "2rem" : "1.5"}
+          >
+            <Quote className="quotation-mark" />
+          </StyledQuotation>
+        </MotionContainer>
       )}
-      <StyledUppercaseTitle>
+      <MotionContainer delay={0.3}>
+        <StyledUppercaseTitle>
+          <Typography
+            as="h5"
+            variant="body_text_6"
+            textTransform="uppercase"
+            color={labelColor}
+            fontWeight="700"
+          >
+            {label}
+          </Typography>
+        </StyledUppercaseTitle>
+      </MotionContainer>
+      <MotionContainer delay={0.4}>
         <Typography
-          as="h5"
-          variant="body_text_6"
-          textTransform="uppercase"
-          color={labelColor}
+          as="h3"
+          variant={titleVariant}
+          color={titleColor}
+          highlightColor={highlightColor}
           fontWeight="700"
         >
-          {label}
+          {title}{" "}
+          {titleHighlighted &&
+            wordsArray.map((word, i) => (
+              <span className="highlighted" key={i}>
+                {word}&nbsp;
+              </span>
+            ))}
+          {titleAfter}
         </Typography>
-      </StyledUppercaseTitle>
-      <Typography
-        as="h3"
-        variant={titleVariant}
-        color={titleColor}
-        highlightColor={highlightColor}
-        fontWeight="700"
-      >
-        {title}{" "}
-        {titleHighlighted &&
-          wordsArray.map((word, i) => (
-            <span className="highlighted" key={i}>
-              {word}&nbsp;
-            </span>
-          ))}
-        {titleAfter}
-      </Typography>
+      </MotionContainer>
     </StyledTitle>
   );
 };

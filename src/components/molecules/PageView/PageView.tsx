@@ -3,6 +3,7 @@ import { SectionContainer, Button, Image } from "../../atoms";
 import { PageViewVariants } from "../../../types/pageViewTypes";
 import { ButtonVariant } from "../../../types/buttonTypes";
 import { StyledPageView, StyledContent, StyledViewImage } from "./StyledPageView";
+import { MotionContainer } from "../../../libs/framer";
 
 export interface Props {
   btnVariant?: ButtonVariant;
@@ -41,18 +42,22 @@ export const PageView: FC<Props> = ({
         <StyledContent name={variant}>
           {children}
           {btnLabel && (
-            <Button
-              width={btnWidth}
-              label={btnLabel}
-              onClick={btnOnClick}
-              path={btnPath}
-              variant={btnVariant}
-            />
+            <MotionContainer duration={0.5} delay={0.5}>
+              <Button
+                width={btnWidth}
+                label={btnLabel}
+                onClick={btnOnClick}
+                path={btnPath}
+                variant={btnVariant}
+              />
+            </MotionContainer>
           )}
         </StyledContent>
         {image && (
           <StyledViewImage className={variant} name={variant}>
-            <Image src={image} alt="section" animatedComponent={animatedComponent} />
+            <MotionContainer>
+              <Image src={image} alt="section" animatedComponent={animatedComponent} />
+            </MotionContainer>
           </StyledViewImage>
         )}
       </StyledPageView>

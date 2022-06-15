@@ -12,22 +12,7 @@ export const StyledList = styled.div<Props>`
   flex-direction: column;
   margin: ${({ margin }) => margin};
   &.standard {
-    &.developers {
-      &.inner {
-        padding-left: 3.5rem;
-        margin: 1rem 0 0 0;
-      }
-      &.outer {
-        border: 2px;
-        padding: 1.5rem;
-        margin: 0;
-        &:hover {
-          background-color: ${theme.colors.blueTransparent};
-          transition: all 0.3s;
-          border-radius: 4px;
-        }
-      }
-    }
+    flex-direction: column;
   }
   &.plain {
     width: max-content;

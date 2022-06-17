@@ -45,6 +45,7 @@ export const Menu = ({ closeMenu }: Props) => {
       setNavItemActive(true);
       if (navBtnPath) {
         setPageOverlayActive(false);
+        setNavItemActive(false);
       } else setPageOverlayActive(true);
     }
   };

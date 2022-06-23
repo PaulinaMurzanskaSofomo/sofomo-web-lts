@@ -1,5 +1,6 @@
 import { backend, frontend, mobile, magento, salesforce, awsCloud } from "../icons";
 import { ROUTE } from "../../routes";
+
 export const developers = [
   {
     type: "backend developers",
@@ -35,7 +36,7 @@ export const developers = [
     ],
     description: `We support all major backend technologies.`,
     icon: `${backend}`,
-    id: "1",
+    id: "devs-1",
   },
   {
     type: "frontend developers",
@@ -55,7 +56,7 @@ export const developers = [
     ],
     description: `We're specialists in React, Angular & Vue.js.`,
     icon: `${frontend}`,
-    id: "2",
+    id: "devs-2",
   },
   {
     type: "mobile developers",
@@ -75,7 +76,7 @@ export const developers = [
     ],
     description: `Launching a new app ? Lets's do it! iOS, Android & React Native.`,
     icon: `${mobile}`,
-    id: "3",
+    id: "devs-3",
   },
   {
     type: "AWS Cloud Engineers",
@@ -87,7 +88,7 @@ export const developers = [
     ],
     description: `We've done it all from basic to advanced AWS infrastructure.`,
     icon: `${awsCloud}`,
-    id: "4",
+    id: "devs-4",
   },
   {
     type: "Salesforce developers",
@@ -99,7 +100,7 @@ export const developers = [
     ],
     description: `Take advantage of Salesforce, we've got you covered.`,
     icon: `${salesforce}`,
-    id: "5",
+    id: "devs-5",
   },
   {
     type: "Magento",
@@ -111,6 +112,6 @@ export const developers = [
     ],
     description: `We're experts in .Net framework/Core.`,
     icon: `${magento}`,
-    id: "6",
+    id: "devs-6",
   },
 ];

@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { AdditionalGridVariant, GridTypes } from "../../../types/gridTypes";
 import { Image } from "../../atoms";
 import { StyledGrid } from "./StyledGrid";
+import { v4 as uuidv4 } from "uuid";
 
 export interface Props {
   itemsList: {
@@ -17,13 +18,7 @@ export const Grid: FC<Props> = ({ className, itemsList, variant, additionalVaria
   return (
     <StyledGrid className={`${className} grid-wrapper ${variant} ${additionalVariant}`}>
       {itemsList.map((item, i) => (
-        <Image
-          key={item.logo + i}
-          src={item.logo}
-          alt="logo"
-          label={item.label}
-          className="grid-item"
-        />
+        <Image key={uuidv4()} src={item.logo} alt="logo" label={item.label} className="grid-item" />
       ))}
     </StyledGrid>
   );

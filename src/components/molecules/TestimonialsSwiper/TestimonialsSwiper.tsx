@@ -1,4 +1,5 @@
 import React, { FC, useRef } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import "swiper/css";
@@ -39,8 +40,8 @@ export const TestimonialsSwiper: FC = () => {
         speed={300}
         slidesPerView={1}
       >
-        {testimonials.map((item: any, i: number) => (
-          <SwiperSlide className="my-swiper-slide" key={i}>
+        {testimonials.map((item: any) => (
+          <SwiperSlide className="my-swiper-slide" key={uuidv4()}>
             <Title
               titleVariant="heading_5"
               title={item.beforeHighlight}

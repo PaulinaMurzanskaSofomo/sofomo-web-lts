@@ -1,4 +1,5 @@
 import React, { FC, useEffect, useRef, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -42,12 +43,12 @@ export const ImagesSwiper: FC = () => {
         breakpoints={imageSwiperBreakpoints}
         className="images-swiper"
       >
-        {imagesList.map((item: any, i: number) => (
-          <SwiperSlide className="swiper-slide" key={i}>
+        {imagesList.map((item) => (
+          <SwiperSlide className="swiper-slide" key={uuidv4()}>
             <StyledImagesWrapper>
-              {item.map((image: any, i: number) => (
+              {item.map((image) => (
                 <SwiperImage
-                  key={i}
+                  key={uuidv4()}
                   src={image.image}
                   alt="swiper"
                   height={image.height}

@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { theme } from "../../../../themes/MainTheme";
 import { doubledLoopArrayType } from "../../../../types/currencyTypes";
 import { SectionContainer, Typography } from "../../../atoms";
@@ -37,10 +38,10 @@ export const CurrencyBannerDisplay: FC<ICurrency> = ({ today, currencyArrays, er
               </StyledDate>
               <StyledRatesContainer>
                 <StyledAnimatedBlocksWrapper>
-                  {currencyArrays.map((array, i) => (
-                    <StyledAnimatedBlock key={i}>
-                      {array.map((item, i) => (
-                        <StyledCurrencyBox key={i}>
+                  {currencyArrays.map((array) => (
+                    <StyledAnimatedBlock key={uuidv4()}>
+                      {array.map((item) => (
+                        <StyledCurrencyBox key={uuidv4()}>
                           <Typography variant="body_text_2" color={theme.colors.actionPrimaryGreen}>
                             1$
                           </Typography>

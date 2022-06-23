@@ -1,4 +1,5 @@
 import React, { FC, MouseEvent, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { developers } from "../../assets/content/developers";
 import { StyledNestedDropdown, StyledListOverlay } from "./StyledNestedDropdownList";
 import { NestedList } from "../../components/molecules/NestedList/NestedList";
@@ -29,7 +30,7 @@ export const NestedDropdownList: FC = () => {
           itemOuter={item.type}
           itemOuterId={item.id}
           itemInnerList={item.role}
-          key={item.id}
+          key={uuidv4()}
           handleActiveClass={handleActiveClass}
         />
       ))}

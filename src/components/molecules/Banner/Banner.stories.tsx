@@ -5,6 +5,7 @@ import { circles, tenYears } from "../../../assets/images";
 import { Grid } from "../Grid";
 import { leadersLogoList, partnersLogosList } from "../../../assets/logos/logoLists";
 import { theme } from "../../../themes/MainTheme";
+import { MotionContainer } from "../../../libs/framer";
 
 export default {
   title: "Molecules/Banner",
@@ -14,7 +15,9 @@ export default {
 const Template: Story<Props> = (args) => (
   <div className="container footer">
     <Banner {...args}>
-      <Grid itemsList={partnersLogosList} variant={"grid-6-items"} />
+      <MotionContainer>
+        <Grid itemsList={partnersLogosList} variant={"grid-6-items"} />
+      </MotionContainer>
     </Banner>
   </div>
 );

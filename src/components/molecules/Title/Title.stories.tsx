@@ -5,7 +5,7 @@ import { theme } from "../../../themes/MainTheme";
 import { Title, ITitle } from "./Title";
 
 export default {
-  title: "Organisms/Title",
+  title: "Molecules/Title",
   component: Title,
   argTypes: {},
 } as Meta;

@@ -10,6 +10,7 @@ import { onInit } from "../../../libs/swiper";
 import { Image, DottedArrow, Typography } from "../../atoms";
 import { theme } from "../../../themes/MainTheme";
 import { Title } from "../../molecules";
+import { MotionContainer } from "../../../libs/framer";
 import {
   StyledNavIndicators,
   StyledTestimonialsSwiper,
@@ -22,15 +23,17 @@ export const TestimonialsSwiper: FC = () => {
 
   return (
     <StyledTestimonialsSwiper className="swiper">
-      <Typography
-        as="h3"
-        color={theme.colors.gray300}
-        textTransform="uppercase"
-        variant="body_text_6"
-        fontWeight="700"
-      >
-        what clients are saying
-      </Typography>
+      <MotionContainer>
+        <Typography
+          as="h3"
+          color={theme.colors.gray300}
+          textTransform="uppercase"
+          variant="body_text_6"
+          fontWeight="700"
+        >
+          what clients are saying
+        </Typography>
+      </MotionContainer>
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={100}

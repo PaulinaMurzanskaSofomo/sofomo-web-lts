@@ -6,4 +6,5 @@ export type ListVariants =
   | "standard developers outer"
   | "plain"
   | "dropdown-outer"
+  | "double-list"
   | "navlist";

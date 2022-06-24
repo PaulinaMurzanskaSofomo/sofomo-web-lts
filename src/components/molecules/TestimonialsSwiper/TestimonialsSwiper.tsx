@@ -1,5 +1,4 @@
-import React, { FC, useRef } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React, { FC, useRef, useId } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import "swiper/css";
@@ -44,7 +43,7 @@ export const TestimonialsSwiper: FC = () => {
         slidesPerView={1}
       >
         {testimonials.map((item: any) => (
-          <SwiperSlide className="my-swiper-slide" key={uuidv4()}>
+          <SwiperSlide className="my-swiper-slide" key={useId()}>
             <Title
               titleVariant="heading_5"
               title={item.beforeHighlight}

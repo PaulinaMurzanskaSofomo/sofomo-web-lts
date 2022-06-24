@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 import { StyledResponsiveContainer, Typography } from "../../atoms";
 import { Card, Props } from "./Card";
 import { Meta, Story } from "@storybook/react";
@@ -7,7 +7,6 @@ import { ListItem } from "../ListItem";
 import { socialIconsList } from "../../../assets/icons/socialIconsList";
 import { theme } from "../../../themes/MainTheme";
 import { developersShort } from "../../../assets/content/developersShort";
-import { v4 as uuidv4 } from "uuid";
 
 export default {
   title: "Molecules/Card",
@@ -30,7 +29,7 @@ CardWithList.args = {
   children: (
     <List variant="plain">
       {developersShort.map((item) => (
-        <ListItem variant="plain" listItem={item.type} key={uuidv4()} hover />
+        <ListItem variant="plain" listItem={item.type} key={useId()} hover />
       ))}
     </List>
   ),

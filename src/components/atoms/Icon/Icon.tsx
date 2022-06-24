@@ -6,7 +6,7 @@ export interface Props {
   path?: string;
   variant?: string;
   width?: string;
-  children?: any;
+  children?: React.ReactNode;
 }
 
 export const Icon: FC<Props> = ({

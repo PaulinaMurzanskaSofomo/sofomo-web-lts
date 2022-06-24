@@ -3,7 +3,7 @@ import { StyledSectionContainer } from "./StyledSectionContainer";
 
 interface Props {
   background?: string;
-  children?: any;
+  children?: React.ReactNode;
   as?: ElementType;
 }
 

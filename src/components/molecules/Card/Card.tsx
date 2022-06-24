@@ -7,7 +7,7 @@ import { StyledCard, StyledCardBody, StyledHeading } from "./StyledCard";
 
 export interface Props {
   variant: CardTypes;
-  children: any;
+  children: React.ReactNode;
   className?: string;
   headingColor?: string;
   socialIconsList?: any;

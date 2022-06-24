@@ -10,7 +10,7 @@ interface Props {
   highlightColor?: string;
   fontWeight?: string;
   variant?: TypographyTypes;
-  children: ReactNode;
+  children: any;
   className?: string;
   textTransform?: string;
 }

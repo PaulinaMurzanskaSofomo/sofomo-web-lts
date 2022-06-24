@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React, { useState, useId } from "react";
 import { StyledResponsiveContainer } from "../../atoms";
 import { Meta, Story } from "@storybook/react";
 import { List, Props } from "./List";
@@ -18,7 +17,7 @@ export const ListPlain: Story<Props> = (args) => (
     <StyledResponsiveContainer>
       <List {...args}>
         {developers.map((item) => (
-          <ListItem listItem={item.type} variant="plain" key={uuidv4()} />
+          <ListItem listItem={item.type} variant="plain" key={useId()} />
         ))}
       </List>
     </StyledResponsiveContainer>
@@ -34,7 +33,7 @@ export const ListInDropdown: Story<Props> = (args) => (
       <List {...args} variant="in-dropdown" isActive={true}>
         {developers.map((item) => (
           <ListItem
-            key={uuidv4()}
+            key={useId()}
             listItem={item.type}
             variant="icon-check-arr-dots"
             checkIconColor={theme.colors.blue}
@@ -52,7 +51,7 @@ export const ListSplit: Story<Props> = (args) => (
       <List {...args} variant="split" isActive={true}>
         {developers.map((item) => (
           <ListItem
-            key={uuidv4()}
+            key={useId()}
             listItem={item.type}
             variant="icon-left"
             checkIconColor={theme.colors.blue}
@@ -72,7 +71,7 @@ export const Navlist: Story<Props> = (args) => {
         <List {...args} variant="navlist">
           {mainMenu.map((item) => (
             <ListItem
-              key={uuidv4()}
+              key={useId()}
               listItem={item.title}
               variant={item.chevron ? "dropdown-chevrons" : "dropdown-no-chevrons"}
               checkIconColor={theme.colors.blue}

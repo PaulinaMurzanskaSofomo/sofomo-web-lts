@@ -13,7 +13,7 @@ export interface Props {
   btnOnClick?: VoidFunction;
   image?: string;
   id?: string;
-  children: any;
+  children: React.ReactNode;
   variant: PageViewVariants;
   background?: string;
   className?: string;

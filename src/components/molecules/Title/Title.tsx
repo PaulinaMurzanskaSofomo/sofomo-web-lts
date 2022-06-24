@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from "react";
-import { v4 as uuidv4 } from "uuid";
 import { Typography } from "../../atoms";
 import { StyledQuotation, StyledTitle, StyledUppercaseTitle } from "./StyledTitle";
 import { TypographyTypes } from "../../../types/typographyTypes";

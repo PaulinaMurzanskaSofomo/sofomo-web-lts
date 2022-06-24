@@ -1,5 +1,4 @@
-import React, { FC } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React, { FC, useId } from "react";
 import { whatWeDolist } from "../../assets/content/homepage/SectionApproach";
 import { theme } from "../../themes/MainTheme";
 import {
@@ -114,7 +113,7 @@ export const HomePage: FC = () => {
           <List variant="standard" margin="3.5rem 0 1rem 0">
             {featuresList.map((item) => (
               <ListItem
-                key={uuidv4()}
+                key={useId()}
                 icon={item.icon}
                 variant="icon-left"
                 iconWidth="4rem"
@@ -138,7 +137,7 @@ export const HomePage: FC = () => {
             {whatWeDolist.map((item) => (
               <ListItem
                 checkIconColor={theme.colors.blue}
-                key={uuidv4()}
+                key={useId()}
                 iconWidth="1.6rem"
                 variant="icon-left"
                 listItem={item}

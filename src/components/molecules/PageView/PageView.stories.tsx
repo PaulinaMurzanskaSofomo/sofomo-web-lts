@@ -1,5 +1,4 @@
-import React from "react";
-import { v4 as uuidv4 } from "uuid";
+import React, { useId } from "react";
 import { Meta, Story } from "@storybook/react";
 import { BrowserRouter } from "react-router-dom";
 import { theme } from "../../../themes/MainTheme";
@@ -93,9 +92,9 @@ Secondary.args = {
       />
       <MotionContainer>
         <List variant={"standard"} margin="3.5rem 0 1rem 0">
-          {featuresList.map((item: any, i: any) => (
+          {featuresList.map((item: any) => (
             <ListItem
-              key={i}
+              key={useId()}
               icon={item.icon}
               variant={"icon-left"}
               iconWidth="4rem"
@@ -123,9 +122,9 @@ Tertiary.args = {
         title="How we partner with you"
         margin="0 0 5.5rem 0"
       />
-      {outsourceCards.map((item: any, i: number) => (
+      {outsourceCards.map((item, i: number) => (
         <Card
-          key={uuidv4()}
+          key={useId()}
           className="card-white"
           title={item.title}
           headingColor={theme.colors.white}
@@ -168,8 +167,8 @@ HalfWidth.args = {
         title=" With our skillset, We've got you covered"
       />
       <MotionContainer delay={0.2}>
-        {developersShort.map((item: any) => (
-          <List variant={"standard"} className="grid-area" margin="0" key={uuidv4()}>
+        {developersShort.map((item) => (
+          <List variant={"standard"} className="grid-area" margin="0" key={useId()}>
             <ListItem
               listItem={item.type}
               variant={"icon-left-bold"}
@@ -178,9 +177,9 @@ HalfWidth.args = {
               margin="0 0 1.5rem 0"
             />
             <List variant="standard" margin="0 0 0 0">
-              {item.role.map((item: any) => (
+              {item.role.map((item) => (
                 <ListItem
-                  key={uuidv4()}
+                  key={useId()}
                   checkIconColor={theme.colors.white}
                   listItem={item.title}
                   variant="icon-left"
@@ -211,9 +210,9 @@ NoImage.args = {
       />
       <MotionContainer>
         <List variant="split" margin="3.5rem 0 2.5rem 0 ">
-          {whatWeDolist.map((item: any, i: number) => (
+          {whatWeDolist.map((item: any) => (
             <ListItem
-              key={i}
+              key={useId()}
               checkIconColor={theme.colors.blue}
               iconWidth="1.6rem"
               variant="icon-left"

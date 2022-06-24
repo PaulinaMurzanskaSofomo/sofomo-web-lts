@@ -1,5 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React, { FC, useId, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -44,11 +43,11 @@ export const ImagesSwiper: FC = () => {
         className="images-swiper"
       >
         {imagesList.map((item) => (
-          <SwiperSlide className="swiper-slide" key={uuidv4()}>
+          <SwiperSlide className="swiper-slide" key={useId()}>
             <StyledImagesWrapper>
               {item.map((image) => (
                 <SwiperImage
-                  key={uuidv4()}
+                  key={useId()}
                   src={image.image}
                   alt="swiper"
                   height={image.height}

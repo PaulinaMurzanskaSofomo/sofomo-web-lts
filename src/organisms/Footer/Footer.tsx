@@ -1,5 +1,4 @@
-import React, { FC } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React, { FC, useId } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { theme } from "../../themes/MainTheme";
 import { offices } from "../../assets/content/footer/Offices";
@@ -21,7 +20,7 @@ export const Footer: FC = () => {
         {offices.map((office, i) => (
           <Card
             className="grid-area"
-            key={uuidv4()}
+            key={useId()}
             title={office.country}
             label={office.headquarter ? "Headquarters" : ""}
             variant="large-nonresponsive"
@@ -30,8 +29,8 @@ export const Footer: FC = () => {
               <StyledCardBody>
                 <Image width="5rem" height="5rem" src={office.avatar} alt="avatar" />
                 <List variant="plain" margin="0 0 0 1.5rem">
-                  {Object.values(office.data).map((item: any) => (
-                    <Typography variant="body_text_5" color={theme.colors.gray400} key={uuidv4()}>
+                  {Object.values(office.data).map((item) => (
+                    <Typography variant="body_text_5" color={theme.colors.gray400} key={useId()}>
                       {item}
                     </Typography>
                   ))}
@@ -56,11 +55,11 @@ export const Footer: FC = () => {
             title={list.listTitle}
             className="grid-area"
             variant="small-nonresponsive"
-            key={uuidv4()}
+            key={useId()}
           >
             <List variant="double-list" margin="0">
               {list.listItems.map((listItem) => (
-                <Link to={listItem.path === "" ? defaultPath : listItem.path} key={uuidv4()}>
+                <Link to={listItem.path === "" ? defaultPath : listItem.path} key={useId()}>
                   <ListItem
                     as="div"
                     hover

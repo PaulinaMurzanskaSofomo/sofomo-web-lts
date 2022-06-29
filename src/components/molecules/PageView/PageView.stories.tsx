@@ -8,11 +8,11 @@ import { Title } from "../../molecules";
 import { Typography } from "../../atoms";
 import { List } from "../List";
 import { ListItem } from "../ListItem";
-import { featuresList } from "../../../assets/content/homepage/SectionClientSuccess";
-import { whatWeDolist } from "../../../assets/content/homepage/SectionApproach";
+import { featuresList } from "../../../data/content/homepage/SectionClientSuccess";
+import { whatWeDolist } from "../../../data/content/homepage/SectionApproach";
 import { Card } from "../Card";
-import { outsourceCards } from "../../../assets/content/landingOutsource/SectionHowWePartner";
-import { developersShort } from "../../../assets/content/developersShort";
+import { outsourceCards } from "../../../data/content/landingOutsource/SectionHowWePartner";
+import { developersShort } from "../../../data/content/developersShort";
 import { MotionContainer } from "../../../libs/framer";
 
 export default {

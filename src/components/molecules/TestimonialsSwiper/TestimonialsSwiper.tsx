@@ -4,7 +4,7 @@ import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { testimonials } from "../../../assets/content/testimonials/testimonials";
+import { testimonials } from "../../../data/content/testimonials/testimonials";
 import { onInit } from "../../../libs/swiper";
 import { Image, DottedArrow, Typography } from "../../atoms";
 import { theme } from "../../../themes/MainTheme";

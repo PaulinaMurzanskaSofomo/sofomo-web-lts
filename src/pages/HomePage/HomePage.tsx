@@ -1,5 +1,5 @@
 import React, { FC, useId } from "react";
-import { whatWeDolist } from "../../assets/content/homepage/SectionApproach";
+import { whatWeDolist } from "../../data/content/homepage/SectionApproach";
 import { theme } from "../../themes/MainTheme";
 import {
   TestimonialsSwiper,
@@ -12,7 +12,7 @@ import {
   Title,
 } from "../../components/molecules";
 import { leadersLogoList, partnersLogosList } from "../../assets/logos/logoLists";
-import { featuresList } from "../../assets/content/homepage/SectionClientSuccess";
+import { featuresList } from "../../data/content/homepage/SectionClientSuccess";
 import { Typography, Image, SectionContainer } from "../../components/atoms";
 import { clock } from "../../assets/icons";
 import { ROUTE } from "../../routes";

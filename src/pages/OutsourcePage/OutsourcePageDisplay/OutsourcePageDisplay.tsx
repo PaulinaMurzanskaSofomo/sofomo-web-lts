@@ -1,5 +1,5 @@
 import React, { useId } from "react";
-import { aboutList } from "../../../assets/content/landingOutsource/SectionOutsTop";
+import { aboutList } from "../../../data/content/landingOutsource/SectionOutsTop";
 import {
   List,
   ListItem,
@@ -12,9 +12,9 @@ import {
 } from "../../../components/molecules";
 import { theme } from "../../../themes/MainTheme";
 import { checkSvg } from "../../../assets/icons";
-import { developersShort } from "../../../assets/content/developersShort";
+import { developersShort } from "../../../data/content/developersShort";
 import { partnersLogosList, logosOutsource } from "../../../assets/logos/logoLists";
-import { outsourceCards } from "../../../assets/content/landingOutsource/SectionHowWePartner";
+import { outsourceCards } from "../../../data/content/landingOutsource/SectionHowWePartner";
 import { Button, Typography, DottedArrow } from "../../../components/atoms";
 import {
   heroOutsource,

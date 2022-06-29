@@ -1,4 +1,9 @@
-import { dictionaryColor, januaryColor, primexColor, roadtripColor } from "../../logos/logotypes";
+import {
+  dictionaryColor,
+  januaryColor,
+  primexColor,
+  roadtripColor,
+} from "../../../assets/logos/logotypes";
 
 export const testimonials = [
   {

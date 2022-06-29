@@ -1,6 +1,6 @@
 import React, { MouseEvent, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { developers } from "../../../../assets/content/developers";
+import { developers } from "../../../../data/content/developers";
 import { devices } from "../../../../assets/images";
 import { Image, Typography } from "../../../../components/atoms";
 import { ListItem } from "../../../../components/molecules";

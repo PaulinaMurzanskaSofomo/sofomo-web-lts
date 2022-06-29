@@ -2,9 +2,9 @@ import React, { useState, useId } from "react";
 import { StyledResponsiveContainer } from "../../atoms";
 import { Meta, Story } from "@storybook/react";
 import { List, Props } from "./List";
-import { developers } from "../../../assets/content/developers";
+import { developers } from "../../../data/content/developers";
 import { ListItem } from "../ListItem";
-import { mainMenu } from "../../../assets/content/navMenu/mainMenu";
+import { mainMenu } from "../../../data/content/navMenu/mainMenu";
 import { theme } from "../../../themes/MainTheme";
 
 export default {

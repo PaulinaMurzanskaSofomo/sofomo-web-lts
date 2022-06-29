@@ -1,9 +1,9 @@
 import React, { FC, useId } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { theme } from "../../themes/MainTheme";
-import { offices } from "../../assets/content/footer/Offices";
+import { offices } from "../../data/content/footer/Offices";
 import { socialIconsList } from "../../assets/icons/socialIconsList";
-import { footerLists } from "../../assets/content/footer/SectionAbout";
+import { footerLists } from "../../data/content/footer/SectionAbout";
 import { Image, Typography, SectionContainer } from "../../components/atoms";
 import { ListItem, List, Card } from "../../components/molecules";
 import { StyledSpan, StyledCardBody, StyledFooter, StyledDividerLine } from "./StyledFooter";

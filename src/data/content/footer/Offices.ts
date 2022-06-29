@@ -1,6 +1,6 @@
-import peterS from "../../avatars/peterS.png";
-import peterN from "../../avatars/peterN.png";
-import robert from "../../avatars/robert.png";
+import peterS from "../../../assets/avatars/peterS.png";
+import peterN from "../../../assets/avatars/peterN.png";
+import robert from "../../../assets/avatars/robert.png";
 
 export const offices = [
   {

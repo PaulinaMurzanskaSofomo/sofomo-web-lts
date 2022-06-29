@@ -1,4 +1,4 @@
-import { tenPlus, man, shield } from "../../icons";
+import { tenPlus, man, shield } from "../../../assets/icons";
 
 export const spanClients = `CLIENT SUCCESS`;
 export const relationship = `10+ years of amazing client relationships`;

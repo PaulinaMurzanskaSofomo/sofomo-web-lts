@@ -1,5 +1,5 @@
 import React, { MouseEvent } from "react";
-import { mainMenu } from "../../../../assets/content/navMenu/mainMenu";
+import { mainMenu } from "../../../../data/content/navMenu/mainMenu";
 import { ListItem, List } from "../../../../components/molecules";
 import { Button } from "../../../../components/atoms";
 import { MenuContent } from "../MenuContent/MenuContent";

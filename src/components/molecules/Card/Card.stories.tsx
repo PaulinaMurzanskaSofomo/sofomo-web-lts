@@ -6,7 +6,7 @@ import { List } from "../List";
 import { ListItem } from "../ListItem";
 import { socialIconsList } from "../../../assets/icons/socialIconsList";
 import { theme } from "../../../themes/MainTheme";
-import { developersShort } from "../../../assets/content/developersShort";
+import { developersShort } from "../../../data/content/developersShort";
 
 export default {
   title: "Molecules/Card",

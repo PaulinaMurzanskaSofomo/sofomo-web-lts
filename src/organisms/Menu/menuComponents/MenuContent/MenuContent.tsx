@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Typography } from "../../../../components/atoms";
 import { Card } from "../../../../components/molecules";
 import { DevelopersGrid } from "../DevelopersGrid/DevelopersGrid";
-import { whatWeDoCards, aboutUsCards } from "../../../../assets/content/navMenu/cards";
+import { whatWeDoCards, aboutUsCards } from "../../../../data/content/navMenu/cards";
 import { StyledMenuContent, StyledTitle, StyledCardsWrapper, Wrapper } from "./StyledMenuContent";
 import { theme } from "../../../../themes/MainTheme";
 import { useLaptopScreen } from "../../../../hooks";

@@ -1,4 +1,4 @@
-import { backend, frontend, mobile, magento, salesforce, awsCloud } from "../icons";
+import { backend, frontend, mobile, magento, salesforce, awsCloud } from "../../assets/icons";
 import { ROUTE } from "../../routes";
 
 export const developers = [

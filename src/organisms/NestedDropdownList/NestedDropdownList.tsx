@@ -1,5 +1,5 @@
 import React, { FC, MouseEvent, useState, useId } from "react";
-import { developers } from "../../assets/content/developers";
+import { developers } from "../../data/content/developers";
 import { StyledNestedDropdown, StyledListOverlay } from "./StyledNestedDropdownList";
 import { NestedList } from "../../components/molecules/NestedList/NestedList";
 

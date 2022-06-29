@@ -1,7 +1,5 @@
-import React, { FC, useState } from "react";
 import { ReactSVG } from "react-svg";
 import { Card } from "../Card";
-// import { ReactComponent as CheckMark } from "../../../assets/icons/CheckMark.svg";
 import { checkSvg } from "../../../assets/icons";
 import {
   StyledProgressCard,
@@ -21,14 +19,14 @@ export interface Props {
   handleCardClick?: (e: any) => void;
   selectedCard?: string;
 }
-export const ProgressCard: FC<Props> = ({
+export const ProgressCard = ({
   cardTitle,
   cardBodyText,
   cardActive,
   visited,
   id,
   handleCardClick,
-}) => {
+}: Props) => {
   return (
     <StyledProgressCard
       data-testid="progress-card"

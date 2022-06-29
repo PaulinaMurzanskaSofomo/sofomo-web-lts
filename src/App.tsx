@@ -6,7 +6,7 @@ import { ContactFormContext, NavItemStateContext, PageOverlayContext } from "./c
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { PageTemplate } from "./templates/PageTemplate";
 import { ROUTE } from "./routes";
-import { HomePage, OutsourcePage } from "./pages";
+import { AndroidPage, HomePage, OutsourcePage } from "./pages";
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
                 <Routes>
                   <Route path={ROUTE.HOME_PAGE} element={<HomePage />} />
                   <Route path={ROUTE.OUTSOURCE} element={<OutsourcePage />} />
+                  <Route path={ROUTE.ANDROID} element={<AndroidPage />} />
                 </Routes>
               </PageTemplate>
             </BrowserRouter>

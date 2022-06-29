@@ -24,6 +24,12 @@ export const StyledCard = styled.div<Props>`
     padding: 1.5rem;
     border-radius: 2px;
   }
+  &.medium-larger {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    color: ${({ headingColor }) => headingColor || theme.colors.dark};
+  }
   &.large-responsive {
     margin-bottom: 3.5rem;
     @media ${device.tablet} {

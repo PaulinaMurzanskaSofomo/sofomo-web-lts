@@ -3,6 +3,3 @@ export enum ROUTE {
   OUTSOURCE = "outsource",
   ANDROID = "developers/android",
 }
-
-// export const HOME_PAGE: ROUTE = "/";
-// export const OUTSOURCE: ROUTE = "outsource";

@@ -44,6 +44,7 @@ export const StyledHeading = styled.h3<Props>`
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+  color: ${({ headingColor }) => headingColor};
   &.small-nonresponsive {
     font-size: 1.6rem;
     line-height: 2.4rem;

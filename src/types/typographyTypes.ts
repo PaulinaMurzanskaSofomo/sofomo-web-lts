@@ -17,4 +17,5 @@ export type TypographyTypes =
   | "heading_5"
   | "heading_6"
   | "heading_7"
-  | "heading_8";
+  | "heading_8"
+  | "heading_9";

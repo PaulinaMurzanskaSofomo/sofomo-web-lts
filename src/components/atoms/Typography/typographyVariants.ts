@@ -99,6 +99,11 @@ export const variant: any = {
       spacing: "0.3",
     },
   },
+  heading_9: {
+    size: "2.6rem",
+    lineHeight: "4rem",
+    spacing: "0.4px",
+  },
   heading_8: {
     size: "1.3rem",
     lineHeight: "2rem",

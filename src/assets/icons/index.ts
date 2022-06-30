@@ -20,7 +20,14 @@ import quotationMark from "./QuotationMark.svg";
 import quotationMarkBlack from "./QuotationMarkBlack.svg";
 import salesforce from "./Salesforce.svg";
 import shield from "./Shield.svg";
+import oneDotted from "./OneDotted.svg";
+import twoDotted from "./TwoDotted.svg";
+import threeDotted from "./ThreeDotted.svg";
+
 export {
+  oneDotted,
+  twoDotted,
+  threeDotted,
   tenPlus,
   arrowRightDotted,
   arrowRightPlain,

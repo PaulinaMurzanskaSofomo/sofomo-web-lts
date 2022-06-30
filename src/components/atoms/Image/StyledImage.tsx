@@ -22,6 +22,11 @@ export const StyledImageContainer = styled.div<Props>`
     left: 0;
     z-index: -1;
   }
+  &.android {
+    svg {
+      z-index: 3;
+    }
+  }
 `;
 
 export const StyledImage = styled.img`

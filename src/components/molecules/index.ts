@@ -8,3 +8,5 @@ export { Title } from "./Title";
 export { PageView } from "./PageView";
 export { ImagesSwiper } from "./ImagesSwiper";
 export { TestimonialsSwiper } from "./TestimonialsSwiper";
+export { ProgressCards } from "./ProgressCards";
+export { ProgressCard } from "./ProgressCard";

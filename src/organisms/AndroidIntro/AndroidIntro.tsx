@@ -46,7 +46,7 @@ export const AndroidIntro = () => {
               <Typography variant="body_text_9">
                 Sofomo is your trusted Android development partner. Our talented Android developers
                 join your team, working directly with you to solve your Android challenges and
-                succeed with Android.
+                succeed with Android...
               </Typography>
             </StyledParagraphWrapper>
             <Button label="Hire Android Developers" variant="primary" path={ROUTE.OUTSOURCE} />
